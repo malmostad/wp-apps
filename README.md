@@ -17,7 +17,7 @@ For more information about the services, contact kominteamet@malmo.se.
 * LDAP server for authentication
 * SSL certificate
 * Dynamic linking to Malmö stad’s assets.
-* Sass for development and build
+* Sass for development and build. See `wp-content/themes/komin-master/stylesheets/application.scss` for info.
 * Wordpress plugins used:
   * auto-hyperlink-urls
   * content-scheduler
