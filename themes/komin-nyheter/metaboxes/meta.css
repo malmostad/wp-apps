@@ -1,0 +1,149 @@
+.mb_control .description
+{ display:none; }
+
+.mb_control label
+{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; }
+
+.mb_control label span
+{ display:inline; font-weight:normal; }
+
+.mb_control span
+{ color:#999; display:block; }
+
+.mb_control .mceStatusbar span {
+  display:inline;
+  color: #555;
+}
+
+.mb_control textarea, .mb_control input[type='text']
+{ margin-bottom:3px; width:99%; }
+
+.mb_control h4
+{ color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }
+
+.mb_control textarea {
+  font-weight: bold;
+  font-family: 'OpenSans', 'Verdana', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
+  font-size: emize(15, 16);
+}
+
+#title {
+  font-family: Georgia;
+}
+
+.meta-box-sortables {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.customEditor {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.postbox h3.hndle {
+  border-bottom: 1px #ccc solid !important;
+}
+
+
+/* custom editor styles */
+.mb_control.customEditor
+{ margin:15px 6px; border:1px solid #ccc; }
+
+.mb_control .customEditor textarea
+{ border:0;}
+
+.mb_control.customEditor .mceStatusbar a.mceResize
+{ top:-2px; }
+
+
+.mceIframeContainer {
+  background-color: white !important;
+}
+
+.dodelete-links {
+  float: right;
+  margin: 0 10px;
+}
+.dodelete {
+  margin-left: 70px;
+}
+
+.instructions {
+  margin-bottom: 15px !important;
+}
+
+.wpa_group-links {
+  margin: 0 0 22px;
+}
+
+.wpa_group-links .link-text {
+  margin-bottom: 2px;
+}
+.wpa_group-links .link-url {
+  margin-bottom: 8px;
+}
+.wpa_group-links label {
+  float: left;
+  width: 70px !important;
+  margin-top: 4px;
+}
+
+.wpa_group-links input {
+  width: 511px;
+  margin: 0;
+}
+
+
+/* Editor field width
+.mceLayout {
+  width: 511px !important;
+}
+*/
+
+.wp_themeSkin .mceSeparator {
+  margin: 0 3px !important;
+}
+
+#dashboard_primary.postbox,
+#dashboard_secondary.postbox,
+#dashboard_incoming_links.postbox,
+#dashboard_plugins {
+  display: none !important;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.eot');
+  src: local('☺'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.woff') format('woff'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.svg#XOpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.eot');
+  src: local('☺'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.woff') format('woff'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.ttf') format('truetype'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.svg#XOpenSans') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.eot');
+  src: local('☺'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.woff') format('woff'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.ttf') format('truetype'),
+       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.svg#XOpenSans') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

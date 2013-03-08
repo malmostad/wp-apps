@@ -1,0 +1,6 @@
+@media print {
+  body > footer, body > header, aside, menu,  
+  .btn {
+    display: none !important;
+  }
+}

@@ -1,0 +1,56 @@
+aside {
+  margin-bottom: 1em;
+  a {
+    clear: both;
+    display: block;
+    @include clearfix();
+    @include box-sizing('border-box');
+    padding: .4em 0 .4em;
+    border: solid white;
+    border-width: 1px 0;
+    margin: 0;
+  }
+  li:first-child a:hover {
+    border-top-color: $backgroundLight;
+  }
+  h1 {
+    font-size: emize(15);
+    line-height: 1;
+    font-family: $sansSerif;
+    border-bottom: $border;
+    margin: 0;
+    a {
+      color: black;
+      padding-bottom: .2em;
+    }
+  }
+  h2 {
+    font-weight: normal;
+    font-size: emize(14);
+    line-height: emize(19, 14);
+  }
+  p {
+    font-size: emize(14);
+    line-height: emize(19, 14);
+    color: black;
+  }
+  h2, p {
+    margin: 0 0 0 18%;
+  }
+  time {
+    font-family: $sansSerif;
+    font-size: emize(11, 14);
+    margin-right: .5em;
+  }
+  .featured-image {
+    float: left;
+    margin: .2em 0 0;
+    width: 15%;
+    background-color: $backgroundLight;
+    img {
+      width: 100%;
+      height: auto;
+      border: none;
+    }
+  }
+}

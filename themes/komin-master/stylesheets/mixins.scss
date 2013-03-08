@@ -1,0 +1,100 @@
+@mixin columns($span, $last: false) {
+  $gutter: 4%;
+  $total-columns: 12; // Number of columns in the grid
+
+  // (column width in percentage) minus its (own portion of all the gutters)
+  width: percentage($span / $total-columns) - (($total-columns / $span - 1) * $gutter / ($total-columns / $span));
+
+  // No gutter to the left if the column is the last to the right
+  @if not $last {
+    margin-right: $gutter;
+  } @else {
+    margin-right: 0;
+  }
+  @if $span == $total-columns {
+    margin-right: 0;
+    float: none;
+  }
+
+  float: left;
+  @include box-sizing(border-box);
+}
+
+@mixin radius($values) {
+  -moz-border-radius: $values;
+  -webkit-border-radius: $values;
+  border-radius: $values;
+}
+
+@mixin linear-gradient($from, $to, $start: 0, $stop: 100%) {
+  filter: none;
+  background: $from;
+  background: -ms-linear-gradient(top, $from $start, $to $stop); /* IE10+ */
+  background: -moz-linear-gradient(top, $from $start, $to $stop);
+  background: -webkit-gradient(linear, 0 0, $start $stop, from($from), to($to));
+  background: -webkit-linear-gradient(top, $from $start, $to $stop);
+  background: -o-linear-gradient(top, $from $start, $to $stop);
+  background: linear-gradient(to bottom, $from $start, $to $stop);
+}
+
+@mixin transition($values) {
+  -webkit-transition: $values;
+  -moz-transition: $values;
+  -o-transition: $values;
+  transition: $values;
+}
+
+@mixin box-shadow($values) {
+  -moz-box-shadow: $values;
+  -webkit-box-shadow: $values;
+  box-shadow: $values;
+}
+
+@mixin opacity($value) {
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(#{$value * 100}));
+  filter: alpha(opacity=($value * 100));
+  opacity: $value;
+}
+
+@mixin box-sizing($boxmodel) {
+  -ms-box-sizing: $boxmodel;
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+
+// Use with a media query to disable the hz mode below a breakpoint
+@mixin form-force-vertical() {
+  .form-horizontal {
+    .control-label {
+      display: block;
+      width: 100%;
+    }
+    .controls {
+      width: 100%;
+      margin-left: 0;
+      clear: both;
+    }
+  }
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate(#{$deg}deg);
+  -moz-transform: rotate(#{$deg}deg);
+  -ms-transform: rotate(#{$deg}deg);
+  -o-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
+}
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

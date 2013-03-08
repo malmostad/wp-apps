@@ -1,0 +1,13 @@
+.media-single tr.post_title,
+.media-single tr.post_content,
+.media-single tr.image_alt,
+#media-items tr.post_title,
+#media-items tr.post_content,
+#media-items tr.image_alt,
+#tab_advanced {
+  display: none;
+}
+
+#login #nav {
+  display: none;
+}

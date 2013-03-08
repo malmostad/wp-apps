@@ -1,0 +1,27 @@
+@media ( max-width: 34em ) {
+  .box-content {
+    font-size: emize(16, 16) !important;
+  }
+  .service-title a {
+    font-size: emize(15, 13) !important;
+  }
+  #wpadminbar {
+    display: none;
+  }
+}
+
+@media ( max-width: 28em ) {
+  article {
+    .alignright,
+    .alignleft,
+    .alignnone,
+    .aligncenter,
+    .featured-image img {
+      display: block;
+      float: none;
+      margin: .3em 0 1em 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

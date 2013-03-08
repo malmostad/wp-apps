@@ -1,0 +1,13 @@
+// sass --watch komin-master/stylesheets/application.scss komin-nyheter/stylesheets/application.scss  komin-blogg/stylesheets/application.scss
+// Add --style compressed before deployment
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'base';
+@import 'post';
+@import 'comments';
+@import 'loop';
+@import 'nav-posts';
+@import 'aside';
+@import 'media-queries';
+@import 'print';

@@ -1,0 +1,34 @@
+.loop {
+  margin-top: 0;
+  .post {
+    .entry-meta {
+      margin-top: .5em;
+      @include columns(3, true);
+      font-family: $sansSerif;
+      .author {
+        margin-bottom: .2em;
+        color: $linkColor;
+        font-size: emize(11, 13);
+      }
+      time {
+        font-size: emize(11, 13);
+      }
+      .avatar {
+        img {
+          width: 100%;
+          // max-width: 10em;
+          height: auto;
+          border: none;
+        }
+      }
+      time {
+        display: block;
+      }
+    }
+    .text {
+      @include columns(9, true);
+      float: right;
+      margin: 0;
+    }
+  }
+}
