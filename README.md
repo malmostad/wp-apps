@@ -5,7 +5,7 @@ Wordpress theme for the following intranet publishing services at Malmö stad:
 * News
 * HR, help texts to the HR system.
 
-The themes are using Malmö stads’s intranet global assets, see the repo `intranet-assets`.
+The themes are using Malmö stads’s intranet global assets, see the repo see the repo [intranet-assets](https://github.com/malmostad/intranet-assets).
 
 For more information about the services, contact kominteamet@malmo.se.
 
