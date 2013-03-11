@@ -13,7 +13,6 @@ For more information about the services, contact kominteamet@malmo.se.
 * Wordpress >= 3.5
 * Wordpress compatible database
 * The themes `komin-nyheter` and `komin-blogg` are child themes to `komin-master`.
-* APC
 * LDAP server for authentication
 * SSL certificate
 * Dynamic linking to Malmö stad’s assets.
