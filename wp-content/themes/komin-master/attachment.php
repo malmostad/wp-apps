@@ -6,9 +6,9 @@ get_header(); ?>
 
 <div id="container" class="single-attachment">
 	<div id="content" role="main">
-		<?php 
-			if ( have_posts() ) : 
-				while ( have_posts() ) : 
+		<?php
+			if ( have_posts() ) :
+				while ( have_posts() ) :
 				the_post();
 			?>
 				<?php if ( ! empty( $post->post_parent ) ) : ?>
@@ -29,7 +29,7 @@ get_header(); ?>
 						</span>
 
 						<span class="meta-sep">|</span>
-						<span class="meta-prep meta-prep-entry-date">Publiserad </span>
+						<span class="meta-prep meta-prep-entry-date">Publicerad </span>
 						<span class="entry-date"><abbr class="published"><?php echo get_the_time() . ' ' . get_the_date() ?></abbr></span>
 
 						<?php if ( wp_attachment_is_image() ) : ?>
@@ -43,7 +43,7 @@ get_header(); ?>
 
 					<div class="entry-content">
 						<div class="entry-attachment">
-							<?php 
+							<?php
 								if ( wp_attachment_is_image() ) :
 									$attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
 									foreach ( $attachments as $k => $attachment ) {
