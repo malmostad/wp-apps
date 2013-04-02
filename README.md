@@ -24,12 +24,12 @@ For more information about the services, contact kominteamet@malmo.se.
   * wpdirauth
 
 ## Setup
-* Perform a regular Wordpress installation.
-* Install and activate one of the themes.
-* Install the plugins listed above.
 * Copy and edit the following files from this code base (do __not__ check in config files in the repository):
   * `wp-config-example.php` to `wp-config.php`
   * `.htaccess-example` to `.htaccess`
+* Perform a regular Wordpress installation.
+* Install and activate one of the themes.
+* Install the plugins listed above.
 * Edit `themes/<theme_name>/functions/theme-config.php`
 
 ## Licence
