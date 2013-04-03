@@ -30,11 +30,21 @@ article {
     height: auto;
   }
 
-  .featured-image img {
+  .featured-image {
     float: right;
     width: 42%;
-    height: auto;
     margin: .3em 0 1em 1em;
+  }
+
+  .featured-image .caption {
+    font-family: $sansSerif;
+    font-size: emize(13);
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .2em!important;
   }
   img {
     max-width: 100%;
