@@ -33,4 +33,4 @@ For more information about the services, contact kominteamet@malmo.se.
 * Edit `themes/<theme_name>/functions/theme-config.php`
 
 ## Licence
-TBD
+Released under AGPL version 3.
