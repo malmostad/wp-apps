@@ -11,17 +11,17 @@ function feedFilter($query) {
 function feedContentFilter($content) {
   $before_content = " ";
   $after_content = " ";
- 
+
   // Preamble
   $preamble = get_post_meta(get_the_id(), '_metabox_preamble', true);
 
   if ( !empty( $preamble["preamble"] ) ) {
-     $before_content .= $preamble["preamble"];
+     $before_content .= $preamble["preamble"] . " ";
   }
 
   // Featured image
   if ( has_post_thumbnail() ) {
-    $before_content .= the_post_thumbnail('medium'); 
+    $before_content .= the_post_thumbnail('medium');
   }
 
   // Facts
@@ -55,7 +55,7 @@ function create_meta_taxonomies() {
       'singular_name' => 'Publiceringsstyrning',
       'search_items' =>  'Sök',
       'all_items' => 'Alla fält',
-      'edit_item' => 'Redigera fält', 
+      'edit_item' => 'Redigera fält',
       'update_item' => 'Uppdatera fält',
       'add_new_item' => 'Lägg till nytt fält',
       'new_item_name' => 'Nytt fält',
