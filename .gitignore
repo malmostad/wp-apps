@@ -25,7 +25,6 @@ wp-blog-header.php
 wp-comments-post.php
 wp-commentsrss2.php
 wp-content/languages/
-wp-content/plugins/
 wp-cron.php
 wp-feed.php
 wp-includes/
