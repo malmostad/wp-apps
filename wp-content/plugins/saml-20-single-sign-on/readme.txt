@@ -1,13 +1,14 @@
-== Fork of SAML 2.0 Single Sign-On ==
+== SAML 2.0 Single Sign-On - Fork ==
 
-See description of the original plugin below, section SAML 2.0 Single Sign-On
+This plugin is a fork of the plugin described in section 'SAML 2.0 Single Sign-On' below.
+
 Fork contributors: Mattias Andersson
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-== Changes made from the original plugin ==
+Changes made from the original plugin:
 - Doesn't use wordpress password once authenticated by IDP.
-- Idp group role permissions not used for new users, user role always made wordpress author
+- Idp group role permissions not used for new users, user role always set to wordpress author
 - wp-blog-header.php include adapted to Malmö Stad server settings
 
 === SAML 2.0 Single Sign-On ===
