@@ -1,7 +1,7 @@
 SAML 2.0 Single Sign-On
 =======================
 
-SAML 2.0 Single Sign-On allows you to use a SAML 2.0-compliant Identity Provider for Single Sign-On to your blog. This plugin is a fork of the plugin found at http://wordpress.org/plugins/saml-20-single-sign-on.
+SAML 2.0 Single Sign-On allows you to use a SAML 2.0-compliant Identity Provider for Single Sign-On to your WP site. This plugin is a fork of the plugin found at http://wordpress.org/plugins/saml-20-single-sign-on.
 
 Changes made from the original plugin:
 * Doesn't use wordpress password once authenticated by IDP.
@@ -11,7 +11,7 @@ Changes made from the original plugin:
 ## Dependencies
 * Wordpress >= 3.3
 * Wordpress compatible database
-* Identity provider (IP) for authentication
+* Identity provider (IDP) for authentication
 
 ## Setup
 * Place plugin code in the `/wp-content/plugins/' directory
