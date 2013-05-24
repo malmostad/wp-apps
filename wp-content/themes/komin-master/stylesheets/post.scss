@@ -36,7 +36,7 @@ article {
     margin: .3em 0 1em 1em;
   }
 
-  .featured-image .caption {
+  .featured-image .caption, .wp-caption .wp-caption-text {
     font-family: $sansSerif;
     font-size: emize(13);
   }

@@ -196,7 +196,8 @@ img.aligncenter {
 	border: none;
 	background: #fff;
 	color: #000 !important;
-	font-size: 13px;
+	font-family: "OpenSans","Verdana","DejaVu Sans","Bitstream Vera Sans",sans-serif;
+  font-size: 0.8125em;
 	line-height: 18px;
 	text-align: left;
 	margin-bottom: 4px;
