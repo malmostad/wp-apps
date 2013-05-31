@@ -1,7 +1,5 @@
 <?php
 
-if (!isset( $content_width)) $content_width = 512;
-
 function theme_setup() {
   add_editor_style();
   add_theme_support( 'post-thumbnails' );
@@ -100,3 +98,10 @@ function remove_adminbar_style() {
   remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'remove_adminbar_style');
+
+// Allow redirect to dashboard. Used for logout redirect
+add_filter('allowed_redirect_hosts','allow_domain_redirect');
+function allow_domain_redirect($allowed) {
+  $allowed[] = 'webapps06.malmo.se';
+  return $allowed;
+}
