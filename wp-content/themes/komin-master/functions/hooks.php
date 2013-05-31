@@ -1,5 +1,7 @@
 <?php
 
+if (!isset( $content_width)) $content_width = 512;
+
 function theme_setup() {
   add_editor_style();
   add_theme_support( 'post-thumbnails' );
