@@ -1,7 +1,5 @@
 // Methods for WPAlchemy Metaboxes, e.g. customization of boxes
 jQuery(function($) {
-  console.log('metabox')
-
   // Init editor for facts box
   // Copy settings from the main editor #content and extend with custom settings
   var setupEditor = function() {

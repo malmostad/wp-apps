@@ -41,3 +41,10 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 xmlrpc.php
+wp-content/plugins/valideratext
+wp-content/plugins/vote-it-up
+wp-content/plugins/wpdirauth
+wp-content/plugins/most-commented
+wp-content/plugins/content-scheduler
+wp-content/plugins/auto-hyperlink-urls
+

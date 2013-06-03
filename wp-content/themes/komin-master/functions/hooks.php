@@ -29,10 +29,12 @@ function set_mce_options( $init ) {
 }
 add_filter('tiny_mce_before_init', 'set_mce_options');
 
+global $mconfig;
+
 // Add styles and script to admin views
 if (is_admin())  {
-  wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/stylesheets/admin.css');
-  wp_enqueue_script('admin', get_stylesheet_directory_uri() . '/javascripts/admin.js');
+  wp_enqueue_style('admin', get_template_directory_uri() . '/stylesheets/admin.css');
+  wp_enqueue_script('admin', get_template_directory_uri() . '/javascripts/admin.js');
 }
 
 // Remove title tags. Parses all content markup. Might slow down page rendering.
