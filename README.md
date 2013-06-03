@@ -1,6 +1,6 @@
-Intranet Wordpress Themes
+Intranet Wordpress Applications
 =============
-Wordpress theme for the following intranet publishing services at Malmö stad:
+Wordpress applications for the following intranet publishing services at Malmö stad:
 * Blog
 * News
 * HR, help texts to the HR system.
@@ -13,15 +13,17 @@ For more information about the services, contact kominteamet@malmo.se.
 * Wordpress >= 3.5
 * Wordpress compatible database
 * The themes `komin-nyheter` and `komin-blogg` are child themes to `komin-master`.
-* LDAP server for authentication
-* SSL certificate
-* Dynamic linking to Malmö stad’s assets.
+* LDAP server or a SAML IdP for authentication
+* [Assets service](https://github.com/malmostad/intranet-assets).
+* [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service).
 * Sass for development and build. See `wp-content/themes/komin-master/stylesheets/application.scss` for info.
 * Wordpress plugins used:
   * auto-hyperlink-urls
   * content-scheduler
   * valideratext
   * wpdirauth
+  * Force Login (included in source)
+  * SAML 2.0 (included in source)
 
 ## Setup
 * Copy and edit the following files from this code base (do __not__ check in config files in the repository):
