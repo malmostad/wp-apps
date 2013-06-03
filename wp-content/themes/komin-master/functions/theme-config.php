@@ -15,7 +15,7 @@ if ( $mconfig['env'] == 'development') {
 }
 elseif ( $mconfig['env'] == 'test' ) {
   $mconfig['logout_redirect_url'] =  'https://webapps06.malmo.se/dashboard-test/logout';
-  $mconfig['avtar_base_url'] =  'http://webapps06.malmo.se/avatars/';
+  $mconfig['avtar_base_url'] =  '//webapps06.malmo.se/avatars/';
   $mconfig['asset_host'] = '//webapps06.malmo.se/assets-3.0-test/';
   $mconfig['asset_host_stylesheet'] = '//webapps06.malmo.se/assets-3.0-test/malmo.css';
   $mconfig['asset_host_javascript'] = '//webapps06.malmo.se/assets-3.0-test/malmo.js';

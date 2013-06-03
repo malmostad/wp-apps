@@ -13,7 +13,7 @@ add_action( 'after_setup_theme', 'theme_setup' );
 // Override remember me expire
 function set_cookie_expire_filter( $default, $user_ID, $remember_me ) {
   if ($remember_me) {
-    $default = 60 * 60 * 24 * 365;
+    $default = 60 * 60 * 24 * 30;
   }
   return $default;
 }
