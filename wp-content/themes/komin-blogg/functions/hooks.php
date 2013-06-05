@@ -74,5 +74,5 @@ function wp_rss_img_include($comment) {
   global $mconfig;
   $email = $comment ? get_comment_author_email() : get_the_author_meta('user_email');
   $user = get_user_by( 'email', $email );
-  echo '<enclosure url="http:' . $mconfig['avtar_base_url'] . $user->user_login .'/small_quadrat.jpg" type="image/jpeg"/>';
+  echo '<enclosure url="https:' . $mconfig['avtar_base_url'] . $user->user_login .'/small_quadrat.jpg" type="image/jpeg"/>';
 }
