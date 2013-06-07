@@ -19,7 +19,7 @@
   if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
   wp_head();
 ?>
-<link href="<?php echo $mconfig['asset_host_stylesheet'] ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo $mconfig['asset_host'] ?>malmo.css" rel="stylesheet" type="text/css"/>
 <link href="<?php bloginfo( 'stylesheet_directory' ); ?>/stylesheets/application.css" rel="stylesheet" type="text/css"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s flöde" href="<?php bloginfo('url'); ?>/feed/"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s kommentarsflöde" href="<?php bloginfo('url'); ?>/comments/feed/"/>
