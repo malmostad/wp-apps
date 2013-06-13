@@ -20,11 +20,11 @@
     if ($term->parent == 0) {
       echo "<meta name='eri-cat' content='$term->name'/>\n";
     }
-  } 
+  }
 }
 ?>
 <!--[if lte IE 8]><script src="<?php echo $mconfig['asset_host'] ?>html5shiv-printshiv.js" type="text/javascript"></script><![endif]-->
-<link href="<?php echo $mconfig['asset_host_stylesheet'] ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo $mconfig['asset_host'] ?>malmo.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/stylesheets/application.css"/>
 <!--[if lte IE 9]><link href="<?php echo $mconfig['asset_host'] ?>legacy/ie9.css" rel="stylesheet" type="text/css"/><![endif]-->
 <!--[if lte IE 7]><link href="<?php echo $mconfig['asset_host'] ?>legacy/ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
