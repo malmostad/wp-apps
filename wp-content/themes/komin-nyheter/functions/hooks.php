@@ -92,13 +92,20 @@ function load_language() {
 add_action("do_feed_rss2","wp_rss_img_do_feed",5,1);
 function wp_rss_img_do_feed(){
     add_action('rss2_item', 'wp_rss_img_include');
+    add_action('rss2_ns', 'add_rss2_ns');
     add_action('commentrss2_item', 'wp_rss_img_include');
 }
 function wp_rss_img_include($content) {
   global $post;
-  $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
+  $small = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
+  $medium = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium');
+  $large = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
 
-  if ($thumbnail) {
-    echo  "<enclosure url='{$thumbnail[0]}' type='" . get_post_mime_type(get_post_thumbnail_id()) . "' />";
+  if ($small) {
+    echo  "<enclosure url='{$small[0]}' dashboard:url-medium='{$medium[0]}' dashboard:url-large='{$large[0]}' type='" . get_post_mime_type(get_post_thumbnail_id()) . "'/>";
   }
+}
+
+function add_rss2_ns() {
+  echo 'xmlns:dashboard="http://komin.malmo.se/dashboard"';
 }
