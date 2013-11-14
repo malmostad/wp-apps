@@ -1,5 +1,5 @@
 <?php
-  global $template_vars;
+  global $template_vars, $mconfig;
   $title = isset($template_vars['title']) ? $template_vars['title'] : "Alla inlägg";
   $feed_url = isset($template_vars['feed_url']) ? $template_vars['feed_url'] : "./feed";
   $alt = isset($alt) ? $alt : "Prenumerera på RSS-flödet för {$title}";
@@ -10,13 +10,21 @@
   <?php if (have_posts()) : ?>
     <?php  while (have_posts()): the_post(); ?>
       <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>" class="entry-meta">
-          <div class="avatar">
-            <?php echo get_avatar( get_the_author_meta( 'user_email' ), 139); ?>
+        <div class="entry-meta">
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>" id="blogger-menu" role="button" title="Information om bloggaren">
+              <div class="avatar">
+                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 139); ?>
+              </div>
+              <p class="author vcard"><?php the_author() ?></p>
+            </a>
+            <menu aria-labelledby="blogger-menu" class="dropdown-menu" role="menu">
+              <li><a href="<?php echo $mconfig['staff_directory'] . get_the_author_meta('user_login') ?>">Kontaktkort</a></li>
+              <li><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>">Alla inlägg</a></li>
+            </menu>
           </div>
-          <p class="author vcard"><?php the_author() ?></p>
           <time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>
-        </a>
+        </div>
 
         <a href="<?php the_permalink(); ?>" rel="bookmark">
           <section class="text">

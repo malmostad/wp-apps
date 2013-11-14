@@ -5,13 +5,14 @@
       margin-top: .5em;
       @include columns(3, true);
       font-family: $sansSerif;
+      font-size: 1em;
       .author {
         margin-bottom: .2em;
         color: $linkColor;
-        font-size: emize(11, 13);
+        font-size: emize(11, 16);
       }
       time {
-        font-size: emize(11, 13);
+        font-size: emize(11, 16);
       }
       .avatar {
         img {
