@@ -10,6 +10,7 @@ if ( $mconfig['env'] == 'development') {
   $mconfig['avtar_base_url'] =  '//www.local.malmo.se/ws/avatars/';
   $mconfig['asset_host'] =  '//www.local.malmo.se:3001/assets/';
   $mconfig['staff_directory'] = 'http://www.local.malmo.se:3000/users/';
+  $mconfig['staff_directory'] = 'http://webapps06.malmo.se/dashboard/users/';
   $mconfig['loglevel'] = 3;
 }
 elseif ( $mconfig['env'] == 'test' ) {
