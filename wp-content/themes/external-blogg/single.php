@@ -7,16 +7,10 @@
 
     <section class="meta">
       <div class="author-avatar">
-        <div class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>" id="blogger-menu" role="button" title="Information om bloggaren">
-            <?php echo get_avatar( get_the_author_meta( 'user_email' ), 139) ; ?>
-            <p class="author vcard"><?php the_author() ?></p>
-          </a>
-          <menu aria-labelledby="blogger-menu" class="dropdown-menu" role="menu">
-            <li><a href="<?php echo $mconfig['staff_directory'] . get_the_author_meta('user_login') ?>">Kontaktkort</a></li>
-            <li><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>">Alla inlägg</a></li>
-          </menu>
-        </div>
+        <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>" role="button" title="Information om bloggaren">
+          <?php echo get_avatar(get_the_author_meta('user_email'), 139) ; ?>
+          <p class="author vcard"><?php the_author() ?></p>
+        </a>
       </div>
       <time pubdate><?php echo get_the_date() . ' ' . get_the_time() ?></time>
       <dl class="entry-meta">

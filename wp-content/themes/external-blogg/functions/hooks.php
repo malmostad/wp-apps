@@ -4,6 +4,11 @@ function load_language() {
   load_child_theme_textdomain( 'malmo', get_stylesheet_directory() . '/languages' );
 }
 
+// Hack to prevent master from overriding
+function let_child_rule() {
+  return true;
+}
+
 /* Add gravatar image to rss feed */
 function wp_rss_img_include($comment) {
   $email = $comment ? get_comment_author_email() : get_the_author_meta('user_email');

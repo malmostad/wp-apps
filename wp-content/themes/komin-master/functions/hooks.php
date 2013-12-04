@@ -58,7 +58,10 @@ function custom_login() {
 add_action('login_head', 'custom_login');
 
 // Use Malmo's avatar service instead of Gravatar
-add_filter( 'get_avatar', 'get_malmo_avatar', 10, 5 );
+if (!function_exists('let_child_rule')) {
+  add_filter( 'get_avatar', 'get_malmo_avatar', 10, 5 );
+}
+
 function get_malmo_avatar( $avatar, $id_or_email, $size, $url, $alt, $css = "" ) {
   global $mconfig;
 
