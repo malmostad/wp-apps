@@ -1,0 +1,57 @@
+.post {
+  article.body-copy, .history, #comments {
+    @include columns(9, true);
+    float: right;
+  }
+  article {
+    margin-top: .5em;
+    .entry-meta, .entry-tags {
+      display: none;
+      ul {
+        margin: 0;
+      }
+    }
+  }
+  .meta {
+    @include columns(3, true);
+    margin-top: .8em;
+    .author-avatar {
+      img {
+        float: none;
+        width: 100%;
+      }
+      .author {
+        clear: right;
+        float: none;
+        min-width: 0;
+        text-align: left;
+        font-family: $sansSerif;
+        font-size: emize(13);
+        margin: 0;
+        color: $linkColor;
+      }
+    }
+    time, dl {
+      font-family: $sansSerif;
+      font-size: emize(11);
+      clear: left;
+    }
+    dd {
+      margin-left: 0;
+      li {
+        display: inline;
+      }
+    }
+    .entry-meta {
+      margin-bottom: 0em;
+      @include clearfix();
+    }
+    .entry-tags {
+      margin-bottom: 2em;
+      @include clearfix();
+    }
+  }
+  #comments .comment-body {
+    *margin-left: 19%;
+  }
+}

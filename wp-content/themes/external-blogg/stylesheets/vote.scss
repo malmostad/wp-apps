@@ -1,0 +1,86 @@
+/* Overrides for Vote it up plug */
+.post_postvote {
+  font-family: $sansSerif;
+  .post_votebutton,
+  .post_votebutton:hover {
+    color: black;
+    text-align: center;
+  }
+
+  .post_votecount {
+    border-bottom: $border;
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 4px 0 5px !important;
+    font-size: 17px;
+  }
+
+  .post_votecount.show {
+    cursor: pointer;
+    color: $linkColor;
+    width: 100%;
+  }
+
+  .post_votecount.show:hover {
+    text-decoration: underline;
+  }
+  .post_votewidget {
+    background-image: none;
+    background-color: #fff0ac;
+    @include radius(4px);
+    width: 55px;
+  }
+  .post_votebutton {
+    width: 100%;
+    padding: .1em 0;
+    background-image: none;
+    a {
+      color: $linkColor !important;
+      font-size: 11px;
+    }
+  }
+}
+
+.voters-dialog .ui-widget-header {
+  font-size: emize(13);
+  padding-bottom: 0.2em !important;
+  padding-top: 0.2em !important;
+  margin: 0 !important;
+}
+
+.voters-dialog .ui-dialog-title {
+  padding: 0 !important;
+  margin: 0.1em 16px 0.2em 0 !important;
+}
+
+div.voters-dialog.ui-dialog div.ui-dialog-titlebar {
+  padding-left: .5em;
+}
+
+#voters-dialog {
+  padding: .4em .2em;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0 0 1em;
+    padding: 0;
+  }
+  li.anon {
+    margin-top: 1em;
+  }
+  li a {
+    color: #007133;
+  }
+  li img {
+    vertical-align: middle;
+    margin-right: .6em;
+    text-decoration: none;
+    border: 1px solid #c0c0c0;
+  }
+}
+.ui-dialog .ui-dialog-content {
+  overflow: auto !important;
+}
