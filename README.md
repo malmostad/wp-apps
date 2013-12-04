@@ -15,7 +15,7 @@ For more information about the services, contact kominteamet@malmo.se.
 * The themes `komin-nyheter` and `komin-blogg` are child themes to `komin-master`.
 * LDAP server or a SAML IdP for authentication
 * [Assets service](https://github.com/malmostad/intranet-assets).
-* [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service).
+* [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
 * Sass for development and build. See `wp-content/themes/komin-master/stylesheets/application.scss` for info.
 * Wordpress plugins used:
   * auto-hyperlink-urls
