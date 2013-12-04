@@ -85,5 +85,6 @@
 
 <?php
   $template_vars = array('postID' => $postID);
+  get_template_part('aside');
   get_footer();
 ?>
