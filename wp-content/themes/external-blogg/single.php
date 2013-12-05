@@ -31,8 +31,8 @@
         <dd><ul><?php echo get_the_tag_list('<li>',', </li><li>','</li>'); ?></ul></dd>
       </dl>
       <div class="share">
-        <a href="https://twitter.com/intent/tweet?text=Bo+%26+bygga+-+Malm%C3%B6+stad&amp;url=http%3A%2F%2Fwww.malmo.se%2FMedborgare%2FBo--bygga.html" title="Twittra om inlägget"><span class="icon-twitter"> </span></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.malmo.se%2FMedborgare%2FBo--bygga.html%23.Up9Y47H9CtE.facebook" title="Dela inlägget på Facebook"><span class="icon-facebook"> </span></a>
+        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title()) ?>&amp;url=<?php echo urlencode(the_guid()) ?>" title="Twittra om inlägget"><span class="icon-twitter"> </span></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(the_guid()) ?>" title="Dela inlägget på Facebook"><span class="icon-facebook"> </span></a>
       </div>
       <script>
         var blogTracking = {
