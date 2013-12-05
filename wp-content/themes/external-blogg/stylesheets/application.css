@@ -427,7 +427,8 @@ aside {
   margin-top: .8em; }
   .post .meta .author-avatar img {
     float: none;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
   .post .meta .author-avatar .author {
     clear: right;
     float: none;
@@ -482,7 +483,7 @@ aside {
     .loop .post .entry-meta .author {
       margin-bottom: .2em;
       color: #007133;
-      font-size: 0.6875em; }
+      font-size: 0.8125em; }
     .loop .post .entry-meta time {
       font-size: 0.6875em; }
     .loop .post .entry-meta .avatar img {
