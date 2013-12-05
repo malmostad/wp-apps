@@ -464,6 +464,15 @@ aside {
       line-height: 0; }
     .post .meta .entry-tags:after {
       clear: both; }
+  .post .meta .share a span {
+    font-size: 1.8em;
+    color: #5a5a5a;
+    margin-right: .2em; }
+    .post .meta .share a span.icon-twitter {
+      font-size: 2em;
+      color: #55acee; }
+    .post .meta .share a span.icon-facebook {
+      color: #4C66A4; }
 .post #comments .comment-body {
   *margin-left: 19%; }
 

@@ -51,6 +51,18 @@
       margin-bottom: 2em;
       @include clearfix();
     }
+    .share a span {
+      font-size: 1.8em;
+      color: $backgroundDarker;
+      margin-right: .2em;
+      &.icon-twitter {
+        font-size: 2em;
+        color: #55acee;
+      }
+      &.icon-facebook {
+        color: #4C66A4;
+      }
+    }
   }
   #comments .comment-body {
     *margin-left: 19%;
