@@ -185,7 +185,11 @@ article {
     #comments .comment-form-comment label:after {
       content: ":"; }
     #comments .comment-form-comment textarea {
-      width: 95%; }
+      -ms-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%; }
   #comments .reply {
     display: none; }
 
@@ -406,11 +410,11 @@ aside {
     width: 18%; }
   aside h2, aside p {
     margin: 0 0 0 22%; }
-
-.categories {
-  clear: both;
-  font-family: "OpenSans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-  font-size: 0.8125em; }
+  aside nav {
+    font-family: "OpenSans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.8125em; }
+    aside nav a {
+      color: black; }
 
 .post article.body-copy, .post .history, .post #comments {
   width: 74%;
