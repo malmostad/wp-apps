@@ -1,0 +1,22 @@
+.breadcrumbs {
+  list-style: none;
+  margin-top: .5em;
+  padding: 0;
+  li {
+    font-family: $sansSerif;
+    font-size: emize(13);
+    margin: 0 0 0 0;
+    padding: 0;
+    display: inline-block;
+    &:after {
+      content: "\f054";
+      font-family: $iconFont;
+      margin: 0 .5em 0 .7em;
+      font-size: 0.8125em;
+    }
+    &:last-child:after {
+      content: "";
+      margin: 0;
+    }
+  }
+}

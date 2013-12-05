@@ -2,11 +2,11 @@ body {
   padding: 0 .5em;
   min-width: 56em;
   margin: 0 1em 2em;
-  > .wrapper {
-    @include clearfix();
-    max-width: 56em;
-    margin: 0 auto;
-  }
+}
+.wrapper, .breadcrumbs {
+  @include clearfix();
+  max-width: 56em;
+  margin: 0 auto;
 }
 
 [role="main"] {
