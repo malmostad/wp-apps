@@ -372,11 +372,17 @@ aside {
 body {
   padding: 0 .5em;
   min-width: 56em;
-  margin-top: 0;
-  margin-right: 1em;
-  margin-left: 1em; }
-  body > .wrapper, body > footer nav {
-    max-width: 56em; }
+  margin: 0 1em 2em; }
+  body > .wrapper {
+    *zoom: 1;
+    max-width: 56em;
+    margin: 0 auto; }
+    body > .wrapper:before, body > .wrapper:after {
+      display: table;
+      content: "";
+      line-height: 0; }
+    body > .wrapper:after {
+      clear: both; }
 
 [role="main"] {
   width: 74%;
@@ -400,6 +406,11 @@ aside {
     width: 18%; }
   aside h2, aside p {
     margin: 0 0 0 22%; }
+
+.categories {
+  clear: both;
+  font-family: "OpenSans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+  font-size: 0.8125em; }
 
 .post article.body-copy, .post .history, .post #comments {
   width: 74%;
@@ -466,12 +477,12 @@ aside {
       clear: both; }
   .post .meta .share a span {
     font-size: 1.8em;
-    color: #5a5a5a;
     margin-right: .2em; }
-    .post .meta .share a span.icon-twitter {
-      font-size: 2em;
+    .post .meta .share a span.icon-twitter, .post .meta .share a span.icon-twitter-sign {
       color: #55acee; }
-    .post .meta .share a span.icon-facebook {
+    .post .meta .share a span.icon-twitter {
+      font-size: 2em; }
+    .post .meta .share a span.icon-facebook, .post .meta .share a span.icon-facebook-sign {
       color: #4C66A4; }
 .post #comments .comment-body {
   *margin-left: 19%; }

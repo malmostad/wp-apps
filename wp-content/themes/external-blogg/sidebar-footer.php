@@ -1,5 +1,5 @@
 <!--eri-no-index-->
-<section class="categories" role="main">
+<section class="categories">
   <?php
     // Split categories in 4 columns
     $items = get_terms('category', array( 'parent' => 0, 'hide_empty' => false));

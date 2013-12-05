@@ -53,13 +53,14 @@
     }
     .share a span {
       font-size: 1.8em;
-      color: $backgroundDarker;
       margin-right: .2em;
-      &.icon-twitter {
-        font-size: 2em;
+      &.icon-twitter, &.icon-twitter-sign {
         color: #55acee;
       }
-      &.icon-facebook {
+      &.icon-twitter {
+        font-size: 2em;
+      }
+      &.icon-facebook, &.icon-facebook-sign {
         color: #4C66A4;
       }
     }
