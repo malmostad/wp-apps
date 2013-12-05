@@ -61,7 +61,8 @@
     }
     margin-bottom: 0;
     textarea {
-      width: 95%;
+      @include box-sizing(border-box);
+      width: 100%;
     }
   }
   .reply {
