@@ -38,6 +38,6 @@
 </head>
 <body <?php body_class($mconfig['env'] . " malmo-masthead-more malmo-form"); ?>>
 <!--eri-no-index-->
-<div class="service-title"><a href="<?php bloginfo('url'); ?>"><?php _e('Tjänstenamn', 'malmo') ?></a></div>
+<div class="app-title"><a href="<?php bloginfo('url'); ?>"><?php _e('Tjänstenamn', 'malmo') ?></a></div>
 <!--/eri-no-index-->
 <div class="wrapper">
