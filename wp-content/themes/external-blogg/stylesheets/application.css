@@ -410,11 +410,6 @@ aside {
     width: 18%; }
   aside h2, aside p {
     margin: 0 0 0 22%; }
-  aside nav {
-    font-family: "OpenSans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-    font-size: 0.8125em; }
-    aside nav a {
-      color: black; }
 
 .post article.body-copy, .post .history, .post #comments {
   width: 74%;
@@ -480,12 +475,12 @@ aside {
     .post .meta .entry-tags:after {
       clear: both; }
   .post .meta .share a span {
-    font-size: 1.8em;
-    margin-right: .2em; }
+    font-size: 1.6em;
+    margin-right: .3em; }
     .post .meta .share a span.icon-twitter, .post .meta .share a span.icon-twitter-sign {
       color: #55acee; }
     .post .meta .share a span.icon-twitter {
-      font-size: 2em; }
+      font-size: 1.8em; }
     .post .meta .share a span.icon-facebook, .post .meta .share a span.icon-facebook-sign {
       color: #4C66A4; }
 .post #comments .comment-body {
@@ -527,6 +522,15 @@ aside {
     float: right;
     margin: 0; }
 
+aside nav {
+  font-family: "OpenSans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif; }
+  aside nav li {
+    line-height: 1.3;
+    margin: 0 0 .6em; }
+  aside nav a {
+    font-size: 0.8125em;
+    color: black;
+    display: inline; }
 aside p {
   margin: 0;
   clear: both; }
