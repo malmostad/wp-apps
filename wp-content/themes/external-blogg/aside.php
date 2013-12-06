@@ -1,12 +1,8 @@
 <!--eri-no-index-->
 <aside role="complementary">
   <?php if (is_home() && is_active_sidebar('home-page-widget-area')): ?>
-    <div id="primary" class="widget-area" role="complementary">
-      <ul>
-        <li>
-          <?php dynamic_sidebar('home-page-widget-area') ?>
-        </li>
-      </ul>
+    <div class="widget-area">
+      <?php dynamic_sidebar('home-page-widget-area') ?>
     </div>
   <?php endif ?>
 

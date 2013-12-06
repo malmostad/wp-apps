@@ -11,8 +11,15 @@ aside {
       display: inline;
     }
   }
-  p {
-    margin: 0;
-    clear: both;
+  .widget-area {
+    margin: .2em 0 1em;
+    a {
+      display: inline;
+    }
+    p {
+      margin: 0 0 1em;
+      clear: both;
+    }
   }
+
 }

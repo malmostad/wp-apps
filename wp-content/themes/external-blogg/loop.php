@@ -5,15 +5,17 @@
   $alt = isset($alt) ? $alt : "Prenumerera på RSS-flödet för {$title}";
 ?>
 <section class="loop" role="main">
-  <h1 class="page-title"><?php echo $title ?></h1>
+  <?php if (!is_home()): ?>
+    <h1 class="page-title"><?php echo $title ?></h1>
+  <?php endif ?>
 
-  <?php if (have_posts()) : ?>
-    <?php  while (have_posts()): the_post(); ?>
-      <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <?php if (have_posts()): ?>
+    <?php while (have_posts()): the_post(); ?>
+      <section id="post-<?php the_ID(); ?>" <?php post_class() ?>>
         <div class="entry-meta">
           <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
             <div class="avatar">
-                <?php echo get_avatar(get_the_author_meta( 'user_email' ), 139); ?>
+              <?php echo get_avatar(get_the_author_meta('user_email'), 139) ?>
             </div>
             <p class="author vcard"><?php the_author() ?></p>
           </a>
