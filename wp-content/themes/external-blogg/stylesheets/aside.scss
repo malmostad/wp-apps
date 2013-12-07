@@ -1,4 +1,10 @@
 aside {
+  li:first-child a, &:hover {
+    border: none;
+  }
+  h1 a {
+    border-width: 0;
+  }
   nav {
     font-family: $sansSerif;
     li {
@@ -11,8 +17,28 @@ aside {
       display: inline;
     }
   }
+  .latest-post {
+    a {
+      padding: 0 0 1em;
+      color: black;
+    }
+    h2 {
+      font-family: $sansSerif;
+      font-size: emize(13);
+    }
+    time {
+      color: black;
+      font-size: emize(11);
+      margin-left: 22%;
+      display: block;
+    }
+    p {
+      clear: left;
+      margin: 0;
+    }
+  }
   .widget-area {
-    margin: .2em 0 1em;
+    margin: 0 0 1em;
     a {
       display: inline;
     }

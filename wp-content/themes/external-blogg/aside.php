@@ -7,7 +7,7 @@
   <?php endif ?>
 
   <?php if (!is_home()): ?>
-    <h1><a href="<?php bloginfo("url")?>">Senaste inläggen</a></h1>
+    <h1><a href="<?php bloginfo("url")?>">Malmö stad bloggar</a></h1>
     <ul class="latest-post">
       <?php
         global $template_vars;
@@ -17,13 +17,10 @@
           <li>
             <a href="<?php echo get_permalink() ?>">
               <div class="featured-image">
-                <?php echo get_avatar( get_the_author_meta( 'user_email' ), 48) ?>
+                <?php echo get_avatar(get_the_author_meta('user_email'), 48) ?>
               </div>
               <h2><?php the_title() ?></h2>
-              <p>
-                <time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>
-                <?php echo truncate_excerpt(get_the_content(), 20) ?>
-              </p>
+              <time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>
             </a>
           </li>
         <?php endwhile ?>
