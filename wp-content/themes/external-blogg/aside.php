@@ -29,6 +29,7 @@
   <?php endif ?>
 
   <nav>
+    <h1>Här hittar du</h1>
     <ul>
       <li><a href="<?php bloginfo('url'); ?>/">Alla inlägg</a></li>
       <li><a href="<?php bloginfo('url'); ?>/bloggare">Bloggare</a></li>

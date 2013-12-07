@@ -545,22 +545,24 @@ aside nav {
   aside nav a {
     font-size: 0.8125em;
     color: black; }
-aside .latest-post a {
-  padding: 0 0 1em;
-  color: black; }
-aside .latest-post h2 {
-  font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-  font-size: 0.8125em; }
-aside .latest-post time {
-  color: black;
-  font-size: 0.6875em;
-  margin-left: 22%;
-  display: block; }
-aside .latest-post p {
-  clear: left;
-  margin: 0; }
+aside .latest-post {
+  margin-bottom: 1.5em; }
+  aside .latest-post a {
+    padding: 0 0 1em;
+    color: black; }
+  aside .latest-post h2 {
+    font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.8125em; }
+  aside .latest-post time {
+    color: black;
+    font-size: 0.6875em;
+    margin-left: 22%;
+    display: block; }
+  aside .latest-post p {
+    clear: left;
+    margin: 0; }
 aside .widget-area {
-  margin: 0 0 1em; }
+  margin: 0 0 2em; }
   aside .widget-area p {
     margin: 0 0 1em;
     clear: both; }
