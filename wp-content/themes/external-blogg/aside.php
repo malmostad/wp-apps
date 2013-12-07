@@ -7,7 +7,7 @@
   <?php endif ?>
 
   <?php if (!is_home()): ?>
-    <h1><a href="<?php bloginfo("url")?>">Malmö stad bloggar</a></h1>
+    <h1><a href="<?php bloginfo("url")?>">Senaste inläggen</a></h1>
     <ul class="latest-post">
       <?php
         global $template_vars;

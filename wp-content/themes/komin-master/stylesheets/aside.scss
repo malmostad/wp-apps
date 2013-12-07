@@ -1,6 +1,6 @@
 aside {
   margin-bottom: 1em;
-  a {
+  .latest-post a {
     clear: both;
     display: block;
     @include clearfix();

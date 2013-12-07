@@ -297,7 +297,7 @@ menu.history {
 
 aside {
   margin-bottom: 1em; }
-  aside a {
+  aside .latest-post a {
     clear: both;
     display: block;
     *zoom: 1;
@@ -309,11 +309,11 @@ aside {
     border: solid transparent;
     border-width: 1px 0;
     margin: 0; }
-    aside a:before, aside a:after {
+    aside .latest-post a:before, aside .latest-post a:after {
       display: table;
       content: "";
       line-height: 0; }
-    aside a:after {
+    aside .latest-post a:after {
       clear: both; }
   aside li:first-child a:hover {
     border-top-color: whitesmoke; }
@@ -536,8 +536,7 @@ aside nav {
     margin: 0 0 .6em; }
   aside nav a {
     font-size: 0.8125em;
-    color: black;
-    display: inline; }
+    color: black; }
 aside .latest-post a {
   padding: 0 0 1em;
   color: black; }
@@ -554,8 +553,6 @@ aside .latest-post p {
   margin: 0; }
 aside .widget-area {
   margin: 0 0 1em; }
-  aside .widget-area a {
-    display: inline; }
   aside .widget-area p {
     margin: 0 0 1em;
     clear: both; }
