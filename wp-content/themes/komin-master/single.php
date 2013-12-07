@@ -4,7 +4,7 @@
     <?php while (have_posts()): the_post(); ?>
 
       <h1><?php the_title(); ?></h1>
-      <time pubdate><?php echo get_the_date() . ' ' . get_the_time() ?></time>
+      <time><?php echo get_the_date() . ' ' . get_the_time() ?></time>
 
       <?php if ( has_post_thumbnail() ) { ?>
         <div class="featured-image">

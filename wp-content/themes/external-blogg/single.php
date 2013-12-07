@@ -12,7 +12,7 @@
           <p class="author vcard"><?php the_author() ?></p>
         </a>
       </div>
-      <time pubdate><?php echo get_the_date() . ' ' . get_the_time() ?></time>
+      <time><?php echo get_the_date() . ' ' . get_the_time() ?></time>
       <dl class="entry-meta">
         <dt class="meta-prep meta-prep-tags">Kategorier:</dt>
         <dd>
