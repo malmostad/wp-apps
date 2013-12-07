@@ -3,6 +3,9 @@
     @include columns(9, true);
     float: right;
   }
+  .body-copy h1 {
+    margin-top: 0;
+  }
   article {
     margin-top: .5em;
     .entry-meta, .entry-tags {

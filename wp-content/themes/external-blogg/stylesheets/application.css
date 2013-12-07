@@ -423,6 +423,8 @@ aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: right; }
+.post .body-copy h1 {
+  margin-top: 0; }
 .post article {
   margin-top: .5em; }
   .post article .entry-meta, .post article .entry-tags {
@@ -491,6 +493,12 @@ aside {
 
 .loop {
   margin-top: 0; }
+  .loop section.post {
+    padding: 0 0 1em; }
+    .loop section.post .entry-meta {
+      margin-top: 0; }
+    .loop section.post h1 {
+      margin: -.2em 0 0; }
   .loop .post .entry-meta {
     margin-top: .5em;
     width: 22%;
