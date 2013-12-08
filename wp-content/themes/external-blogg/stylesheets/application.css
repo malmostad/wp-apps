@@ -380,6 +380,9 @@ body {
   min-width: 56em;
   margin: 0 1em 2em; }
 
+body > .wrapper {
+  padding: 0; }
+
 .wrapper, .breadcrumbs {
   *zoom: 1;
   max-width: 56em;
@@ -596,7 +599,9 @@ aside .widget-area {
     margin-right: 0; }
     body .wrapper {
       margin: 0 1.5em;
-      padding-bottom: 1em; } }
+      padding-bottom: 1em; }
+    body .breadcrumbs {
+      margin: .5em 1.5em; } }
 @media (max-width: 54em) {
   [role="main"] {
     width: 100%;
@@ -638,7 +643,14 @@ aside .widget-area {
   .meta .author-avatar .author {
     clear: both;
     float: none;
-    text-align: left; } }
+    text-align: left; }
+
+  aside .latest-post h2 {
+    font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+    font-size: 1.125em; }
+  aside .latest-post time {
+    font-size: 0.8125em;
+    margin-left: 18%; } }
 @media (max-width: 32em) {
   .post article.body-copy, .post .history, .post #comments, .post .meta {
     width: 100%;
@@ -667,13 +679,8 @@ aside .widget-area {
   .post article.body-copy {
     float: none; }
 
-  aside {
-    width: 100%;
-    margin-right: 4%;
-    margin-right: 0;
-    float: none;
-    float: left;
-    -ms-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; } }
+  aside .latest-post h2 {
+    font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.8125em; }
+  aside .latest-post time {
+    font-size: 0.6875em; } }

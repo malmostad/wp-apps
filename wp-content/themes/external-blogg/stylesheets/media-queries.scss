@@ -13,6 +13,9 @@
       margin: 0 1.5em;
       padding-bottom: 1em;
     }
+    .breadcrumbs {
+      margin: .5em 1.5em;
+    }
   }
 }
 
@@ -52,6 +55,16 @@
       }
     }
   }
+  aside .latest-post {
+    h2 {
+      font-family: $serif;
+      font-size: emize(18);
+    }
+    time {
+      font-size: emize(13);
+      margin-left: 18%;
+    }
+  }
 }
 
 @media ( max-width: 32em ) {
@@ -85,7 +98,13 @@
       float: none;
     }
   }
-  aside {
-    @include columns(12);
+  aside .latest-post {
+    h2 {
+      font-family: $sansSerif;
+      font-size: emize(13);
+    }
+    time {
+      font-size: emize(11);
+    }
   }
 }

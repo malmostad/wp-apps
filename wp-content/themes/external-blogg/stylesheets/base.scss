@@ -3,6 +3,9 @@ body {
   min-width: 56em;
   margin: 0 1em 2em;
 }
+body > .wrapper {
+  padding: 0;
+}
 .wrapper, .breadcrumbs {
   @include clearfix();
   max-width: 56em;
