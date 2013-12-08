@@ -22,6 +22,13 @@ function truncate_excerpt($text, $limit) {
   return $text;
 }
 
+// Cut the text to $limit number of chars
+function truncate_excerpt_chars($text, $limit) {
+  $text = do_shortcode($text);
+  $text = strip_tags($text);
+  return mb_substr($text, 0, 199);
+}
+
 function get_top_posts($except = null, $max = 5) {
   return new WP_Query(array(
     'posts_per_page' => $max,
