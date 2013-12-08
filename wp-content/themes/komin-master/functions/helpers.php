@@ -28,3 +28,7 @@ function get_top_posts($except = null, $max = 5) {
     'post__not_in' => array($except)
   ));
 }
+
+function get_gravatar_url($email) {
+  return 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($email))) . "?s=180&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D139";
+}
