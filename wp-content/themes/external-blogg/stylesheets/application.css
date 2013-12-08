@@ -647,7 +647,8 @@ aside .widget-area {
 
   aside .latest-post h2 {
     font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
-    font-size: 1.125em; }
+    font-size: 1.125em;
+    color: #007133; }
   aside .latest-post time {
     font-size: 0.8125em;
     margin-left: 18%; } }
@@ -681,6 +682,7 @@ aside .widget-area {
 
   aside .latest-post h2 {
     font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-    font-size: 0.8125em; }
+    font-size: 0.8125em;
+    color: black; }
   aside .latest-post time {
     font-size: 0.6875em; } }
