@@ -35,7 +35,7 @@
       <li><a href="<?php bloginfo('url'); ?>/bloggare">Bloggare</a></li>
       <li><a href="<?php bloginfo('url'); ?>/kategorier">Kategorier</a></li>
       <li><a href="<?php bloginfo('url'); ?>/etiketter">Etiketter</a></li>
-      <li><a href="<?php bloginfo('url'); ?>/arkiv">Månadsarkiv</a></li>
+      <li><a href="<?php bloginfo('url'); ?>/arkiv">Arkiv</a></li>
     </ul>
   </nav>
 
