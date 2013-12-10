@@ -31,6 +31,7 @@
 <script>var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";</script>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s flöde" href="<?php bloginfo('url'); ?>/mainfeed/"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s kommentarsflöde" href="<?php bloginfo('url'); ?>/comments/feed/"/>
+<link rel="icon" type="image/x-icon" href="<?php echo $mconfig['asset_host'] ?>favicon.ico"/>
 <?php
   if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
   wp_head();
