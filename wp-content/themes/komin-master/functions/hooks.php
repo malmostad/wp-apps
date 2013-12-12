@@ -118,6 +118,9 @@ function my_wp_title($title, $sep) {
 
   if (is_tax()) {
     $term = get_queried_object();
+    if (is_feed()) {
+      return  " $sep $term->name";
+    }
     $title = "$term->name $sep ";
   }
   if (is_feed()) {
