@@ -1,22 +1,13 @@
-<!DOCTYPE html>
+<?php global $mconfig; ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title><?php
-  global $page, $paged, $mconfig;
-
-  // Description for the home/front page.
-  $site_description = get_bloginfo( 'description', 'display' );
-  if ( $site_description && ( is_home() || is_front_page() ) ) echo "$site_description - ";
-  wp_title( '-', true, 'right' );
-  bloginfo( 'name' );
-
-?></title>
+<title><?php wp_title('-', true, 'right') ?></title>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
-<?php if ( is_single() ) {
+<?php if (is_single()) {
   // Meta tags for main categories fetched by Siteseeker
-  foreach( (get_the_category() ) as $term ) {
+  foreach((get_the_category()) as $term) {
     if ($term->parent == 0) {
       echo "<meta name='eri-cat' content='$term->name'/>\n";
     }

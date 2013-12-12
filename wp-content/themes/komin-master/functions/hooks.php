@@ -112,3 +112,25 @@ function allow_domain_redirect($allowed) {
   $allowed[] = 'webapps06.malmo.se';
   return $allowed;
 }
+
+function my_wp_title($title, $sep) {
+  global $paged, $page;
+
+  if (is_tax()) {
+    $term = get_queried_object();
+    $title = "$term->name $sep ";
+  }
+  if (is_feed()) {
+    return $title;
+  }
+
+  $title .= get_bloginfo('name');
+
+  // Add the site description for the home/front page.
+  $site_description = get_bloginfo( 'description', 'display' );
+  if ( $site_description && (is_home() || is_front_page())) {
+    $title = "$title $sep $site_description";
+  }
+  return $title;
+}
+add_filter('wp_title', 'my_wp_title', 10, 2);

@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> id="html">
+<?php global $mconfig; ?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-<title><?php
-  global $page, $paged, $mconfig;
-
-  // Description for the home/front page.
-  $site_description = get_bloginfo( 'description', 'display' );
-  if ( $site_description && ( is_home() || is_front_page() ) ) echo "$site_description - ";
-  wp_title( '-', true, 'right' );
-  bloginfo( 'name' );
-?></title>
+<title><?php wp_title('-', true, 'right') ?></title>
 <!--[if lte IE 8]><script src="<?php echo $mconfig['asset_host'] ?>html5shiv-printshiv.js" type="text/javascript"></script><![endif]-->
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
 <?php
