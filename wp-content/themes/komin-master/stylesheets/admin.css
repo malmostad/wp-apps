@@ -22,4 +22,6 @@
   color: #000;
   text-decoration: none;
   cursor: text;
+  height: auto !important;
+  width: auto !important;
 }
