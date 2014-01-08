@@ -1,6 +1,10 @@
 .htaccess
 .DS_Store
+licens-sv_SE.txt
+license.txt
+readme.html
 wp-config.php
+wp-config-sample.php
 wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/
@@ -47,4 +51,5 @@ wp-content/plugins/wpdirauth
 wp-content/plugins/most-commented
 wp-content/plugins/content-scheduler
 wp-content/plugins/auto-hyperlink-urls
-
+wp-content/plugins/saml-20-single-sign-on/etc/certs/
+wp-content/plugins/saml-20-single-sign-on/etc/config/saml20-idp-remote.ini
