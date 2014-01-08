@@ -18,4 +18,6 @@ else {
   $mconfig['loglevel'] = 1;
   $mconfig['cache_engine'] = 'apc';
 }
+
 $mconfig['cache_id'] = 'hr_' . $mconfig['env'];
+$mconfig['eri_cats'] = false;

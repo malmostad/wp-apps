@@ -23,4 +23,6 @@ else {
   $mconfig['loglevel'] = 1;
   $mconfig['cache_engine'] = 'apc';
 }
+
 $mconfig['cache_id'] = 'external_blog_' . $mconfig['env'];
+$mconfig['eri_cats'] = false;

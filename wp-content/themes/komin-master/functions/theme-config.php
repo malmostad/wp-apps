@@ -30,4 +30,5 @@ if (empty($mconfig['asset_host'])) { // To make it possible to override it in ch
     $mconfig['cache_engine'] = 'apc';
   }
   $mconfig['cache_id'] = 'news_' . $mconfig['env'];
+  $mconfig['eri_cats'] = true;
 }

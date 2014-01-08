@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title><?php wp_title('-', true, 'right') ?></title>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
-<?php if (is_single()) {
+<?php if (is_single() && $mconfig['eri_cats']) {
   // Meta tags for main categories fetched by Siteseeker
   foreach((get_the_category()) as $term) {
     if ($term->parent == 0) {
