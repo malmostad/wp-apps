@@ -53,3 +53,5 @@ wp-content/plugins/content-scheduler
 wp-content/plugins/auto-hyperlink-urls
 wp-content/plugins/saml-20-single-sign-on/etc/certs/
 wp-content/plugins/saml-20-single-sign-on/etc/config/saml20-idp-remote.ini
+
+wp-content/themes/twentyfourteen
