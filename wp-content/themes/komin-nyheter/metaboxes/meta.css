@@ -90,10 +90,15 @@
 }
 
 .wpa_group-links input {
-  width: 511px;
+  width: 100%;
   margin: 0;
 }
 
+
+.mb_control textarea {
+    resize: none;
+    width: 100%;
+}
 
 /* Editor field width
 .mceLayout {
