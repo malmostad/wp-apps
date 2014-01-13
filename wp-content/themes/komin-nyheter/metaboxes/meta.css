@@ -98,6 +98,8 @@
 .mb_control textarea {
     resize: none;
     width: 100%;
+    border: none;
+    box-shadow: none;
 }
 
 /* Editor field width
