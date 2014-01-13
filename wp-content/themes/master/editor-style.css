@@ -5,7 +5,7 @@ Theme Name: Malmo_Theme
 Used to style the TinyMCE editor.
 */
 html .mceContentBody {
-	max-width: 511px;
+	max-width: 585px;
 }
 
 p,
@@ -29,7 +29,7 @@ pre, code, code var {
 }
 input, textarea {
 	font-size: 15px;
-	line-height: 21px; 
+	line-height: 21px;
 }
 hr {
 	background-color: #e7e7e7;
@@ -190,7 +190,7 @@ img.aligncenter {
   border-radius: 0;
   margin: 0 0 10px 0;
   padding: 0;
-  text-align: left;	
+  text-align: left;
 }
 .wp-caption .wp-caption-dd {
 	border: none;
@@ -271,6 +271,6 @@ li {
   padding: 0;
 }
 
-body { 
+body {
   font-family: Georgia, 'DejaVu Serif', 'Bitstream Vera Serif', serif;
 }
