@@ -1,5 +1,5 @@
-// sass --watch komin-master/stylesheets/application.scss komin-nyheter/stylesheets/application.scss  komin-blogg/stylesheets/application.scss   external-blogg/stylesheets/application.scss
-// Add --style compressed before deployment
+// sass --watch master/stylesheets/application.scss komin-nyheter/stylesheets/application.scss  komin-blogg/stylesheets/application.scss   external-blogg/stylesheets/application.scss
+// sass --watch --style compressed  master/stylesheets/application.scss komin-nyheter/stylesheets/application.scss  komin-blogg/stylesheets/application.scss   external-blogg/stylesheets/application.scss
 @import 'variables';
 @import 'mixins';
 @import 'functions';
