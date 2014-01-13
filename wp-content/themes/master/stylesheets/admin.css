@@ -25,3 +25,8 @@
   height: auto !important;
   width: auto !important;
 }
+
+.mceToolbar > tbody > tr > td {
+  float: left;
+  min-height: 28px;
+}
