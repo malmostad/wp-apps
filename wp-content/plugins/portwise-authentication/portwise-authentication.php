@@ -14,6 +14,8 @@
     define('PORTWISE_SIGNOUT_URL', 'https://sso.example.org/wa/logout');
 */
 
+$portwise = new PortwiseAuthentication();
+
 class PortwiseAuthentication {
   function __construct() {
     add_action('after_setup_theme', array($this, 'signon'));
@@ -34,17 +36,24 @@ class PortwiseAuthentication {
     }
   }
 
-  private function signout() {
+  public function signout() {
+    wp_logout();
+    wp_redirect(PORTWISE_SIGNOUT_URL);
   }
 
-  private function trust_portwise() {
+  private function trust_request() {
+    // Check that the request comes from Portwise, i.e. provides:
+    //   an X-UID header
+    //   PORTWISE_IP_ADDRESS
+    //   PORTWISE_TOKEN
+    //   PORTWISE_REQUIRE_SSL
   }
 
-  private function add_user() {
+  private function add_user($userdata) {
+    wp_insert_user($userdata);
   }
 
-  private function update_user() {
+  private function update_user($userdata) {
+    wp_update_user($userdata);
   }
 }
-
-$portwise = new PortwiseAuthentication();
