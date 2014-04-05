@@ -10,6 +10,16 @@ function log_db_queries() {
   }
 }
 
+function log_debug($log)  {
+  if (true === WP_DEBUG) {
+    if (is_array($log) || is_object($log)) {
+      error_log(print_r($log, true) );
+    } else {
+      error_log($log);
+    }
+  }
+}
+
 // Cut the text to $limit number of words
 function truncate_excerpt($text, $limit) {
   $text = do_shortcode($text);
