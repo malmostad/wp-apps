@@ -19,6 +19,7 @@ $portwise = new PortwiseAuthentication();
 class PortwiseAuthentication {
   function __construct() {
     add_action('after_setup_theme', array($this, 'signon'));
+    add_action('wp_logout', array($this, 'signout'));
   }
 
   public function signon() {
@@ -32,14 +33,14 @@ class PortwiseAuthentication {
         wp_set_auth_cookie($user->ID, false, PORTWISE_REQUIRE_SSL);
         do_action('wp_login', $user->user_login);
         error_log("is_user_logged_in: " . is_user_logged_in());
-        error_log("user: " . $user->user_login);
       }
     }
   }
 
   public function signout() {
-    wp_logout();
+    wp_clear_auth_cookie();
     wp_redirect(PORTWISE_SIGNOUT_URL);
+    exit;
   }
 
   private function trust_request() {
