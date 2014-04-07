@@ -2,39 +2,43 @@
 /*
   Plugin Name: Portwise Authentication
   Plugin URI: https://github.com/malmostad/intranet-wordpress-themes
-  Description: Authentication with Portwise reveresed proxy http headers method
-               If user is present, it is updated with attributes from Portwise
-               If user isn't present, it is created with attributes from Portwise
+  Description: Authentication with Portwise reveresed proxy http headers method.
+               If user is present, it is updated with attributes from Portwise.
+               If user isn't present, it is created with attributes from Portwise.
+               This is a non-GUI plugin relying on wp-config settings.
   Version: 0.0.1
   Author: Malmö stad
   Author URI: https://github.com/malmostad
 
-  Define the following constants in wp-config.php:
-    define('PORTWISE_IP_ADDRESS', '123.123.123.123');
-    define('PORTWISE_TOKEN', 'long token');
-    define('PORTWISE_REQUIRE_SSL', true);
-    define('PORTWISE_SIGNOUT_URL', 'https://sso.example.org/wa/logout');
+  Instructions:
+    Define the following constants in wp-config.php:
+      define('PORTWISE_IP_ADDRESS', '123.123.123.123');
+      define('PORTWISE_TOKEN', 'long token');
+      define('PORTWISE_REQUIRE_SSL', true);
+      define('PORTWISE_SIGNOUT_URL', 'https://sso.example.org/wa/logout');
 */
 
 $portwise = new PortwiseAuthentication();
 
 class PortwiseAuthentication {
   function __construct() {
-    add_action('after_setup_theme', array($this, 'signon'));
-    add_action('wp_logout', array($this, 'signout'));
-    $_SERVER['HTTP_X_TOKEN'] = PORTWISE_TOKEN;
-    $_SERVER['HTTP_X_UID'] = "martha2";
+    if ($this->trust_request()) {
+      add_action('after_setup_theme', array($this, 'signon'));
+      add_action('wp_logout', array($this, 'signout'));
+    }
   }
 
   public function signon() {
     error_log("portwise_authentication");
-    if ($this->trust_request() && !is_user_logged_in()) {
+    if (!is_user_logged_in()) {
       error_log("START AUTH");
 
-      if (username_exists($this->username)) {
-        $user = get_user_by('login', $this->$username);
+      if (username_exists($this->username())) {
+        error_log("User exits");
+        $user = get_user_by('login', $this->username());
         $this->update_user($user);
       } else {
+        error_log("User dosn't exit");
         $user = $this->add_user();
       }
 
@@ -49,7 +53,6 @@ class PortwiseAuthentication {
   public function signout() {
     wp_clear_auth_cookie();
     wp_redirect(PORTWISE_SIGNOUT_URL);
-    exit;
   }
 
   private function trust_request() {
@@ -67,16 +70,25 @@ class PortwiseAuthentication {
       'display_name' => $this->display_name(),
       'user_pass'    => wp_generate_password(64, true, true) // unusable pw
     ));
+    if (is_wp_error($id)) {
+      error_log($id->get_error_message());
+      return false;
+    }
     return get_user_by('id', $id);
   }
 
   private function update_user($user) {
-    return wp_update_user(array(
-      'id'           => $user->ID,
+    $id = wp_update_user(array(
+      'ID'           => $user->ID,
       'user_email'   => $this->email(),
       'nickname'     => $this->nickname(),
       'display_name' => $this->display_name()
     ));
+    if (is_wp_error($id)) {
+      error_log($id->get_error_message());
+      return false;
+    }
+    return $id;
   }
 
   private function username() {
@@ -84,14 +96,14 @@ class PortwiseAuthentication {
   }
 
   private function display_name() {
-    return $_SERVER['HTTP_X_DISPLAYNAME']? $_SERVER['HTTP_X_DISPLAYNAME'] : $_SERVER['HTTP_X_UID'];
+    return !empty($_SERVER['HTTP_X_DISPLAYNAME']) ? $_SERVER['HTTP_X_DISPLAYNAME'] : $_SERVER['HTTP_X_UID'];
   }
 
   private function nickname() {
-    return $this->displayname();
+    return $this->display_name();
   }
 
   private function email() {
-    return $_SERVER['HTTP_X_EMAIL']? $_SERVER['HTTP_X_EMAIL'] : "{$_SERVER['HTTP_X_UID']}@malmo.se";
+    return !empty($_SERVER['HTTP_X_EMAIL']) ? $_SERVER['HTTP_X_EMAIL'] : "{$_SERVER['HTTP_X_UID']}@malmo.se";
   }
 }
