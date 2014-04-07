@@ -20,6 +20,7 @@ class PortwiseAuthentication {
   function __construct() {
     add_action('after_setup_theme', array($this, 'signon'));
     add_action('wp_logout', array($this, 'signout'));
+    error_log("TRUST: " . $this->trust_request());
   }
 
   public function signon() {
@@ -44,11 +45,10 @@ class PortwiseAuthentication {
   }
 
   private function trust_request() {
-    // Check that the request comes from Portwise, i.e. provides:
-    //   an X-UID header
-    //   PORTWISE_IP_ADDRESS
-    //   PORTWISE_TOKEN
-    //   PORTWISE_REQUIRE_SSL
+    return ($_SERVER['REMOTE_ADDR'] == PORTWISE_IP_ADDRESS && // HTTP_CLIENT_IP HTTP_X_FORWARDED_FOR
+        $_SERVER['HTTP_X_TOKEN'] == PORTWISE_TOKEN &&
+        !empty($_SERVER['HTTP_X_UID']) &&
+        (PORTWISE_REQUIRE_SSL ? $_SERVER['HTTPS'] == "on" : true));
   }
 
   private function add_user($userdata) {
