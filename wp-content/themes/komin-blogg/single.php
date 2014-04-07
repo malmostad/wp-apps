@@ -55,10 +55,8 @@
         <?php }
           the_content();
           $postID = $post->ID;
-          if (is_user_logged_in()):
         ?>
-        <a class="btn btn-mini edit" href="<?php echo get_edit_post_link() ?>">Redigera</a>
-      <?php endif; ?>
+        <?php edit_post_link('Redigera', '<span class="btn btn-mini edit">', '</span>'); ?>
 
       <dl class="entry-meta">
         <dt class="meta-prep meta-prep-tags">Kategorier:</dt>

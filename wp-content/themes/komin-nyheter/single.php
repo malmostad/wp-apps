@@ -76,9 +76,7 @@
       endwhile; ?>
   </article>
 
-  <?php if (is_user_logged_in()): ?>
-    <a class="btn btn-mini edit" href="<?php echo get_edit_post_link() ?>">Redigera</a>
-  <?php endif; ?>
+  <?php edit_post_link('Redigera', '<span class="btn btn-mini edit">', '</span>'); ?>
 
   <?php comments_template( '', true ); ?>
 

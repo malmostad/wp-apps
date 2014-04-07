@@ -25,13 +25,14 @@ class PortwiseAuthentication {
     error_log("portwise_authentication");
     if (!is_user_logged_in()) {
       error_log("START AUTH");
-      $username = 'martha2';
+      $username = 'admin';
       if (get_user_by('login', $username)) {
         $user = get_user_by('login', $username);
         wp_set_current_user($user->ID, $user->user_login);
         wp_set_auth_cookie($user->ID, false, PORTWISE_REQUIRE_SSL);
         do_action('wp_login', $user->user_login);
         error_log("is_user_logged_in: " . is_user_logged_in());
+        error_log("user: " . $user->user_login);
       }
     }
   }
