@@ -53,6 +53,7 @@ class PortwiseAuthentication {
   public function signout() {
     wp_clear_auth_cookie();
     wp_redirect(PORTWISE_SIGNOUT_URL);
+    exit;
   }
 
   private function trust_request() {
