@@ -121,36 +121,36 @@
 
 @font-face {
   font-family: 'OpenSans';
-  src: url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.eot');
+  src: url('//assets.malmo.se/internal/3.0/OpenSans-Regular-webfont.eot');
   src: local('☺'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.woff') format('woff'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.ttf') format('truetype'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Regular-webfont.svg#XOpenSans') format('svg');
+       url('//assets.malmo.se/internal/3.0/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Regular-webfont.woff') format('woff'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Regular-webfont.svg#XOpenSans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.eot');
+  src: url('//assets.malmo.se/internal/3.0/OpenSans-Italic-webfont.eot');
   src: local('☺'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.woff') format('woff'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.ttf') format('truetype'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Italic-webfont.svg#XOpenSans') format('svg');
+       url('//assets.malmo.se/internal/3.0/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Italic-webfont.woff') format('woff'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Italic-webfont.ttf') format('truetype'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Italic-webfont.svg#XOpenSans') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.eot');
+  src: url('//assets.malmo.se/internal/3.0/OpenSans-Bold-webfont.eot');
   src: local('☺'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.woff') format('woff'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.ttf') format('truetype'),
-       url('//webapps06.malmo.se/assets-3.0/OpenSans-Bold-webfont.svg#XOpenSans') format('svg');
+       url('//assets.malmo.se/internal/3.0/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Bold-webfont.woff') format('woff'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Bold-webfont.ttf') format('truetype'),
+       url('//assets.malmo.se/internal/3.0/OpenSans-Bold-webfont.svg#XOpenSans') format('svg');
   font-weight: bold;
   font-style: normal;
 }
