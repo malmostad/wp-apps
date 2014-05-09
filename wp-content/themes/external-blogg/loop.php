@@ -4,7 +4,7 @@
   $feed_url = isset($template_vars['feed_url']) ? $template_vars['feed_url'] : "./feed";
   $alt = isset($alt) ? $alt : "Prenumerera på RSS-flödet för {$title}";
 ?>
-<section class="loop" role="main">
+<main role="main">
   <?php if (!is_home()): ?>
     <h1 class="page-title"><?php echo $title ?></h1>
   <?php endif ?>
@@ -37,4 +37,4 @@
     <img src="<?php echo get_template_directory_uri() . '/images/feed-18.png' ?>" alt="<?php echo $alt ?>" title="<?php echo $alt ?>" />
   </a>
   <?php get_template_part('nav-posts') ?>
-</section>
+</main>

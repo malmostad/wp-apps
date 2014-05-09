@@ -1,115 +1,115 @@
-@media ( max-width: 68em ) {
-  body {
-    min-width: 0;
-  }
-}
+// @media ( max-width: 68em ) {
+//   body {
+//     min-width: 0;
+//   }
+// }
 
-@media ( max-width: 51em ) {
-  body {
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    .wrapper {
-      margin: 0 1.5em;
-      padding-bottom: 1em;
-    }
-    #masthead-search {
-      margin-right: 1em;
-    }
-    .breadcrumbs {
-      margin: .5em 1.5em;
-    }
-  }
-}
+// @media ( max-width: 51em ) {
+//   body {
+//     padding: 0;
+//     margin-left: 0;
+//     margin-right: 0;
+//     .wrapper {
+//       margin: 0 1.5em;
+//       padding-bottom: 1em;
+//     }
+//     #masthead-search {
+//       margin-right: 1em;
+//     }
+//     .breadcrumbs {
+//       margin: .5em 1.5em;
+//     }
+//   }
+// }
 
-@media ( max-width: 54em ) {
-  [role="main"] {
-    @include columns(12);
-    margin-bottom: 1em;
-  }
-  aside {
-    @include columns(12);
-    .featured-image {
-      width: 15%;
-    }
-    h2, p {
-      margin-left: 18%;
-      clear: none;
-    }
-  }
-  body > .wrapper {
-    margin-top: 1em;
-  }
+// @media ( max-width: 54em ) {
+//   main {
+//     @include columns(12);
+//     margin-bottom: 1em;
+//   }
+//   aside {
+//     @include columns(12);
+//     .featured-image {
+//       width: 15%;
+//     }
+//     h2, p {
+//       margin-left: 18%;
+//       clear: none;
+//     }
+//   }
+//   body > .wrapper {
+//     margin-top: 1em;
+//   }
 
-  .meta {
-    .entry-tags, .entry-meta {
-      margin-bottom: .5em;
-    }
-    .author-avatar {
-      img {
-        clear: both;
-        float: none;
-        margin: 0;
-      }
-      .author {
-        clear: both;
-        float: none;
-        text-align: left;
-      }
-    }
-  }
-  aside .latest-post {
-    h2 {
-      font-family: $serif;
-      font-size: emize(18);
-      color: $linkColor;
-    }
-    time {
-      font-size: emize(13);
-      margin-left: 18%;
-    }
-  }
-}
+//   .meta {
+//     .entry-tags, .entry-meta {
+//       margin-bottom: .5em;
+//     }
+//     .author-avatar {
+//       img {
+//         clear: both;
+//         float: none;
+//         margin: 0;
+//       }
+//       .author {
+//         clear: both;
+//         float: none;
+//         text-align: left;
+//       }
+//     }
+//   }
+//   aside .latest-post {
+//     h2 {
+//       font-family: $serif;
+//       font-size: emize(18);
+//       color: $linkColor;
+//     }
+//     time {
+//       font-size: emize(13);
+//       margin-left: 18%;
+//     }
+//   }
+// }
 
-@media ( max-width: 32em ) {
-  .post {
-    article.body-copy, .history, #comments, .meta {
-      @include columns(12);
-    }
-    article.body-copy {
-      overflow: visible;
-    }
-    article {
-      .entry-meta, .entry-tags {
-        display: block;
-      }
-    }
-    .meta {
-      margin: .2em .8em .4em 0;
-      width: 30%;
-      float: left;
-      .entry-meta, .entry-tags {
-        display: none;
-      }
-      .author-avatar {
-        margin-top: .3em;
-        img {
-          max-width: 8em;
-        }
-      }
-    }
-    article.body-copy {
-      float: none;
-    }
-  }
-  aside .latest-post {
-    h2 {
-      font-family: $sansSerif;
-      font-size: emize(13);
-      color: black;
-    }
-    time {
-      font-size: emize(11);
-    }
-  }
-}
+// @media ( max-width: 32em ) {
+//   .post {
+//     article.body-copy, .history, #comments, .meta {
+//       @include columns(12);
+//     }
+//     article.body-copy {
+//       overflow: visible;
+//     }
+//     article {
+//       .entry-meta, .entry-tags {
+//         display: block;
+//       }
+//     }
+//     .meta {
+//       margin: .2em .8em .4em 0;
+//       width: 30%;
+//       float: left;
+//       .entry-meta, .entry-tags {
+//         display: none;
+//       }
+//       .author-avatar {
+//         margin-top: .3em;
+//         img {
+//           max-width: 8em;
+//         }
+//       }
+//     }
+//     article.body-copy {
+//       float: none;
+//     }
+//   }
+//   aside .latest-post {
+//     h2 {
+//       font-family: $sansSerif;
+//       font-size: emize(13);
+//       color: black;
+//     }
+//     time {
+//       font-size: emize(11);
+//     }
+//   }
+// }

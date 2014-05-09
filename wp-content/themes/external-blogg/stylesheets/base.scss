@@ -1,18 +1,19 @@
 body {
-  padding: 0 .5em;
   min-width: 56em;
-  margin: 0 1em 2em;
 }
 body > .wrapper {
-  padding: 0;
+  padding: 0 .5em;
 }
-.wrapper, .breadcrumbs {
+.wrapper {
   @include clearfix();
   max-width: 56em;
   margin: 0 auto;
 }
+.breadcrumbs {
+  margin: .5em 0 1.5em;
+}
 
-[role="main"] {
+main {
   @include columns(9);
 }
 

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div role="main" class="post">
+<main role="main" class="post">
   <?php while (have_posts()): the_post(); ?>
     <div class="body-copy">
       <h1><?php the_title(); ?></h1>
@@ -79,7 +79,7 @@
     <li class="previous"><?php previous_post_link( '%link', '<span class="icon-circle-arrow-left icon-large"></span><span class="title">%title</span>' ); ?></li>
     <li class="next"><?php next_post_link( '%link', '<span class="title">%title</span><span class=" icon-circle-arrow-right icon-large"></span>' ); ?></li>
   </menu>
-</div>
+</main>
 
 <?php
   $template_vars = array('postID' => $postID);
