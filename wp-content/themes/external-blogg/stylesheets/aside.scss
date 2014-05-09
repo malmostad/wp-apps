@@ -1,49 +1,37 @@
 aside {
-  li:first-child a, &:hover {
-    border: none;
+  a {
+    color: black;
   }
-  h1 a {
-    border-width: 0;
-  }
-  nav {
-    font-family: $sansSerif;
-    li {
-      line-height: 1.3;
-      margin: 0 0 .6em;
-    }
-    a {
-      font-size: emize(13, 16);
-      color: black;
-    }
-  }
+//   li:first-child a, &:hover {
+//     border: none;
+//   }
+//   h1 a {
+//     border-width: 0;
+//   }
   .latest-post {
     margin-bottom: 1.5em;
-    a {
-      padding: 0 0 1em;
-      color: black;
-    }
-    h2 {
-      font-family: $sansSerif;
-      font-size: emize(13);
-    }
-    time {
-      color: black;
-      font-size: emize(11);
-      margin-left: 22%;
-      display: block;
-    }
-    p {
-      clear: left;
-      margin: 0;
-    }
-  }
-  .widget-area {
-    margin: 0 0 2em;
-    a {
-    }
-    p {
-      margin: 0 0 1em;
-      clear: both;
-    }
+//     h2 {
+//       font-family: $sansSerif;
+//       font-size: emize(13);
+//     }
+//     time {
+//       color: black;
+//       font-size: emize(11);
+//       margin-left: 22%;
+//       display: block;
+//     }
+//     p {
+//       clear: left;
+//       margin: 0;
+//     }
+//   }
+//   .widget-area {
+//     margin: 0 0 2em;
+//     a {
+//     }
+//     p {
+//       margin: 0 0 1em;
+//       clear: both;
+//     }
   }
 }

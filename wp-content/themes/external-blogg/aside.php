@@ -1,5 +1,5 @@
 <!--eri-no-index-->
-<aside role="complementary">
+<aside class="basic" role="complementary">
   <?php if (is_home() && is_active_sidebar('home-page-widget-area')): ?>
     <div class="widget-area">
       <?php dynamic_sidebar('home-page-widget-area') ?>
@@ -28,8 +28,8 @@
     </ul>
   <?php endif ?>
 
-  <nav>
-    <h1>Här hittar du:</h1>
+  <nav class="basic">
+    <h1>Här hittar du</h1>
     <ul>
       <li><a href="<?php bloginfo('url'); ?>/">Alla inlägg</a></li>
       <li><a href="<?php bloginfo('url'); ?>/bloggare">Bloggare</a></li>
@@ -38,6 +38,5 @@
       <li><a href="<?php bloginfo('url'); ?>/arkiv">Arkiv</a></li>
     </ul>
   </nav>
-
 </aside>
 <!--/eri-no-index-->

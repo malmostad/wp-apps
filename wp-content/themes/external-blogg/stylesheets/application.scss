@@ -1,4 +1,18 @@
-@import '../../master/stylesheets/application';
+// @import '../../master/stylesheets/variables';
+// @import '../../master/stylesheets/mixins';
+// @import '../../master/stylesheets/functions';
+// @import '../../master/stylesheets/base';
+// @import '../../master/stylesheets/post';
+// @import '../../master/stylesheets/comments';
+// @import '../../master/stylesheets/loop';
+// @import '../../master/stylesheets/nav-posts';
+// @import '../../master/stylesheets/aside';
+// @import '../../master/stylesheets/media-queries';
+// @import '../../master/stylesheets/print';
+
+@import 'variables';
+@import 'mixins';
+@import 'functions';
 @import 'base';
 @import 'post';
 @import 'loop';
