@@ -1,16 +1,8 @@
-body {
-  min-width: 56em;
-}
-body > .wrapper {
-  padding: 0 .5em;
-}
 .wrapper {
   @include clearfix();
-  max-width: 56em;
+  max-width: 60em;
   margin: 0 auto;
-}
-.breadcrumbs {
-  margin: .5em 0 1.5em;
+  padding: 0 .5em;
 }
 
 main {
@@ -19,11 +11,4 @@ main {
 
 aside {
   @include columns(3, true);
-  .featured-image {
-    background-color: transparent;
-    width: 18%;
-  }
-  h2, p {
-    margin: 0 0 0 22%;
-  }
 }
