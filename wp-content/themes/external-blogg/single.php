@@ -27,7 +27,7 @@
         };
       </script>
 
-      <a class="btn btn-default btn-sm edit" href="<?php echo get_edit_post_link() ?>">Redigera</a>
+      <?php edit_post_link('Redigera', '<span class="btn btn-default btn-sm edit">', '</span>'); ?>
     </section>
 
     <article class="body-copy">
@@ -50,9 +50,10 @@
 
   <nav>
     <ul class="pagination">
-    <li class="previous"><?php previous_post_link( '%link', '&laquo; %title' ); ?></li>
-    <li class="next"><?php next_post_link( '%link', '%title &raquo;' ); ?></li>
-  </ul>
+      <li class="previous"><?php previous_post_link( '%link', '%title' ); ?></li>
+      <li class="next"><?php next_post_link( '%link', '%title' ); ?></li>
+    </ul>
+  </nav>
 </main>
 
 <?php

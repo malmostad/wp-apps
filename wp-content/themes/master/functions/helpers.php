@@ -37,7 +37,7 @@ function truncate_excerpt_chars($text, $limit) {
   $text = do_shortcode($text);
   $text = strip_tags($text);
   $text = preg_replace('/\s\s+/', ' ', $text);
-  return mb_substr($text, 0, 199);
+  return mb_substr($text, 0, $limit);
 }
 
 function get_top_posts($except = null, $max = 5) {

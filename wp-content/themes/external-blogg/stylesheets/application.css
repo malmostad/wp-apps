@@ -126,6 +126,10 @@ h1.aside, .post #reply-title {
   margin-bottom: 2em; }
 .post .edit {
   margin: 2.5em 0; }
+  .post .edit a {
+    color: black; }
+    .post .edit a:hover {
+      text-decoration: none; }
 .post article .entry-meta, .post article .entry-tags {
   display: none; }
   .post article .entry-meta li:first-child, .post article .entry-tags li:first-child {
@@ -188,15 +192,6 @@ h1.aside, .post #reply-title {
       color: black; }
     .loop .post a:hover {
       text-decoration: none; }
-
-ul.pagination {
-  margin: 1em 0;
-  padding: 0; }
-  ul.pagination li {
-    display: inline-block;
-    font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-    font-size: 0.875em;
-    margin: 0 .5em 0 0; }
 
 aside h1 a, aside li a {
   color: black; }

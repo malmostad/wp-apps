@@ -42,6 +42,12 @@
 
   .edit {
     margin: 2.5em 0;
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   article {
