@@ -1,16 +1,6 @@
 .post {
-  article.body-copy, .history, #comments {
+  article, .history, #comments {
     @include columns(9, true);
-    float: right;
-  }
-
-  article {
-    .entry-meta, .entry-tags {
-      display: none;
-      ul {
-        margin: 0;
-      }
-    }
   }
 
   .meta {
@@ -29,27 +19,40 @@
       font-family: $sansSerif;
       font-size: emize(12);
     }
+  }
+  .entry-meta, .entry-tags {
+    @include clearfix();
+    margin: 1em 0;
+    padding: 0;
+    li {
+      display: inline;
+      margin: 0;
+      font-family: $sansSerif;
+      font-size: emize(12);
+    }
+    li:first-child {
+      font-weight: bold;
+      display: block;
+    }
+  }
+  .entry-tags {
+    margin-bottom: 2em;
+  }
+  .edit {
+    margin: 2.5em 0;
+  }
 
+  article {
     .entry-meta, .entry-tags {
-      @include clearfix();
-      margin: 1em 0;
-      padding: 0;
-      li {
-        display: inline;
-        margin: 0;
-        font-family: $sansSerif;
-        font-size: emize(12);
-      }
+      display: none;
       li:first-child {
         font-weight: bold;
-        display: block;
+        display: inline;
+        &::after {
+          content: ": ";
+          margin-right: .3em;
+        }
       }
-    }
-    .entry-tags {
-      margin-bottom: 2em;
-    }
-    .edit {
-      margin: 2.5em 0;
     }
   }
 }

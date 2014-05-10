@@ -28,19 +28,14 @@ aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.post article.body-copy, .post .history, .post #comments {
+.post article, .post .history, .post #comments {
   width: 74.5%;
   margin-right: 0;
   float: left;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: right; }
-.post article .entry-meta, .post article .entry-tags {
-  display: none; }
-  .post article .entry-meta ul, .post article .entry-tags ul {
-    margin: 0; }
+  box-sizing: border-box; }
 .post .meta {
   width: 23.5%;
   margin-right: 2%;
@@ -60,28 +55,36 @@ aside {
   .post .meta time {
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-size: 0.75em; }
-  .post .meta .entry-meta, .post .meta .entry-tags {
-    *zoom: 1;
-    margin: 1em 0;
-    padding: 0; }
-    .post .meta .entry-meta:before, .post .meta .entry-meta:after, .post .meta .entry-tags:before, .post .meta .entry-tags:after {
-      display: table;
-      content: "";
-      line-height: 0; }
-    .post .meta .entry-meta:after, .post .meta .entry-tags:after {
-      clear: both; }
-    .post .meta .entry-meta li, .post .meta .entry-tags li {
-      display: inline;
-      margin: 0;
-      font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-      font-size: 0.75em; }
-    .post .meta .entry-meta li:first-child, .post .meta .entry-tags li:first-child {
-      font-weight: bold;
-      display: block; }
-  .post .meta .entry-tags {
-    margin-bottom: 2em; }
-  .post .meta .edit {
-    margin: 2.5em 0; }
+.post .entry-meta, .post .entry-tags {
+  *zoom: 1;
+  margin: 1em 0;
+  padding: 0; }
+  .post .entry-meta:before, .post .entry-meta:after, .post .entry-tags:before, .post .entry-tags:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .post .entry-meta:after, .post .entry-tags:after {
+    clear: both; }
+  .post .entry-meta li, .post .entry-tags li {
+    display: inline;
+    margin: 0;
+    font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.75em; }
+  .post .entry-meta li:first-child, .post .entry-tags li:first-child {
+    font-weight: bold;
+    display: block; }
+.post .entry-tags {
+  margin-bottom: 2em; }
+.post .edit {
+  margin: 2.5em 0; }
+.post article .entry-meta, .post article .entry-tags {
+  display: none; }
+  .post article .entry-meta li:first-child, .post article .entry-tags li:first-child {
+    font-weight: bold;
+    display: inline; }
+    .post article .entry-meta li:first-child::after, .post article .entry-tags li:first-child::after {
+      content: ": ";
+      margin-right: .3em; }
 
 .loop {
   margin-top: 0; }

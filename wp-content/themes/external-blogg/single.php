@@ -12,20 +12,7 @@
       </div>
       <time><?php echo get_the_date() . ' ' . get_the_time() ?></time>
 
-      <ul class="entry-meta">
-        <li>Kategorier</li>
-        <?php $terms = get_the_category(); ?>
-        <?php foreach( ($terms ) as $term ) { ?>
-          <li>
-            <a href="<?php echo bloginfo("url") . '/' . $term->taxonomy . '/' . $term->slug ?>"><?php echo $term->name ?></a><?php if ($term != end($terms)) { echo ","; }?>
-          </li>
-        <?php } ?>
-      </ul>
-
-      <ul class="entry-tags">
-        <li>Etiketter</li>
-        <?php echo get_the_tag_list('<li>',', </li><li>','</li>'); ?>
-      </ul>
+      <?php get_template_part('single-meta') ?>
 
       <section class="share">
         <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(the_guid()) ?>" title="Dela sidan på Facebook"><span class="fa fa-facebook-square"></span></a>
@@ -55,30 +42,17 @@
         ?>
       <?php endif; ?>
 
-      <dl class="entry-meta">
-        <dt class="meta-prep meta-prep-tags">Kategorier:</dt>
-        <dd>
-          <ul>
-            <?php foreach( ($terms ) as $term ) { ?>
-              <li>
-                <a href="<?php echo bloginfo("url") . '/' . $term->taxonomy . '/' . $term->slug ?>"><?php echo $term->name ?></a><?php if ($term != end($terms)) { echo ","; }?>
-              </li>
-            <?php } ?>
-          </ul>
-        </dd>
-      </dl>
-      <dl class="entry-tags">
-        <dt class="meta-prep meta-prep-tags">Etiketter:</dt>
-        <dd><ul><?php echo get_the_tag_list('<li>',', </li><li>','</li>'); ?></ul></dd>
-      </dl>
+      <?php get_template_part('single-meta') ?>
     </article>
   <?php endwhile; ?>
 
   <?php comments_template( '', true ); ?>
-  <menu class="history" type="toolbar">
-    <li class="previous"><?php previous_post_link( '%link', '<span class="icon-circle-arrow-left icon-large"></span><span class="title">%title</span>' ); ?></li>
-    <li class="next"><?php next_post_link( '%link', '<span class="title">%title</span><span class=" icon-circle-arrow-right icon-large"></span>' ); ?></li>
-  </menu>
+
+  <nav>
+    <ul class="pagination">
+    <li class="previous"><?php previous_post_link( '%link', '&laquo; %title' ); ?></li>
+    <li class="next"><?php next_post_link( '%link', '%title &raquo;' ); ?></li>
+  </ul>
 </main>
 
 <?php
