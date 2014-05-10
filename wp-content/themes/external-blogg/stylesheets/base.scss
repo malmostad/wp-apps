@@ -6,9 +6,9 @@
 }
 
 main {
-  @include columns(9);
+  @include columns(9, false, 4%);
 }
 
 aside {
-  @include columns(3, true);
+  @include columns(3, true, 4%);
 }

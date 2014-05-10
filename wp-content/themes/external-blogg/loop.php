@@ -4,7 +4,7 @@
   $feed_url = isset($template_vars['feed_url']) ? $template_vars['feed_url'] : "./feed";
   $alt = isset($alt) ? $alt : "Prenumerera på RSS-flödet för {$title}";
 ?>
-<main role="main">
+<main role="main" class="loop">
   <?php if (!is_home()): ?>
     <h1 class="page-title"><?php echo $title ?></h1>
   <?php endif ?>
@@ -23,9 +23,9 @@
         </div>
 
         <a href="<?php the_permalink(); ?>" rel="bookmark">
-          <section class="text">
+          <section class="body-copy">
             <h1><?php the_title(); ?></h1>
-            <p class="entry-summary"><?php echo truncate_excerpt(get_the_content(), 50) ?></p>
+            <p><?php echo truncate_excerpt(get_the_content(), 40) ?></p>
             <p class="comments-link"><?php comments_number('Kommentera', 'En kommentar', '% kommentarer') ?></p>
           </section>
         </a>

@@ -1,32 +1,37 @@
 .loop {
-  section.post {
-    padding: 0 0 1em;
-    .entry-meta {
-      margin-top: 0;
-    }
-    h1 {
-      margin: -.2em 0 0;
-    }
-  }
   margin-top: 0;
   .post {
+    @include clearfix();
+    margin-bottom: 1.5em;
+    h1 {
+      font-size: emize(24);
+    }
+    .body-copy {
+      @include columns(9, true);
+      p {
+        margin: 0 0 .2em;
+      }
+      .comments-link {
+        font-family: $sansSerif;
+        font-size: emize(14);
+      }
+    }
     .entry-meta {
-      margin-top: .5em;
-      @include columns(3, true);
+      @include columns(3);
       font-family: $sansSerif;
       font-size: 1em;
       .author {
         margin-bottom: .2em;
         color: $linkColor;
-        font-size: emize(13, 16);
+        font-size: emize(12);
       }
       time {
-        font-size: emize(11, 16);
+        font-size: emize(12);
       }
       .avatar {
+        margin-top: .2em;
         img {
           width: 100%;
-          // max-width: 10em;
           height: auto;
           border: none;
         }
@@ -35,10 +40,11 @@
         display: block;
       }
     }
-    .text {
-      @include columns(9, true);
-      float: right;
-      margin: 0;
+    a {
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
 }
