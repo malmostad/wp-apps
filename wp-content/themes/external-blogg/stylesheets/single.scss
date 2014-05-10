@@ -1,3 +1,4 @@
+@import "extends";
 .post {
   article, .history, #comments {
     @include columns(9, true);
@@ -8,7 +9,7 @@
     .author {
       font-family: $sansSerif;
       font-size: emize(14);
-      margin-bottom: .2em;
+      margin-bottom: .8em;
       img {
         margin-top: .5em;
         width: 100%;
@@ -38,6 +39,7 @@
   .entry-tags {
     margin-bottom: 2em;
   }
+
   .edit {
     margin: 2.5em 0;
   }
@@ -54,5 +56,9 @@
         }
       }
     }
+  }
+  #reply-title {
+    @extend h1.aside;
+    margin-top: 1.5em;
   }
 }

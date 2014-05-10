@@ -3,9 +3,8 @@ jQuery(document).ready(function($) {
 
   $('#wp-admin-bar-search').hide();
 
-  $('#adminbarsearch input.adminbar-button').val('Sök i bloggarna');
-
   // Hack to buttonize WP hard coded markup
   $('#submit').addClass('btn btn-primary');
   $('.reply a').addClass('btn btn-mini');
+  $('#comment, #author, #email, #url').addClass('form-control');
 });
