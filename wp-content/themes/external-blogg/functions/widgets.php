@@ -6,7 +6,7 @@ function malmo_child_widgets_init() {
     'description' => 'Sidofält för startsidan',
     'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h1 class="widget-title">',
+    'before_title' => '<h1 class="aside">',
     'after_title' => '</h1>',
   ));
 }

@@ -147,14 +147,63 @@ aside {
     float: right;
     margin: 0; }
 
+h1.body-copy {
+  font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+  font-weight: normal;
+  font-size: 2.25em;
+  line-height: 1.11111em;
+  margin: 0 0 .3em; }
+
+h2.body-copy {
+  font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1.20833em;
+  margin: 1.5em 0 .2em; }
+
+h3.body-copy {
+  font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+  font-weight: bold;
+  font-size: 1.0625em;
+  line-height: 1.47059em;
+  margin: 1.5em 0 0; }
+
+h4.body-copy {
+  font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.0625em;
+  line-height: 1.47059em;
+  margin: 1.5em 0 0; }
+
+p.body-copy {
+  font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+  font-size: 1.0625em;
+  line-height: 1.47059em; }
+
+p.preamble-body-copy {
+  font-weight: bold;
+  font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.3125em; }
+
+h1.aside, aside .widget-area h1 {
+  font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.2;
+  border-bottom: #b5b5b5 1px solid;
+  margin: 0 0 .3em;
+  padding: 0 0 .2em; }
+
 aside h1 a:hover, aside li a:hover {
   text-decoration: none; }
 aside ul, aside ol {
   list-style: none;
   margin: 0;
   padding: 0; }
-  aside ul a, aside ol a {
-    color: black; }
+aside h1 a, aside li a {
+  color: black; }
 aside .latest-posts li {
   *zoom: 1;
   margin-bottom: .4em; }
@@ -196,5 +245,6 @@ aside .widget-area {
   aside .widget-area p {
     font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
     font-size: 0.9375em;
+    line-height: 1.4;
     margin: 0 0 1em;
     clear: both; }

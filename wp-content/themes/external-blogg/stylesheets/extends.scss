@@ -1,0 +1,51 @@
+h1.body-copy {
+  font-family: $serif;
+  font-weight: normal;
+  font-size: emize(36);
+  line-height: emize(40, 36);
+  margin: 0 0 .3em;
+}
+h2.body-copy {
+  font-family: $serif;
+  font-weight: normal;
+  font-size: emize(24);
+  line-height: emize(29, 24);
+  margin: 1.5em 0 .2em;
+}
+h3.body-copy {
+  font-family: $serif;
+  font-weight: bold;
+  font-size: emize(17);
+  line-height: emize(25, 17);
+  margin: 1.5em 0 0;
+}
+h4.body-copy {
+  font-family: $serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: emize(17);
+  line-height: emize(25, 17);
+  margin: 1.5em 0 0;
+}
+
+p.body-copy {
+  font-family: $serif;
+  font-size: emize(17);
+  line-height: emize(25, 17);
+}
+p.preamble-body-copy {
+  font-weight: bold;
+  font-family: $sansSerif;
+  font-size: emize(16);
+  line-height: emize(21, 16);
+}
+
+h1.aside {
+  font-family: $sansSerif;
+  font-size: emize(16);
+  font-weight: bold;
+  line-height: 1.2;
+  border-bottom: $border;
+  margin: 0 0 .3em;
+  padding: 0 0 .2em;
+}
