@@ -1,21 +1,16 @@
-@import "extends";
-
 aside {
-  h1, li {
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  ul, ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
   h1, li {
     a {
       color: black;
     }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .latest-posts {
@@ -27,7 +22,7 @@ aside {
       @include columns(3, false, 5%);
       background-color: transparent;
       img {
-        margin-top: emize(3);
+        margin-top: emize(4);
         width: 100%;
         height: auto;
       }
@@ -35,19 +30,17 @@ aside {
     p {
       @include columns(9, true, 5%);
       line-height: 1.3;
+      font-size: emize(13, 14);
+      font-family: $serif;
       time {
         clear: both;
         display: block;
-        font-size: emize(12, 14);
         color: #333;
       }
     }
   }
 
   .widget-area {
-    h1 {
-      @extend h1.aside;
-    }
     margin: 0 0 2em;
     p {
       font-family: $serif;
