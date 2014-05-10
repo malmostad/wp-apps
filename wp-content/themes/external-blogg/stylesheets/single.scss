@@ -3,11 +3,8 @@
     @include columns(9, true);
     float: right;
   }
-  .body-copy h1 {
-    margin-top: 0;
-  }
+
   article {
-    margin-top: .5em;
     .entry-meta, .entry-tags {
       display: none;
       ul {
@@ -15,60 +12,44 @@
       }
     }
   }
+
   .meta {
-    @include columns(3, true);
-    margin-top: .8em;
-    .author-avatar {
+    @include columns(3);
+    .author {
+      font-family: $sansSerif;
+      font-size: emize(14);
+      margin-bottom: .2em;
       img {
-        float: none;
+        margin-top: .5em;
         width: 100%;
         height: auto;
       }
-      .author {
-        clear: right;
-        float: none;
-        min-width: 0;
-        text-align: left;
-        font-family: $sansSerif;
-        font-size: emize(13);
-        margin: 0;
-        color: $linkColor;
-      }
     }
-    time, dl {
+    time {
       font-family: $sansSerif;
-      font-size: emize(11);
-      clear: left;
+      font-size: emize(12);
     }
-    dd {
-      margin-left: 0;
+
+    .entry-meta, .entry-tags {
+      @include clearfix();
+      margin: 1em 0;
+      padding: 0;
       li {
         display: inline;
+        margin: 0;
+        font-family: $sansSerif;
+        font-size: emize(12);
       }
-    }
-    .entry-meta {
-      margin-bottom: 0em;
-      @include clearfix();
+      li:first-child {
+        font-weight: bold;
+        display: block;
+      }
     }
     .entry-tags {
       margin-bottom: 2em;
-      @include clearfix();
     }
-    .share a span {
-      font-size: 1.6em;
-      margin-right: .3em;
-      &.icon-twitter, &.icon-twitter-sign {
-        color: #55acee;
-      }
-      &.icon-twitter {
-        font-size: 1.8em;
-      }
-      &.icon-facebook, &.icon-facebook-sign {
-        color: #4C66A4;
-      }
+    .edit {
+      margin: 2.5em 0;
     }
-  }
-  #comments .comment-body {
-    *margin-left: 19%;
   }
 }

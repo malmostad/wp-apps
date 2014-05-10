@@ -37,73 +37,51 @@ aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: right; }
-.post .body-copy h1 {
-  margin-top: 0; }
-.post article {
-  margin-top: .5em; }
-  .post article .entry-meta, .post article .entry-tags {
-    display: none; }
-    .post article .entry-meta ul, .post article .entry-tags ul {
-      margin: 0; }
+.post article .entry-meta, .post article .entry-tags {
+  display: none; }
+  .post article .entry-meta ul, .post article .entry-tags ul {
+    margin: 0; }
 .post .meta {
   width: 23.5%;
-  margin-right: 0;
+  margin-right: 2%;
   float: left;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: .8em; }
-  .post .meta .author-avatar img {
-    float: none;
-    width: 100%;
-    height: auto; }
-  .post .meta .author-avatar .author {
-    clear: right;
-    float: none;
-    min-width: 0;
-    text-align: left;
+  box-sizing: border-box; }
+  .post .meta .author {
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-    font-size: 0.8125em;
-    margin: 0;
-    color: #007896; }
-  .post .meta time, .post .meta dl {
+    font-size: 0.875em;
+    margin-bottom: .2em; }
+    .post .meta .author img {
+      margin-top: .5em;
+      width: 100%;
+      height: auto; }
+  .post .meta time {
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-    font-size: 0.6875em;
-    clear: left; }
-  .post .meta dd {
-    margin-left: 0; }
-    .post .meta dd li {
-      display: inline; }
-  .post .meta .entry-meta {
-    margin-bottom: 0em;
-    *zoom: 1; }
-    .post .meta .entry-meta:before, .post .meta .entry-meta:after {
+    font-size: 0.75em; }
+  .post .meta .entry-meta, .post .meta .entry-tags {
+    *zoom: 1;
+    margin: 1em 0;
+    padding: 0; }
+    .post .meta .entry-meta:before, .post .meta .entry-meta:after, .post .meta .entry-tags:before, .post .meta .entry-tags:after {
       display: table;
       content: "";
       line-height: 0; }
-    .post .meta .entry-meta:after {
+    .post .meta .entry-meta:after, .post .meta .entry-tags:after {
       clear: both; }
+    .post .meta .entry-meta li, .post .meta .entry-tags li {
+      display: inline;
+      margin: 0;
+      font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+      font-size: 0.75em; }
+    .post .meta .entry-meta li:first-child, .post .meta .entry-tags li:first-child {
+      font-weight: bold;
+      display: block; }
   .post .meta .entry-tags {
-    margin-bottom: 2em;
-    *zoom: 1; }
-    .post .meta .entry-tags:before, .post .meta .entry-tags:after {
-      display: table;
-      content: "";
-      line-height: 0; }
-    .post .meta .entry-tags:after {
-      clear: both; }
-  .post .meta .share a span {
-    font-size: 1.6em;
-    margin-right: .3em; }
-    .post .meta .share a span.icon-twitter, .post .meta .share a span.icon-twitter-sign {
-      color: #55acee; }
-    .post .meta .share a span.icon-twitter {
-      font-size: 1.8em; }
-    .post .meta .share a span.icon-facebook, .post .meta .share a span.icon-facebook-sign {
-      color: #4C66A4; }
-.post #comments .comment-body {
-  *margin-left: 19%; }
+    margin-bottom: 2em; }
+  .post .meta .edit {
+    margin: 2.5em 0; }
 
 .loop {
   margin-top: 0; }
