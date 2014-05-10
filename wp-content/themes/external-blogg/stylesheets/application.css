@@ -237,7 +237,9 @@ aside .latest-posts p {
   aside .latest-posts p time {
     clear: both;
     display: block;
-    color: #333; }
+    margin-top: .2em;
+    font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.92308em; }
 aside .widget-area {
   margin: 0 0 2em; }
   aside .widget-area p {

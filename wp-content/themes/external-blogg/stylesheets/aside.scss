@@ -35,7 +35,9 @@ aside {
       time {
         clear: both;
         display: block;
-        color: #333;
+        margin-top: .2em;
+        font-family: $sansSerif;
+        font-size: emize(12, 13);
       }
     }
   }
