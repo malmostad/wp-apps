@@ -1,7 +1,7 @@
 .wrapper {
   *zoom: 1;
   max-width: 60em;
-  margin: 0 auto;
+  margin: 0 auto 2em;
   padding: 0 .5em; }
   .wrapper:before, .wrapper:after {
     display: table;
@@ -140,13 +140,10 @@ aside {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-      font-size: 1em; }
+      font-size: 0.75em; }
       .loop .post .entry-meta .author {
         margin-bottom: .2em;
-        color: #007896;
-        font-size: 0.75em; }
-      .loop .post .entry-meta time {
-        font-size: 0.75em; }
+        color: #007896; }
       .loop .post .entry-meta .avatar {
         margin-top: .2em; }
         .loop .post .entry-meta .avatar img {
@@ -159,6 +156,15 @@ aside {
       color: black; }
     .loop .post a:hover {
       text-decoration: none; }
+
+ul.pagination {
+  margin: 1em 0;
+  padding: 0; }
+  ul.pagination li {
+    display: inline-block;
+    font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.875em;
+    margin: 0 .5em 0 0; }
 
 aside h1 a, aside li a {
   color: black; }
