@@ -68,7 +68,7 @@ p.preamble-body-copy {
   font-size: 1em;
   line-height: 1.3125em; }
 
-h1.aside, .post #reply-title {
+h1.aside, .single .post #reply-title {
   font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 1em;
   font-weight: bold;
@@ -77,7 +77,7 @@ h1.aside, .post #reply-title {
   margin: 0 0 .4em;
   padding: 0 0 .2em; }
 
-.post article, .post .history, .post #comments {
+.single .post article, .single .post .history, .single .post #comments {
   width: 74.5%;
   margin-right: 0;
   float: left;
@@ -85,7 +85,7 @@ h1.aside, .post #reply-title {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-.post .meta {
+.single .post .meta {
   width: 23.5%;
   margin-right: 2%;
   float: left;
@@ -93,52 +93,52 @@ h1.aside, .post #reply-title {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  .post .meta .author {
+  .single .post .meta .author {
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-size: 0.875em;
     margin-bottom: .8em; }
-    .post .meta .author img {
+    .single .post .meta .author img {
       margin-top: .5em;
       width: 100%;
       height: auto; }
-  .post .meta time {
+  .single .post .meta time {
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-size: 0.75em; }
-.post .entry-meta, .post .entry-tags {
+.single .post .entry-meta, .single .post .entry-tags {
   *zoom: 1;
   margin: 1em 0;
   padding: 0; }
-  .post .entry-meta:before, .post .entry-meta:after, .post .entry-tags:before, .post .entry-tags:after {
+  .single .post .entry-meta:before, .single .post .entry-meta:after, .single .post .entry-tags:before, .single .post .entry-tags:after {
     display: table;
     content: "";
     line-height: 0; }
-  .post .entry-meta:after, .post .entry-tags:after {
+  .single .post .entry-meta:after, .single .post .entry-tags:after {
     clear: both; }
-  .post .entry-meta li, .post .entry-tags li {
+  .single .post .entry-meta li, .single .post .entry-tags li {
     display: inline;
     margin: 0;
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-size: 0.75em; }
-  .post .entry-meta li:first-child, .post .entry-tags li:first-child {
+  .single .post .entry-meta li:first-child, .single .post .entry-tags li:first-child {
     font-weight: bold;
     display: block; }
-.post .entry-tags {
+.single .post .entry-tags {
   margin-bottom: 2em; }
-.post .edit {
+.single .post .edit {
   margin: 2.5em 0; }
-  .post .edit a {
+  .single .post .edit a {
     color: black; }
-    .post .edit a:hover {
+    .single .post .edit a:hover {
       text-decoration: none; }
-.post article .entry-meta, .post article .entry-tags {
+.single .post article .entry-meta, .single .post article .entry-tags {
   display: none; }
-  .post article .entry-meta li:first-child, .post article .entry-tags li:first-child {
+  .single .post article .entry-meta li:first-child, .single .post article .entry-tags li:first-child {
     font-weight: bold;
     display: inline; }
-    .post article .entry-meta li:first-child::after, .post article .entry-tags li:first-child::after {
+    .single .post article .entry-meta li:first-child::after, .single .post article .entry-tags li:first-child::after {
       content: ": ";
       margin-right: .3em; }
-.post #reply-title {
+.single .post #reply-title {
   margin-top: 1.5em; }
 
 .loop {

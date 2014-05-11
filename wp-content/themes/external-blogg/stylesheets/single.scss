@@ -1,5 +1,5 @@
 @import "extends";
-.post {
+.single .post {
   article, .history, #comments {
     @include columns(9, true);
   }
