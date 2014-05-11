@@ -1,11 +1,11 @@
 @import "extends";
 .single .post {
   article, .history, #comments {
-    @include columns(9, true);
+    @include columns(9, true, 4%);
   }
 
   .meta {
-    @include columns(3);
+    @include columns(3, false, 4%);
     .author {
       font-family: $sansSerif;
       font-size: emize(14);

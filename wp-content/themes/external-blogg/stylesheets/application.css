@@ -11,8 +11,8 @@
     clear: both; }
 
 main {
-  width: 74%;
-  margin-right: 4%;
+  width: 73.75%;
+  margin-right: 5%;
   float: left;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -20,7 +20,7 @@ main {
   box-sizing: border-box; }
 
 aside {
-  width: 22%;
+  width: 21.25%;
   margin-right: 0;
   float: left;
   -ms-box-sizing: border-box;
@@ -78,7 +78,7 @@ h1.aside, .single .post #reply-title {
   padding: 0 0 .2em; }
 
 .single .post article, .single .post .history, .single .post #comments {
-  width: 74.5%;
+  width: 74%;
   margin-right: 0;
   float: left;
   -ms-box-sizing: border-box;
@@ -86,8 +86,8 @@ h1.aside, .single .post #reply-title {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 .single .post .meta {
-  width: 23.5%;
-  margin-right: 2%;
+  width: 22%;
+  margin-right: 4%;
   float: left;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
