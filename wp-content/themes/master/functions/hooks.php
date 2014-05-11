@@ -30,10 +30,18 @@ function set_mce_options( $init ) {
   $init['paste_remove_styles'] = true;
   $init['paste_remove_styles_if_webkit'] = true;
   $init['paste_strip_class_attributes'] = true;
+  $init['force_br_newlines'] = true;
+  $init['force_p_newlines'] = false;
   $init['theme_advanced_status_info'] = false;
   return $init;
 }
 add_filter('tiny_mce_before_init', 'set_mce_options');
+
+function remove_empty_lines_on_save($content) {
+  $content = preg_replace("/&nbsp;/", "", $content);
+  return $content;
+}
+add_action('content_save_pre', 'remove_empty_lines_on_save');
 
 global $mconfig;
 

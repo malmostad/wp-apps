@@ -27,6 +27,7 @@ a:hover {
 
 table {
   border-collapse: collapse;
+  border: none !important;
   margin-bottom: 1em;
   width: 100%;
 }
@@ -34,13 +35,15 @@ th {
   text-align: left;
 }
 th, td {
-  font-family: $sansSerif;
-  font-size: emize(14);
+  font-family: "OpenSans","Verdana","DejaVu Sans","Bitstream Vera Sans",sans-serif;
+  font-size: 14px;
   line-height: 1.35;
   padding: .4em .6em;
-  border-top: $border;
-  border-bottom: $border;
+  border-top: solid 1px #999;
+  border-bottom: solid 1px #999;
+  border-width: 1px 0;
   border-collapse: collapse;
+  vertical-align: top;
 }
 
 img {
