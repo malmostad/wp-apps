@@ -1,6 +1,5 @@
-@import "extends";
 .single .post {
-  article, .history, #comments {
+  .article-and-comments {
     @include columns(9, true, 4%);
   }
 
@@ -63,8 +62,9 @@
       }
     }
   }
+
   #reply-title {
     @extend h1.aside;
-    margin-top: 1.5em;
+    margin-top: 2em;
   }
 }

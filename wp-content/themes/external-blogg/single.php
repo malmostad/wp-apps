@@ -30,23 +30,25 @@
       <?php edit_post_link('Redigera', '<span class="btn btn-default btn-sm edit">', '</span>'); ?>
     </section>
 
-    <article class="body-copy">
-      <?php if ( has_post_thumbnail() ) { ?>
-        <div class="featured-image">
-          <?php the_post_thumbnail('medium', array('class' => 'article-image')) ?>
-        </div>
-        <?php }
-          the_content();
-          $postID = $post->ID;
-          if (is_user_logged_in()):
-        ?>
-      <?php endif; ?>
+    <div class="article-and-comments">
+      <article class="body-copy">
+        <?php if ( has_post_thumbnail() ) { ?>
+          <div class="featured-image">
+            <?php the_post_thumbnail('medium', array('class' => 'article-image')) ?>
+          </div>
+          <?php }
+            the_content();
+            $postID = $post->ID;
+            if (is_user_logged_in()):
+          ?>
+        <?php endif; ?>
 
-      <?php get_template_part('single-meta') ?>
-    </article>
+        <?php get_template_part('single-meta') ?>
+      </article>
+      <?php comments_template( '', true ); ?>
+    </div>
   <?php endwhile; ?>
 
-  <?php comments_template( '', true ); ?>
 
   <nav>
     <ul class="pagination">

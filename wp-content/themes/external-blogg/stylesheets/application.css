@@ -1,33 +1,3 @@
-.wrapper {
-  *zoom: 1;
-  max-width: 60em;
-  margin: 0 auto 2em;
-  padding: 0 .5em; }
-  .wrapper:before, .wrapper:after {
-    display: table;
-    content: "";
-    line-height: 0; }
-  .wrapper:after {
-    clear: both; }
-
-main {
-  width: 73.75%;
-  margin-right: 5%;
-  float: left;
-  -ms-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-aside {
-  width: 21.25%;
-  margin-right: 0;
-  float: left;
-  -ms-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 h1.body-copy {
   font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
   font-weight: normal;
@@ -68,7 +38,7 @@ p.preamble-body-copy {
   font-size: 1em;
   line-height: 1.3125em; }
 
-h1.aside, .single .post #reply-title {
+h1.aside, .single .post #reply-title, #comments h1 {
   font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 1em;
   font-weight: bold;
@@ -77,7 +47,37 @@ h1.aside, .single .post #reply-title {
   margin: 0 0 .4em;
   padding: 0 0 .2em; }
 
-.single .post article, .single .post .history, .single .post #comments {
+.wrapper {
+  *zoom: 1;
+  max-width: 60em;
+  margin: 0 auto 2em;
+  padding: 0 .5em; }
+  .wrapper:before, .wrapper:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .wrapper:after {
+    clear: both; }
+
+main {
+  width: 73.75%;
+  margin-right: 5%;
+  float: left;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+aside {
+  width: 21.25%;
+  margin-right: 0;
+  float: left;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.single .post .article-and-comments {
   width: 74%;
   margin-right: 0;
   float: left;
@@ -139,7 +139,62 @@ h1.aside, .single .post #reply-title {
       content: ": ";
       margin-right: .3em; }
 .single .post #reply-title {
-  margin-top: 1.5em; }
+  margin-top: 2em; }
+
+#comments {
+  margin-bottom: 1em;
+  clear: both;
+  *zoom: 1; }
+  #comments:before, #comments:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  #comments:after {
+    clear: both; }
+  #comments li {
+    *zoom: 1; }
+    #comments li:before, #comments li:after {
+      display: table;
+      content: "";
+      line-height: 0; }
+    #comments li:after {
+      clear: both; }
+  #comments ul, #comments ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    clear: both; }
+  #comments h1 {
+    margin-top: 2em; }
+  #comments p {
+    font-size: 0.9375em;
+    line-height: 1.4;
+    margin-bottom: .5em; }
+  #comments .logged-in-as {
+    font-size: 1em;
+    line-height: 1.2;
+    margin-bottom: 1em; }
+  #comments .comment-body {
+    margin: 0 0 1.5em 16%;
+    clear: both; }
+  #comments .commentmetadata {
+    margin: .2em 0;
+    font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.75em;
+    line-height: 1.3; }
+  #comments .comment-author.vcard img {
+    clear: both;
+    float: left;
+    margin: .3em 0 1em -19%;
+    width: 15%;
+    height: auto; }
+  #comments .comment-author.vcard cite, #comments .comment-author.vcard .says {
+    font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.875em;
+    line-height: 1.3;
+    font-style: normal; }
+  #comments .reply {
+    display: none; }
 
 .loop {
   margin-top: 0; }
