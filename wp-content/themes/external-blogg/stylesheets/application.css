@@ -119,15 +119,19 @@ aside {
   display: block;
   clear: both;
   margin: .3em 0 1em;
-  width: 100%;
+  width: 100% !important;
   height: auto; }
+  .single .post .alignnone img {
+    width: 100%;
+    height: auto; }
 .single .post .featured-image {
   float: right;
   width: 42%;
   margin: .3em 0 1em 1em; }
 .single .post .featured-image .caption, .single .post .wp-caption .wp-caption-text {
   font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
-  font-size: 0.75em; }
+  font-size: 0.875em;
+  margin-bottom: 0; }
 .single .post .featured-image img {
   width: 100%;
   height: auto;

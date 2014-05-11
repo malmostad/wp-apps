@@ -38,8 +38,12 @@
     display: block;
     clear: both;
     margin: .3em 0 1em;
-    width: 100%;
+    width: 100% !important;
     height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .featured-image {
@@ -50,7 +54,8 @@
 
   .featured-image .caption, .wp-caption .wp-caption-text {
     font-family: $sansSerif;
-    font-size: emize(12);
+    font-size: emize(14);
+    margin-bottom: 0;
   }
 
   .featured-image img {
