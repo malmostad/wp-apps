@@ -124,6 +124,8 @@ aside {
   .single .post .alignnone img {
     width: 100%;
     height: auto; }
+.single .post .wp-caption {
+  margin-bottom: .3em; }
 .single .post .featured-image {
   float: right;
   width: 42%;
