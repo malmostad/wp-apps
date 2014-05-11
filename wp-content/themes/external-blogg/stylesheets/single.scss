@@ -20,6 +20,48 @@
       font-size: emize(12);
     }
   }
+
+  .alignright, .aligncenter { // centered media is bad
+    float: right;
+    margin: .3em 0 1em 1em;
+    width: 42%;
+    height: auto;
+  }
+  .alignleft {
+    float: left;
+    margin: .3em 1em 1em 0;
+    width: 42%;
+    height: auto;
+  }
+  .alignnone {
+    float: none;
+    display: block;
+    clear: both;
+    margin: .3em 0 1em;
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-image {
+    float: right;
+    width: 42%;
+    margin: .3em 0 1em 1em;
+  }
+
+  .featured-image .caption, .wp-caption .wp-caption-text {
+    font-family: $sansSerif;
+    font-size: emize(12);
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .2em!important;
+  }
+  img {
+    max-width: 100%;
+  }
+
   .entry-meta, .entry-tags {
     @include clearfix();
     margin: 1em 0;

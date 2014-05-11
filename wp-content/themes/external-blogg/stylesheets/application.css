@@ -104,6 +104,36 @@ aside {
   .single .post .meta time {
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-size: 0.75em; }
+.single .post .alignright, .single .post .aligncenter {
+  float: right;
+  margin: .3em 0 1em 1em;
+  width: 42%;
+  height: auto; }
+.single .post .alignleft {
+  float: left;
+  margin: .3em 1em 1em 0;
+  width: 42%;
+  height: auto; }
+.single .post .alignnone {
+  float: none;
+  display: block;
+  clear: both;
+  margin: .3em 0 1em;
+  width: 100%;
+  height: auto; }
+.single .post .featured-image {
+  float: right;
+  width: 42%;
+  margin: .3em 0 1em 1em; }
+.single .post .featured-image .caption, .single .post .wp-caption .wp-caption-text {
+  font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+  font-size: 0.75em; }
+.single .post .featured-image img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.2em !important; }
+.single .post img {
+  max-width: 100%; }
 .single .post .entry-meta, .single .post .entry-tags {
   *zoom: 1;
   margin: 1em 0;
@@ -178,7 +208,7 @@ aside {
     margin: 0 0 1.5em 16%;
     clear: both; }
   #comments .commentmetadata {
-    margin: .2em 0;
+    margin: .3em 0;
     font-family: "OpenSans", "Droid Sans", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-size: 0.75em;
     line-height: 1.3; }
