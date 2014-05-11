@@ -25,23 +25,20 @@ function set_mce_options( $init ) {
   $init['toolbar1'] = "undo,redo,|,formatselect,|,italic,|,bullist,numlist,outdent,indent,blockquote,|,pastetext,pasteword,removeformat,|,link,unlink,|,valideratext,|,fullscreen,|,wp_help";
   $init['toolbar2'] = "";
   $init['paste_word_valid_elements'] = "@[class],p,h2,h3,a[href],em,div,table,tbody,thead,tr,td,ul,ol,li,img[src|alt]";
-  $init['valid_elements'] = "@[class],p,h2,h3,a[href],em,div,br,table,tbody,thead,tr,td,ul,ol,li,img[src|alt]";
+  // $init['valid_elements'] = "@[class|id],div,p,h2,h3,a[href],em,br,table,tbody,thead,tr,td,ul,ol,li,img[src|alt|class]";
   $init['paste_auto_cleanup_on_paste'] = true;
   $init['paste_remove_styles'] = true;
   $init['paste_remove_styles_if_webkit'] = true;
-  $init['paste_strip_class_attributes'] = true;
-  $init['force_br_newlines'] = true;
-  $init['force_p_newlines'] = false;
-  $init['theme_advanced_status_info'] = false;
+  $init['theme_advanced_status_info'] = true;
   return $init;
 }
 add_filter('tiny_mce_before_init', 'set_mce_options');
 
-function remove_empty_lines_on_save($content) {
+function clean_on_save($content) {
   $content = preg_replace("/&nbsp;/", "", $content);
   return $content;
 }
-add_action('content_save_pre', 'remove_empty_lines_on_save');
+add_action('content_save_pre', 'clean_on_save');
 
 global $mconfig;
 
