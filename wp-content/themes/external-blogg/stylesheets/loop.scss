@@ -1,5 +1,8 @@
 .loop {
   margin-top: 0;
+  h1.page-title {
+    @extend h1.body-copy;
+  }
   .post {
     @include clearfix();
     margin-bottom: 1.5em;
