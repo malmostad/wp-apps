@@ -20,9 +20,10 @@
                 <div class="featured-image">
                   <?php echo get_avatar(get_the_author_meta('user_email'), 48) ?>
                 </div>
-                <p><?php the_title() ?>
+                <div class="text">
+                  <h2><?php the_title() ?></h2>
                   <time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>
-                </p>
+                </div>
               </a>
             </li>
           <?php endwhile ?>

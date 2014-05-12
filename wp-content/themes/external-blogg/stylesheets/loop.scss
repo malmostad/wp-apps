@@ -7,10 +7,11 @@
     @include clearfix();
     margin-bottom: 1.5em;
     h1 {
-      font-size: emize(24);
+      @extend h2.body-copy;
+      margin-top: 0;
     }
     .body-copy {
-      @include columns(9, true);
+      @include columns(9, true, 3%);
       p {
         margin: 0 0 .2em;
       }
@@ -20,7 +21,7 @@
       }
     }
     .entry-meta {
-      @include columns(3);
+      @include columns(3, false, 3%);
       font-family: $sansSerif;
       font-size: emize(12);
       .author {

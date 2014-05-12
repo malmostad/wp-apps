@@ -1,14 +1,18 @@
 h1.body-copy {
-  font-family: $serif;
   font-weight: normal;
   font-size: emize(36);
+  @media (max-width: 26em) {
+    font-size: emize(28);
+  }
   line-height: emize(40, 36);
   margin: 0 0 .3em;
 }
 h2.body-copy {
-  font-family: $serif;
   font-weight: normal;
   font-size: emize(24);
+  @media (max-width: 26em) {
+    font-size: emize(22);
+  }
   line-height: emize(29, 24);
   margin: 1.5em 0 .2em;
 }
