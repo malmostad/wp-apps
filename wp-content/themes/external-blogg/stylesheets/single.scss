@@ -118,3 +118,34 @@
     margin-top: 2em;
   }
 }
+
+@media ( max-width: 38em ) {
+  .single .post {
+    .article-and-comments {
+      @include columns(12);
+      overflow: visible;
+    }
+    article {
+      .entry-meta, .entry-tags {
+        display: block;
+      }
+    }
+    .meta {
+      margin: .2em .8em .4em 0;
+      width: 30%;
+      float: left;
+      .entry-meta, .entry-tags {
+        display: none;
+      }
+      .author-avatar {
+        margin-top: .3em;
+        img {
+          max-width: 8em;
+        }
+      }
+    }
+    article.body-copy {
+      float: none;
+    }
+  }
+}

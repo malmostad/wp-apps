@@ -192,6 +192,32 @@ aside {
 .single .post #reply-title {
   margin-top: 2em; }
 
+@media (max-width: 38em) {
+  .single .post .article-and-comments {
+    width: 100%;
+    margin-right: 2%;
+    margin-right: 0;
+    float: none;
+    float: left;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: visible; }
+  .single .post article .entry-meta, .single .post article .entry-tags {
+    display: block; }
+  .single .post .meta {
+    margin: .2em .8em .4em 0;
+    width: 30%;
+    float: left; }
+    .single .post .meta .entry-meta, .single .post .meta .entry-tags {
+      display: none; }
+    .single .post .meta .author-avatar {
+      margin-top: .3em; }
+      .single .post .meta .author-avatar img {
+        max-width: 8em; }
+  .single .post article.body-copy {
+    float: none; } }
 #comments {
   margin-bottom: 1em;
   clear: both;
