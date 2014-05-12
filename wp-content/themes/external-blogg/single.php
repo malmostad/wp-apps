@@ -49,7 +49,6 @@
     </div>
   <?php endwhile; ?>
 
-
   <nav>
     <ul class="pagination">
       <li class="previous"><?php previous_post_link( '%link', '%title' ); ?></li>

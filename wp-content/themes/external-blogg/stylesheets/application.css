@@ -55,7 +55,7 @@ h1.aside, .single .post #reply-title, #comments h1 {
   *zoom: 1;
   max-width: 60em;
   margin: 0 auto 2em;
-  padding: 0 .5em; }
+  padding: 0 1em; }
   .wrapper:before, .wrapper:after {
     display: table;
     content: "";
@@ -389,14 +389,3 @@ aside .widget-area {
 @media (max-width: 26em) {
   aside .latest-posts .text h2 {
     font-size: 1.21429em; } }
-@media (max-width: 50em) {
-  .meta .entry-tags, .meta .entry-meta {
-    margin-bottom: .5em; }
-  .meta .author-avatar img {
-    clear: both;
-    float: none;
-    margin: 0; }
-  .meta .author-avatar .author {
-    clear: both;
-    float: none;
-    text-align: left; } }
