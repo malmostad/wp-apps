@@ -176,7 +176,7 @@ aside {
 .single .post .entry-tags {
   margin-bottom: 2em; }
 .single .post .edit {
-  margin: 2.5em 0; }
+  margin: 2.5em 0 1em; }
   .single .post .edit a {
     color: black; }
     .single .post .edit a:hover {
@@ -203,21 +203,38 @@ aside {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    float: none;
     overflow: visible; }
+    .single .post .article-and-comments #comments h1, .single .post .article-and-comments #reply-title {
+      margin-top: 1em; }
+  .single .post article .alignleft,
+  .single .post article .alignright,
+  .single .post article .aligncenter,
+  .single .post article .featured-image {
+    width: 100% !important;
+    margin: 1em 0; }
+    .single .post article .alignleft img,
+    .single .post article .alignright img,
+    .single .post article .aligncenter img,
+    .single .post article .featured-image img {
+      width: 100%;
+      height: auto; }
   .single .post article .entry-meta, .single .post article .entry-tags {
     display: block; }
   .single .post .meta {
-    margin: .2em .8em .4em 0;
+    float: left;
     width: 30%;
-    float: left; }
+    margin: .2em 1em .4em 0; }
     .single .post .meta .entry-meta, .single .post .meta .entry-tags {
       display: none; }
-    .single .post .meta .author-avatar {
-      margin-top: .3em; }
-      .single .post .meta .author-avatar img {
-        max-width: 8em; }
-  .single .post article.body-copy {
-    float: none; } }
+    .single .post .meta time {
+      display: block;
+      margin-bottom: 1em;
+      font-size: 0.625em; }
+    .single .post .meta .author {
+      font-size: 0.75em; }
+      .single .post .meta .author img {
+        margin-top: .2em; } }
 #comments {
   margin-bottom: 1em;
   clear: both;

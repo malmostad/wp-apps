@@ -90,7 +90,7 @@
   }
 
   .edit {
-    margin: 2.5em 0;
+    margin: 2.5em 0 1em;
     a {
       color: black;
       &:hover {
@@ -123,29 +123,46 @@
   .single .post {
     .article-and-comments {
       @include columns(12);
+      float: none;
       overflow: visible;
+      #comments h1, #reply-title {
+        margin-top: 1em;
+      }
     }
     article {
+      .alignleft,
+      .alignright,
+      .aligncenter,
+      .featured-image {
+        width: 100% !important;
+        margin: 1em 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
       .entry-meta, .entry-tags {
         display: block;
       }
     }
     .meta {
-      margin: .2em .8em .4em 0;
-      width: 30%;
       float: left;
+      width: 30%;
+      margin: .2em 1em .4em 0;
       .entry-meta, .entry-tags {
         display: none;
       }
-      .author-avatar {
-        margin-top: .3em;
+      time {
+        display: block;
+        margin-bottom: 1em;
+        font-size: emize(10);
+      }
+      .author {
+        font-size: emize(12);
         img {
-          max-width: 8em;
+          margin-top: .2em;
         }
       }
-    }
-    article.body-copy {
-      float: none;
     }
   }
 }
