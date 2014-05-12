@@ -119,7 +119,7 @@
   }
 }
 
-@media ( max-width: 38em ) {
+@media (max-width: 38em) {
   .single .post {
     .article-and-comments {
       @include columns(12);
@@ -130,17 +130,6 @@
       }
     }
     article {
-      .alignleft,
-      .alignright,
-      .aligncenter,
-      .featured-image {
-        width: 100% !important;
-        margin: 1em 0;
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
       .entry-meta, .entry-tags {
         display: block;
       }
@@ -161,6 +150,24 @@
         font-size: emize(12);
         img {
           margin-top: .2em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 32em) {
+  .single .post {
+    article {
+      .alignleft,
+      .alignright,
+      .aligncenter,
+      .featured-image {
+        width: 100% !important;
+        margin: 1em 0;
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }

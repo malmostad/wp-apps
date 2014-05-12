@@ -207,18 +207,6 @@ aside {
     overflow: visible; }
     .single .post .article-and-comments #comments h1, .single .post .article-and-comments #reply-title {
       margin-top: 1em; }
-  .single .post article .alignleft,
-  .single .post article .alignright,
-  .single .post article .aligncenter,
-  .single .post article .featured-image {
-    width: 100% !important;
-    margin: 1em 0; }
-    .single .post article .alignleft img,
-    .single .post article .alignright img,
-    .single .post article .aligncenter img,
-    .single .post article .featured-image img {
-      width: 100%;
-      height: auto; }
   .single .post article .entry-meta, .single .post article .entry-tags {
     display: block; }
   .single .post .meta {
@@ -235,6 +223,19 @@ aside {
       font-size: 0.75em; }
       .single .post .meta .author img {
         margin-top: .2em; } }
+@media (max-width: 32em) {
+  .single .post article .alignleft,
+  .single .post article .alignright,
+  .single .post article .aligncenter,
+  .single .post article .featured-image {
+    width: 100% !important;
+    margin: 1em 0; }
+    .single .post article .alignleft img,
+    .single .post article .alignright img,
+    .single .post article .aligncenter img,
+    .single .post article .featured-image img {
+      width: 100%;
+      height: auto; } }
 #comments {
   margin-bottom: 1em;
   clear: both;
