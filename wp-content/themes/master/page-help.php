@@ -4,12 +4,12 @@
  */
   get_header();
 ?>
-<section class="help" role="main">
-  <h1 class="page-title"><?php echo get_the_title(); ?></h1>
+<main class="help" role="main">
+  <h1 class="body-copy"><?php echo get_the_title(); ?></h1>
   <?php wp_nav_menu( array( 'menu' => 'Help', 'menu_id' => 'help', 'items_wrap' => '<ul>%3$s</ul>',  'depth' => 1 ) ); ?>
-</section>
+</main>
 
 <?php
   get_template_part('aside');
-  get_footer(); 
+  get_footer();
 ?>

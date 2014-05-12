@@ -4,8 +4,8 @@
  */
   get_header();
 ?>
-<section class="categories" role="main">
-  <h1 class="page-title"><?php echo get_the_title(); ?></h1>
+<main class="categories" role="main">
+  <h1 class="body-copy"><?php echo get_the_title(); ?></h1>
   <?php
     // Split categories in 4 columns
     $items = get_terms('category', array( 'parent' => 0, 'hide_empty' => false));
@@ -23,6 +23,6 @@
       echo '</ul>';
     }
   ?>
-</section>
+</main>
 <?php get_template_part('aside'); ?>
 <?php get_footer(); ?>

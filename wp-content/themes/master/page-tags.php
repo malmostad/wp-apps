@@ -5,7 +5,7 @@
   get_header();
 ?>
 
-<section class="tags">
+<main class="tags" role="main">
   <nav>
     <?php wp_tag_cloud(array(
     	'smallest'=> 0.7,
@@ -15,5 +15,5 @@
         'order'   => 'rand')
     ); ?>
   </nav>
-</section>
+</main>
 <?php get_footer(); ?>

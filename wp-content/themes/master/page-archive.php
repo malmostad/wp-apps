@@ -4,11 +4,11 @@
  */
  get_header();
 ?>
-<section class="archive" role="main">
-  <h1 class="page-title"><?php echo get_the_title(); ?></h1>
+<main class="archive" role="main">
+  <h1 class="body-copy"><?php echo get_the_title(); ?></h1>
   <ul>
     <?php wp_get_archives( array('show_post_count' => true) ); ?>
   </ul>
-</section>
+</main>
 <?php get_template_part('aside'); ?>
 <?php get_footer(); ?>

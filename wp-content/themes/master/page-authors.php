@@ -2,17 +2,19 @@
 /**
  * Template Name: Authors
  */
-get_header(); ?>
+get_header() ?>
 
-<section class="authors" role="main">
-  <h1 class="page-title"><?php echo get_the_title(); ?></h1>
-  <ul>
-    <?php wp_list_authors( array( 'show_fullname' => 1,
+<main class="authors" role="main">
+  <h1 class="body-copy"><?php echo get_the_title() ?></h1>
+  <nav class="basic">
+    <ul>
+      <?php wp_list_authors(array('show_fullname' => 1,
         'optioncount' => 1,
-        'orderby' => 'name')); 
-    ?>
-  </ul>
-</section>
+        'orderby' => 'name'))
+      ?>
+    </ul>
+  </nav>
+</main>
 
-<?php get_template_part('aside'); ?>
-<?php get_footer(); ?>
+<?php get_template_part('aside') ?>
+<?php get_footer() ?>

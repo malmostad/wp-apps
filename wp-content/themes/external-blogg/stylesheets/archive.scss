@@ -1,0 +1,14 @@
+main {
+  &.categories, &.archive, &.authors, &.help {
+    nav {
+      li {
+        font-size: emize(14);
+        padding: .4em 0;
+      }
+      a {
+        display: inline-block;
+        font-size: emize(14, 14);
+      }
+    }
+  }
+}

@@ -284,6 +284,13 @@ aside {
     .loop .post a:hover {
       text-decoration: none; }
 
+main.categories nav li, main.archive nav li, main.authors nav li, main.help nav li {
+  font-size: 0.875em;
+  padding: .4em 0; }
+main.categories nav a, main.archive nav a, main.authors nav a, main.help nav a {
+  display: inline-block;
+  font-size: 1em; }
+
 aside h1 a, aside li a {
   color: black; }
 aside h1 a:hover, aside li a:hover {
