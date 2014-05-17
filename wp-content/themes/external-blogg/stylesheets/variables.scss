@@ -1,52 +1,49 @@
-// Black text on white background is the default
-// with green links in content
-$bodyBackground: white;
-$bodyColor: black;
-$linkColor: #007896;
+$body-background: #fff;
+$body-color: #000;
+$link-color: #007896;
 
 // Borders around boxes etc.
-$borderColor: #b5b5b5;
-$border: $borderColor 1px solid;
+$border-color: #b5b5b5;
+$border: $border-color 1px solid;
 // Darker border
-$borderColorDark: darken($borderColor, 20%);
-$borderDark: $borderColorDark 1px solid;
+$border-color-dark: darken($border-color, 20%);
+$border-dark: $border-color-dark 1px solid;
 
 // Masthead
-$mastheadBackground: #00B5E2;
-$mastheadColor: white;
-$mastheadHighlight: saturate(darken($mastheadBackground, 10%), 100%);
+$masthead-background: #00b5e2;
+$masthead-color: #fff;
+$masthead-highlight: saturate(darken($masthead-background, 10%), 100%);
 
 // Background colors
-$backgroundLight: #f5f5f5;
+$background-light: #f5f5f5;
 // Use it for hover effect when the area is linked
-$backgroundLightHover: darken($backgroundLight, 5%);
+$background-light-hover: darken($background-light, 5%);
 // Background colors used with inverted text
-$backgroundDark: #888;
-$backgroundDarker: darken($backgroundDark, 34%);
+$background-dark: #888;
+$background-darker: darken($background-dark, 34%);
 
 // Title bars for boxes
-$boxTitleBackground: #008FBA;
-$boxTitleColor: white;
-$boxTriggersHightligt: lighten(#666, 14%);
+$box-title-background: #888;
+$box-title-color: #fff;
+$box-triggers-hightligt: lighten(#666, 14%);
 
-$boxShadow: 2px 2px 3px #ccc;
+$box-shadow: 2px 2px 3px #ccc;
 
 // Background color for Save/Update/Login buttons
-$btnPrimaryBackground: #60c05a;
-$btnPrimaryBackgroundDark: darken($btnPrimaryBackground, 15%);
+$btn-primary-background: #60c05a;
+$btn-primary-background-dark: darken($btn-primary-background, 15%);
 
 // Colors for status messages
-$successBackground: #eafcea;
-$successBorder: 1px solid desaturate(darken($successBackground, 50%), 40%);
-$warningBackground: #fffcd0;
-$warningColor: #c00;
-$warningBorder: 1px solid $warningColor;
-$errorBackground: #ffeae0;
-$errorBorder: 1px solid darken($errorBackground, 40%);
-$dangerColor: #c00;
+$success-background: #eafcea;
+$success-border: 1px solid desaturate(darken($success-background, 50%), 40%);
+$warning-background: #fffcd0;
+$warning-color: #c00;
+$warning-border: 1px solid $warning-color;
+$error-background: #ffeae0;
+$error-border: 1px solid darken($error-background, 40%);
+$danger-color: #c00;
 
 // Fonts
-$sansSerif: 'OpenSans', 'Droid Sans', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
+$sans-serif: 'OpenSans', 'Droid Sans', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
 $serif: Georgia, 'Droid Serif', 'DejaVu Serif', 'Bitstream Vera Serif', serif;
 $monospace: Consolas, Inconsolata, 'Droid Sans Mono', 'DejaVu Mono', 'Bitstream Vera Mono', monospace;
-$iconFont: FontAwesome;

@@ -16,17 +16,17 @@
         margin: 0 0 .2em;
       }
       .comments-link {
-        font-family: $sansSerif;
+        font-family: $sans-serif;
         font-size: emize(14);
       }
     }
     .entry-meta {
       @include columns(3, false, 3%);
-      font-family: $sansSerif;
+      font-family: $sans-serif;
       font-size: emize(12);
       .author {
         margin-bottom: .2em;
-        color: $linkColor;
+        color: $link-color;
       }
       .avatar {
         margin-top: .2em;
@@ -41,7 +41,7 @@
       }
     }
     a {
-      color: black;
+      color: #000;
     }
     a:hover {
       text-decoration: none;

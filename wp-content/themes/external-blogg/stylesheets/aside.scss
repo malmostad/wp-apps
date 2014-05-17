@@ -1,7 +1,7 @@
 aside {
   h1, li {
     a {
-      color: black;
+      color: #000;
     }
     a:hover {
       text-decoration: none;
@@ -40,7 +40,7 @@ aside {
         clear: both;
         display: block;
         margin-top: .2em;
-        font-family: $sansSerif;
+        font-family: $sans-serif;
         font-size: emize(12, 14);
       }
     }

@@ -58,7 +58,7 @@ h1.aside, .single .post #reply-title, #comments h1 {
   padding: 0 1em; }
   .wrapper:before, .wrapper:after {
     display: table;
-    content: "";
+    content: '';
     line-height: 0; }
   .wrapper:after {
     clear: both; }
@@ -161,7 +161,7 @@ aside {
   padding: 0; }
   .single .post .entry-meta:before, .single .post .entry-meta:after, .single .post .entry-tags:before, .single .post .entry-tags:after {
     display: table;
-    content: "";
+    content: '';
     line-height: 0; }
   .single .post .entry-meta:after, .single .post .entry-tags:after {
     clear: both; }
@@ -178,7 +178,7 @@ aside {
 .single .post .edit {
   margin: 2.5em 0 1em; }
   .single .post .edit a {
-    color: black; }
+    color: #000; }
     .single .post .edit a:hover {
       text-decoration: none; }
 .single .post article .entry-meta, .single .post article .entry-tags {
@@ -187,7 +187,7 @@ aside {
     font-weight: bold;
     display: inline; }
     .single .post article .entry-meta li:first-child::after, .single .post article .entry-tags li:first-child::after {
-      content: ": ";
+      content: ': ';
       margin-right: .3em; }
 .single .post #reply-title {
   margin-top: 2em; }
@@ -242,7 +242,7 @@ aside {
   *zoom: 1; }
   #comments:before, #comments:after {
     display: table;
-    content: "";
+    content: '';
     line-height: 0; }
   #comments:after {
     clear: both; }
@@ -250,7 +250,7 @@ aside {
     *zoom: 1; }
     #comments li:before, #comments li:after {
       display: table;
-      content: "";
+      content: '';
       line-height: 0; }
     #comments li:after {
       clear: both; }
@@ -298,7 +298,7 @@ aside {
     margin-bottom: 1.5em; }
     .loop .post:before, .loop .post:after {
       display: table;
-      content: "";
+      content: '';
       line-height: 0; }
     .loop .post:after {
       clear: both; }
@@ -339,7 +339,7 @@ aside {
       .loop .post .entry-meta time {
         display: block; }
     .loop .post a {
-      color: black; }
+      color: #000; }
     .loop .post a:hover {
       text-decoration: none; }
 
@@ -351,7 +351,7 @@ main.categories nav a, main.archive nav a, main.authors nav a, main.help nav a {
   font-size: 1em; }
 
 aside h1 a, aside li a {
-  color: black; }
+  color: #000; }
 aside h1 a:hover, aside li a:hover {
   text-decoration: none; }
 aside ul, aside ol {
@@ -363,7 +363,7 @@ aside .latest-posts li {
   margin-bottom: .4em; }
   aside .latest-posts li:before, aside .latest-posts li:after {
     display: table;
-    content: "";
+    content: '';
     line-height: 0; }
   aside .latest-posts li:after {
     clear: both; }
