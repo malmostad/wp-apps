@@ -14,11 +14,7 @@
 
       <?php get_template_part('single-meta') ?>
 
-      <section class="share">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(the_guid()) ?>" title="Dela sidan på Facebook"><span class="fa fa-facebook-square"></span></a>
-        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title()) ?>&amp;url=<?php echo urlencode(the_guid()) ?>" title="Twittra om sidan"><span class="fa fa-twitter-square"></span></a>
-        <a href="https://plus.google.com/share?url=<?php echo urlencode(the_guid()) ?>" title="Dela sidan på Google+"><span class="fa fa-google-plus-square"></span></a>
-      </section>
+      <section class="m-share"></section>
 
       <script>
         var blogTracking = {
