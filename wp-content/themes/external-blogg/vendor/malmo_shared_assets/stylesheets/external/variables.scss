@@ -2,7 +2,7 @@ $body-background: #fff;
 $body-color: #000;
 $link-color: #007896;
 
-// Borders around boxes etc.
+// Borders around boxes and underlines
 $border-color: #b5b5b5;
 $border: $border-color 1px solid;
 // Darker border
@@ -12,7 +12,6 @@ $border-dark: $border-color-dark 1px solid;
 // Masthead
 $masthead-background: #00b5e2;
 $masthead-color: #fff;
-$masthead-highlight: saturate(darken($masthead-background, 10%), 100%);
 
 // Background colors
 $background-light: #f5f5f5;
@@ -21,19 +20,15 @@ $background-light-hover: darken($background-light, 5%);
 // Background colors used with inverted text
 $background-dark: #888;
 $background-darker: darken($background-dark, 34%);
+$background-footer: darken($background-light, 5%);
 
 // Title bars for boxes
 $box-title-background: #888;
 $box-title-color: #fff;
-$box-triggers-hightligt: lighten(#666, 14%);
 
 $box-shadow: 2px 2px 3px #ccc;
 
-// Background color for Save/Update/Login buttons
-$btn-primary-background: #60c05a;
-$btn-primary-background-dark: darken($btn-primary-background, 15%);
-
-// Colors for status messages
+// Status messages
 $success-background: #eafcea;
 $success-border: 1px solid desaturate(darken($success-background, 50%), 40%);
 $warning-background: #fffcd0;
