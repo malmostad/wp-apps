@@ -1,13 +1,13 @@
 .loop {
   margin-top: 0;
   h1.page-title {
-    @extend h1.body-copy;
+    @extend %h1.body-copy;
   }
   .post {
     @include clearfix();
     margin-bottom: 1.5em;
     h1 {
-      @extend h2.body-copy;
+      @extend %h2.body-copy;
       margin-top: 0;
     }
     .body-copy {

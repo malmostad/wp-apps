@@ -1,13 +1,11 @@
-// Used for the 12 column grid system. Supports RWD without specific class names.
+// Used for the 12 column grid system. Supports RWD without specific non-semantic class names.
 // Use it to make a block span over a given number of columns.
 //    $span is the number of columns that the block should span over.
 //    $last specifies if the column is the last in the row, no gutter to the right then.
 //      Optional. Defaults to false. Forced to true if the number of columns is 12 (full width block)
 //    $gutter is the margin to the right of the block in percentage of the full width.
 //      Defaults to 2%.
-@mixin columns($span, $last: false, $gutter: 2%) {
-  $total-columns: 12;
-
+@mixin columns($span, $last: false, $gutter: 2%, $total-columns: 12) {
   // (column width in percentage) minus its (own portion of all the gutters)
   width: percentage($span / $total-columns) - (($total-columns / $span - 1) * $gutter / ($total-columns / $span));
 
@@ -24,6 +22,21 @@
 
   float: left;
   @include box-sizing(border-box);
+}
+
+// Use with a media query to disable the hz mode below a breakpoint
+@mixin form-force-vertical() {
+  .mf-v3 form.basic .form-group {
+    .control-label {
+      display: block;
+      width: 100%;
+    }
+    .controls {
+      width: 100%;
+      margin-left: 0;
+      clear: both;
+    }
+  }
 }
 
 @mixin radius($values) {
@@ -67,21 +80,6 @@
   -webkit-box-sizing: $boxmodel;
   -moz-box-sizing: $boxmodel;
   box-sizing: $boxmodel;
-}
-
-// Use with a media query to disable the hz mode below a breakpoint
-@mixin form-force-vertical() {
-  .mf-v3 form.basic .form-group {
-    .control-label {
-      display: block;
-      width: 100%;
-    }
-    .controls {
-      width: 100%;
-      margin-left: 0;
-      clear: both;
-    }
-  }
 }
 
 @mixin rotate($deg) {

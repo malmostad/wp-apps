@@ -114,7 +114,7 @@
   }
 
   #reply-title {
-    @extend h1.aside;
+    @extend %h1.aside;
     margin-top: 2em;
   }
 }
