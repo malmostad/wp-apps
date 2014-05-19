@@ -1,5 +1,5 @@
 main {
-  &.categories, &.archive, &.authors, &.help {
+  &.categories, &.archive, &.authors, &.help, &.tags {
     nav {
       li {
         font-size: emize(14);
@@ -10,5 +10,8 @@ main {
         font-size: emize(14, 14);
       }
     }
+  }
+  &.tags {
+    margin-bottom: 2em;
   }
 }

@@ -18,3 +18,7 @@ aside {
     @include columns(12);
   }
 }
+
+#wpadminbar {
+  display: none;
+}

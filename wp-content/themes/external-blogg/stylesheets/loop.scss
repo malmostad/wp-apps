@@ -23,10 +23,13 @@
     .entry-meta {
       @include columns(3, false, 3%);
       font-family: $sans-serif;
-      font-size: emize(12);
       .author {
         margin-bottom: .2em;
         color: $link-color;
+        font-size: emize(14);
+        @media (max-width: 32em) {
+          font-size: emize(12);
+        }
       }
       .avatar {
         margin-top: .2em;
@@ -38,6 +41,7 @@
       }
       time {
         display: block;
+        font-size: emize(12);
       }
     }
     a {
