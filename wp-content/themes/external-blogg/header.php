@@ -30,6 +30,6 @@
 ?>
 <?php get_template_part('social-meta') ?>
 </head>
-<body <?php body_class($mconfig['env'] . " malmo-masthead-more mf-v3"); ?>>
+<body <?php body_class($mconfig['env'] . " malmo-masthead-more mf-v4"); ?>>
 <div class="wrapper">
 <?php get_template_part('app-title') ?>
