@@ -1,5 +1,6 @@
 main {
   &.categories, &.archive, &.authors, &.help, &.tags {
+    clear: left;
     nav {
       li {
         font-size: emize(14);

@@ -1,4 +1,5 @@
 .single .post {
+  clear: left;
   .article-and-comments {
     @include columns(9, true, 4%);
   }
