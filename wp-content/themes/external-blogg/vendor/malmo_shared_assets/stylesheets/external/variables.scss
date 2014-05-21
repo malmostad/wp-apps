@@ -2,6 +2,11 @@ $body-background: #fff;
 $body-color: #000;
 $link-color: #007896;
 
+// Fonts
+$sans-serif: 'OpenSans', 'Droid Sans', 'Verdana', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
+$serif: Georgia, 'Droid Serif', 'DejaVu Serif', 'Bitstream Vera Serif', serif;
+$monospace: Consolas, Inconsolata, 'Droid Sans Mono', 'DejaVu Mono', 'Bitstream Vera Mono', monospace;
+
 // Borders around boxes and underlines
 $border-color: #b5b5b5;
 $border: $border-color 1px solid;
@@ -37,8 +42,3 @@ $warning-border: 1px solid $warning-color;
 $error-background: #ffeae0;
 $error-border: 1px solid darken($error-background, 40%);
 $danger-color: #c00;
-
-// Fonts
-$sans-serif: 'OpenSans', 'Droid Sans', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
-$serif: Georgia, 'Droid Serif', 'DejaVu Serif', 'Bitstream Vera Serif', serif;
-$monospace: Consolas, Inconsolata, 'Droid Sans Mono', 'DejaVu Mono', 'Bitstream Vera Mono', monospace;
