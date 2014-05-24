@@ -44,8 +44,8 @@
 
   <nav>
     <ul class="pagination">
-      <li class="previous"><?php previous_post_link( '%link', '%title' ); ?></li>
-      <li class="next"><?php next_post_link( '%link', '%title' ); ?></li>
+      <li class="previous"><?php previous_post_link( '%link', 'Föregående' ); ?></li>
+      <li class="next"><?php next_post_link( '%link', 'Nästa' ); ?></li>
     </ul>
   </nav>
 </main>
