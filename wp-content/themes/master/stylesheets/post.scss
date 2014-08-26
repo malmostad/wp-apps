@@ -46,9 +46,15 @@ article {
     height: auto;
     margin-bottom: .2em!important;
   }
+
   img {
+  img, .wp-caption {
     max-width: 100%;
   }
+  img {
+    height: auto;
+  }
+
   .entry-tags, .entry-meta {
     margin: 0 0 .2em;
     dt, dd {

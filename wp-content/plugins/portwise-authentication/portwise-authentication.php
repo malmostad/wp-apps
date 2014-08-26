@@ -75,6 +75,10 @@ class PortwiseAuthentication {
       error_log($id->get_error_message());
       return false;
     }
+
+    // Set profile to auth with wpDirAuth when not on SSO
+    update_user_meta($id, 'wpDirAuthFlag', 1);
+
     return get_user_by('id', $id);
   }
 
