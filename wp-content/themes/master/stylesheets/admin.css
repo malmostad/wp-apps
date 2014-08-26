@@ -16,3 +16,8 @@
   float: left;
   min-height: 28px;
 }
+
+.column-author img, .column-username img, .column-comment .comment-author img {
+  width: 32px;
+  height: 32px;
+}

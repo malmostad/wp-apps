@@ -27,7 +27,10 @@ article {
     height: auto;
     margin: .3em 0 1em 1em;
   }
+  img, .wp-caption {
+     max-width: 100%;
+   }
   img {
-    max-width: 100%;
+    height: auto;
   }
 }
