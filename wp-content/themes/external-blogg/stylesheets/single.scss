@@ -67,8 +67,12 @@
     height: auto;
     margin-bottom: .2em!important;
   }
+
+  img, .wp-caption {
+     max-width: 100%;
+   }
   img {
-    max-width: 100%;
+    height: auto;
   }
 
   .entry-meta, .entry-tags {
