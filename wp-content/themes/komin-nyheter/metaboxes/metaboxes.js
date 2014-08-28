@@ -14,6 +14,7 @@ jQuery(function($) {
         setupEditor();
       }, 10);
     } else {
+      // Use settings already in main WP editor
       var settings = tinyMCE.get('content').settings;
 
       $.extend(settings, {
