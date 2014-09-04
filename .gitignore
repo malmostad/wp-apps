@@ -46,6 +46,7 @@ wp-signup.php
 wp-trackback.php
 xmlrpc.php
 wp-content/plugins/valideratext
+wp-content/plugins/rss-includes-pages
 wp-content/plugins/vote-it-up
 wp-content/plugins/wpdirauth
 wp-content/plugins/most-commented
