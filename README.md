@@ -11,9 +11,9 @@ The themes are using Malmö stads’s global assets, see the repo see the repo [
 For more information about the services, contact kominteamet@malmo.se.
 
 ## Dependencies
-* Wordpress >= 3.8
+* Wordpress >= 3.9
 * Wordpress compatible database
-* LDAP server or a SAML IdP for authentication
+* LDAP server, Portwise authentication or a SAML IdP for authentication
 * [Assets service](https://github.com/malmostad/intranet-assets).
 * [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
 * Sass for development and build. See `wp-content/themes/komin-master/stylesheets/application.scss` for info.
@@ -24,6 +24,7 @@ For more information about the services, contact kominteamet@malmo.se.
   * wpdirauth
   * Force Login (included in source)
   * Force SSL In Content (included in source)
+  * Portwise Authentication (included in source)
   * SAML 2.0 (included in source)
 
 ## Setup
