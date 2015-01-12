@@ -1,3 +1,8 @@
+/* Override WPs distraction free hiding for custom boxes. */
+/* .focus-on #postbox-container-2>* {
+  opacity: 1 !important;
+} */
+
 .mb_control .description
 { display:none; }
 

@@ -223,37 +223,37 @@ img.aligncenter {
 /* .body-copy */
 h1 {
   font-weight: normal;
-  font-size: emize(28, 16);
+  font-size: 28px;
   line-height: 1.1;
   margin: 0 0 .2em;
 }
 h2 {
   font-weight: normal;
-  font-size: emize(22, 16);
+  font-size: 22px;
   line-height: 1;
   margin: 0;
 }
 h3 {
   font-weight: bold;
-  font-size: emize(16);
-  line-height: emize(21, 16);
+  font-size: 17px;
+  line-height: 21px;
   margin: 0;
 }
 h4 {
   font-weight: normal;
   font-variant: italic;
-  font-size: emize(16);
-  line-height: emize(21, 16);
+  font-size: 17px;
+  line-height: 21px;
   margin: 0;
 }
 p {
-  font-size: emize(16);
-  line-height: emize(21, 16);
+  font-size: 17px;
+  line-height: 21px;
 }
 p.preamble {
   font-weight: bold;
   font-family: 'OpenSans', 'Verdana', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
-  font-size: emize(15, 16);
+  font-size: 16px;
 }
 
 ul {
