@@ -22,7 +22,7 @@ add_filter( 'auth_cookie_expiration', 'set_cookie_expire_filter', 10, 3 );
 // TinyMCE customization
 function set_mce_options( $init ) {
   $init['block_formats'] = "Stycke=p;Rubrik 2=h2;Rubrik 3=h3";
-  $init['toolbar1'] = "undo,redo,|,formatselect,|,italic,|,bullist,numlist,outdent,indent,blockquote,|,pastetext,pasteword,removeformat,|,link,unlink,|,valideratext,|,fullscreen,|,wp_help";
+  $init['toolbar1'] = "undo,redo,|,formatselect,|,italic,|,bullist,numlist,outdent,indent,blockquote,|,pastetext,pasteword,removeformat,|,link,unlink,|,valideratext,|,wp_help,|,dfw";
   $init['toolbar2'] = "";
   $init['paste_word_valid_elements'] = "@[class],p,h2,h3,a[href],em,div,table,tbody,thead,tr,td,ul,ol,li,img[src|alt]";
   // $init['valid_elements'] = "@[class|id],div,p,h2,h3,a[href],em,br,table,tbody,thead,tr,td,ul,ol,li,img[src|alt|class]";
