@@ -4,8 +4,7 @@ $mconfig['env'] = ENV;
 $mconfig['logdir'] = dirname(__FILE__) . '/../../../';
 
 if ($mconfig['env'] == 'development') {
-  // $mconfig['asset_host'] =  '//www.local.malmo.se:3001/assets/';
-  $mconfig['asset_host'] = '//assets.malmo.se/internal/v4-staging/';
+  $mconfig['asset_host'] =  '//www.local.malmo.se:3001/assets/';
   // $mconfig['asset_host'] =  '//161.52.82.110:3001/assets/';
   $mconfig['loglevel'] = 3;
 }
