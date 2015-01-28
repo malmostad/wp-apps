@@ -205,9 +205,3 @@ function add_theme_caps() {
   $role->add_cap( 'upload_files', true );
 }
 add_action( 'admin_init', 'add_theme_caps');
-
-// Add styles and script to admin views
-if (is_admin())  {
-  wp_enqueue_style('admin', get_template_directory_uri() . '/stylesheets/admin.css');
-  wp_enqueue_script('admin', get_template_directory_uri() . '/javascripts/admin.js');
-}
