@@ -1,11 +1,5 @@
 <!--eri-no-index-->
 <aside role="complementary">
-  <?php if (is_home() && is_active_sidebar('home-page-widget-area')): ?>
-    <div class="widget-area">
-      <?php dynamic_sidebar('home-page-widget-area') ?>
-    </div>
-  <?php endif ?>
-
   <?php if (!is_home()): ?>
     <nav class="basic latest-posts">
       <h1><a href="<?php bloginfo("url")?>">Senaste inläggen</a></h1>
@@ -32,7 +26,7 @@
     </nav>
   <?php endif ?>
 
-  <nav class="basic ">
+  <nav class="basic">
     <h1>Här hittar du</h1>
     <ul>
       <li><a href="<?php bloginfo('url'); ?>/">Alla inlägg</a></li>

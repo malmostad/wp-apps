@@ -33,4 +33,4 @@
 </head>
 <body <?php body_class($mconfig['env'] . " malmo-masthead-more mf-v4"); ?>>
 <div class="wrapper">
-<?php get_template_part('app-title') ?>
+<?php get_template_part('breadcrumbs') ?>
