@@ -14,8 +14,6 @@
 
       <?php get_template_part('single-meta') ?>
 
-      <section class="m-share"></section>
-
       <script>
         var blogTracking = {
           author: "<?php the_author() ?>",

@@ -2,7 +2,7 @@
 <aside role="complementary">
   <h1><a href="<?php bloginfo("url")?>">Senaste inläggen</a></h1>
   <ul class="latest-post">
-    <?php 
+    <?php
       global $template_vars;
       $query = get_top_posts($template_vars['postID']);
       if ($query->have_posts()):
