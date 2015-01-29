@@ -1,0 +1,46 @@
+/* Overrides for Vote it up plug */
+.vote-box {
+  @include clearfix();
+}
+
+.post_postvote {
+  font-family: $sans-serif;
+  .post_votebutton,
+  .post_votebutton:hover {
+    color: black;
+    text-align: center;
+  }
+
+  .post_votecount {
+    border-bottom: $border;
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 4px 0 5px !important;
+    font-size: 17px;
+  }
+
+  .post_votecount.show {
+    cursor: pointer;
+    color: $link-color;
+    width: 100%;
+  }
+
+  .post_votecount.show:hover {
+    text-decoration: underline;
+  }
+  .post_votewidget {
+    background-image: none;
+    background-color: #fff0ac;
+    @include radius(4px);
+    width: 55px;
+  }
+  .post_votebutton {
+    width: 100%;
+    padding: .1em 0;
+    background-image: none;
+    a {
+      color: $link-color !important;
+      font-size: 11px;
+    }
+  }
+}
