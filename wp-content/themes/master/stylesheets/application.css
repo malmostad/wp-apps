@@ -469,26 +469,6 @@ aside .widget-area {
       color: #007896 !important;
       font-size: 11px; }
 
-@media (max-width: 34em) {
-  .box-content {
-    font-size: 1em !important; }
-
-  .service-title a {
-    font-size: 1.15385em !important; }
-
-  #wpadminbar {
-    display: none; } }
-@media (max-width: 28em) {
-  article .alignright,
-  article .alignleft,
-  article .alignnone,
-  article .aligncenter,
-  article .featured-image img {
-    display: block;
-    float: none;
-    margin: .3em 0 1em 0;
-    width: 100%;
-    height: auto; } }
 @media print {
   body > footer, body > header, aside, menu,
   #respond, .service-title, .btn, .vote-box, .feed {
