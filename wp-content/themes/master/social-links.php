@@ -1,1 +1,1 @@
-<section class="m-share"></section>
+<!-- Implemented by child themes -->
