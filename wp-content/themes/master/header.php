@@ -25,10 +25,7 @@
 <link rel="icon" type="image/x-icon" href="<?php echo $mconfig['asset_host'] ?>favicon.ico"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s flöde" href="<?php bloginfo('url'); ?>/mainfeed/"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s kommentarsflöde" href="<?php bloginfo('url'); ?>/comments/feed/"/>
-<?php
-  if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
-  wp_head();
-?>
+<?php wp_head() ?>
 <?php get_template_part('social-meta') ?>
 </head>
 <body <?php body_class($mconfig['env'] . " malmo-masthead-more mf-v4"); ?>>

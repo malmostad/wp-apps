@@ -6,7 +6,7 @@
       <ul>
         <?php
           global $template_vars;
-          $query = get_top_posts($template_vars['postID']);
+          $query = get_top_posts(array_key_exists('postID', $template_vars) ? $template_vars['postID'] : null);
           if ($query->have_posts()):
             while ($query->have_posts()): $query->the_post(); ?>
             <li>

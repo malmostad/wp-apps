@@ -1,5 +1,4 @@
 <?php
-
 $mconfig['env'] = ENV;
 $mconfig['logdir'] = dirname(__FILE__) . '/../../../';
 
