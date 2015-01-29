@@ -6,6 +6,6 @@ get_header(); ?>
 
 <section class="body-copy">
 	<h1 class="page-title">Sidan finns inte</h1>
-	<p>Tyvärr så kunde inte sidan du efterfrågat hittas. Prova att göra en sökning.</p>
+	<p>Tyvärr så kunde inte sidan du efterfrågat hittas. Prova att göra en sökning upp till höger.</p>
 </section>
 <?php get_footer(); ?>

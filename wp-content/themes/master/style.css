@@ -1,12 +1,13 @@
 /*
 Theme Name: Master
-Theme URI: http://www.malmo.se/wag/
-Description: Main theme for Malmö stad's internal news
+Theme URI: http://malmo.se/
+Description: Master theme for blog and news
 Author: Malmö stad
-Version: 1.2
 */
 
 /*
-Use the Sass file stylesheets/application.scss for styles and transform it with:
-$ sass --watch stylesheets/application.scss
+Use the Sass to generate CSS
+
+  $ sass --watch stylesheets/application.scss
+  $ sass --watch --style compressed  stylesheets/application.scss
 */

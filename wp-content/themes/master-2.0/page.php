@@ -3,7 +3,7 @@
  * The template for displaying all pages.
  */
 get_header(); ?>
-<main role="main">
+<div role="main">
   <article class="body-copy">
   	<?php while (have_posts()): the_post(); ?>
 
@@ -25,6 +25,6 @@ get_header(); ?>
     <a class="btn btn-mini edit" href="<?php echo get_edit_post_link() ?>">Redigera</a>
   <?php endif; ?>
   <?php comments_template( '', true ); ?>
-</main>
+</div>
 <?php get_template_part('aside'); ?>
 <?php get_footer(); ?>

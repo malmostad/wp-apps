@@ -1,8 +1,12 @@
 <?php
-  global $wp_query;
-  if ($wp_query->max_num_pages > 1): ?>
-  <menu class="history" type="toolbar">
-    <li class="next"><?php previous_posts_link( '<span class="title">' . __('Senare inlägg', 'malmo') .'</span><span class=" icon-circle-arrow-right icon-large"></span>' ); ?></li>
-    <li class="previous"><?php next_posts_link( '<span class="icon-circle-arrow-left icon-large"></span><span class="title">' . __('Tidigare inlägg', 'malmo') . '</span>' ); ?></li>
-  </menu>
-<?php endif; ?>
+global $wp_query;
+if ($wp_query->max_num_pages > 1): ?>
+  <nav>
+    <ul class="pagination">
+      <li class="previous" rel="prev"><?php next_posts_link('Äldre') ?></li>
+      <?php if (strlen(get_previous_posts_link())): ?>
+        <li class="next" rel="next"><?php previous_posts_link('Nyare') ?></li>
+      <?php endif ?>
+    </ul>
+  </nav>
+<?php endif ?>

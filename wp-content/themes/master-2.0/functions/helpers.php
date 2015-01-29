@@ -32,19 +32,19 @@ function truncate_excerpt($text, $limit) {
   return $text;
 }
 
-function get_top_posts($except = null, $max = 5) {
-  return new WP_Query(array(
-    'posts_per_page' => $max,
-    'post__not_in' => array($except)
-  ));
-}
-
 // Cut the text to $limit number of chars
 function truncate_excerpt_chars($text, $limit) {
   $text = do_shortcode($text);
   $text = strip_tags($text);
   $text = preg_replace('/\s\s+/', ' ', $text);
   return mb_substr($text, 0, $limit);
+}
+
+function get_top_posts($except = null, $max = 5) {
+  return new WP_Query(array(
+    'posts_per_page' => $max,
+    'post__not_in' => array($except)
+  ));
 }
 
 function get_gravatar_url($email) {

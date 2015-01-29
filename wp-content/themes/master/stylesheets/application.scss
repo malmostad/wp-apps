@@ -1,13 +1,10 @@
-// sass --watch master/stylesheets/application.scss komin-nyheter/stylesheets/application.scss  komin-blogg/stylesheets/application.scss   external-blogg/stylesheets/application.scss
-// sass --watch --style compressed  master/stylesheets/application.scss komin-nyheter/stylesheets/application.scss  komin-blogg/stylesheets/application.scss   external-blogg/stylesheets/application.scss
-@import 'variables';
-@import 'mixins';
-@import 'functions';
-@import 'base';
-@import 'post';
-@import 'comments';
-@import 'loop';
-@import 'nav-posts';
-@import 'aside';
-@import 'media-queries';
-@import 'print';
+@import '../vendor/malmo_shared_assets/stylesheets/malmo_external',
+        'grid',
+        'single',
+        'comments',
+        'loop',
+        'archive',
+        'aside',
+        'vote',
+        'media-queries',
+        'print';

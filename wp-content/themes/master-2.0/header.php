@@ -17,20 +17,19 @@
 ?>
 <!--[if lte IE 8]><script src="<?php echo $mconfig['asset_host'] ?>html5shiv-printshiv.js" type="text/javascript"></script><![endif]-->
 <link href="<?php echo $mconfig['asset_host'] ?>malmo.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri() ?>/stylesheets/application.css"/>
-<!--[if lte IE 8]><link href="<?php echo $mconfig['asset_host'] ?>legacy/ie8.css" rel="stylesheet" type="text/css"/><![endif]-->
+<link rel="stylesheet" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/stylesheets/application.css"/>
+<!--[if lte IE 7]><link href="<?php echo $mconfig['asset_host'] ?>legacy/ie7.css" rel="stylesheet" type="text/css"/><![endif]-->
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
-<noscript><link href="//assets.malmo.se/external/v4/icons.fallback.css" media="all" rel="stylesheet" type="text/css" /></noscript>
 <script>var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";</script>
-<link rel="icon" type="image/x-icon" href="<?php echo $mconfig['asset_host'] ?>favicon.ico"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s flöde" href="<?php bloginfo('url'); ?>/mainfeed/"/>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>s kommentarsflöde" href="<?php bloginfo('url'); ?>/comments/feed/"/>
+<link rel="icon" type="image/x-icon" href="<?php echo $mconfig['asset_host'] ?>favicon.ico"/>
 <?php
   if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
   wp_head();
 ?>
 <?php get_template_part('social-meta') ?>
 </head>
-<body <?php body_class($mconfig['env'] . " malmo-masthead-more mf-v4"); ?>>
+<body <?php body_class($mconfig['env'] . " malmo-masthead-more malmo-form"); ?>>
+<?php get_template_part('app-title') ?>
 <div class="wrapper">
-<?php get_template_part('breadcrumbs') ?>

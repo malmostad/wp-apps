@@ -1,1 +1,0 @@
-../../komin-master/languages/sv_SE.pot
