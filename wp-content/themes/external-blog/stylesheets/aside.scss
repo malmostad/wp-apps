@@ -30,7 +30,7 @@ aside {
     .text {
       @include columns(9, true, 5%);
       h2 {
-        font-size: emize(13, 14);
+        font-size: emize(15, 14);
         line-height: 1.3;
         font-family: $serif;
         font-weight: normal;

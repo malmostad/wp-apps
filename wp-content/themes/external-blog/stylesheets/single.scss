@@ -1,11 +1,11 @@
 .single .post {
   clear: left;
   .article-and-comments {
-    @include columns(9, true, 4%);
+    @include columns(9, true, 3%);
   }
 
   .meta {
-    @include columns(3, false, 4%);
+    @include columns(3, false, 3%);
     .author {
       font-family: $sans-serif;
       font-size: emize(14);

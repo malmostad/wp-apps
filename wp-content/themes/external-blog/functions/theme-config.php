@@ -3,22 +3,19 @@
 $mconfig['env'] = ENV;
 $mconfig['logdir'] = dirname(__FILE__) . '/../../../';
 
+$mconfig['staff_directory'] = 'http://webapps06.malmo.se/dashboard/users/';
+$mconfig['avtar_base_url'] =  '//webapps06.malmo.se/avatars/';
+
 if ($mconfig['env'] == 'development') {
-  $mconfig['staff_directory'] = 'http://webapps06.malmo.se/dashboard/users/';
-  // $mconfig['asset_host'] =  '//www.local.malmo.se:3001/assets/';
   $mconfig['asset_host'] = '//assets.malmo.se/external/v4-staging/';
-  // $mconfig['asset_host'] =  '//161.52.82.110:3001/assets/';
   $mconfig['loglevel'] = 3;
 }
 elseif ($mconfig['env'] == 'test' ) {
-  $mconfig['staff_directory'] = 'http://webapps06.malmo.se/dashboard/users/';
   $mconfig['asset_host'] = '//assets.malmo.se/external/v4-staging/';
   $mconfig['loglevel'] = 2;
   $mconfig['cache_engine'] = 'apc';
 }
 else {
-  $mconfig['staff_directory'] = 'http://webapps06.malmo.se/dashboard/users/';
-  $mconfig['avtar_base_url'] =  '//webapps06.malmo.se/avatars/';
   $mconfig['asset_host'] = '//assets.malmo.se/external/v4/';
   $mconfig['loglevel'] = 1;
   $mconfig['cache_engine'] = 'apc';

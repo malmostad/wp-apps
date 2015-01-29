@@ -17,7 +17,7 @@
 ?>
 <!--[if lte IE 8]><script src="<?php echo $mconfig['asset_host'] ?>html5shiv-printshiv.js" type="text/javascript"></script><![endif]-->
 <link href="<?php echo $mconfig['asset_host'] ?>malmo.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/stylesheets/application.css"/>
+<link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri() ?>/stylesheets/application.css"/>
 <!--[if lte IE 8]><link href="<?php echo $mconfig['asset_host'] ?>legacy/ie8.css" rel="stylesheet" type="text/css"/><![endif]-->
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
 <noscript><link href="//assets.malmo.se/external/v4/icons.fallback.css" media="all" rel="stylesheet" type="text/css" /></noscript>

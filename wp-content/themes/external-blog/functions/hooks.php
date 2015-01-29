@@ -143,11 +143,6 @@ function my_wp_title($title, $sep) {
 }
 add_filter('wp_title', 'my_wp_title', 10, 2);
 
-add_action( 'after_setup_theme', 'load_language' );
-function load_language() {
-  load_child_theme_textdomain( 'malmo', get_stylesheet_directory() . '/languages' );
-}
-
 // Hack to prevent master from overriding
 function let_child_rule() {
   return true;
