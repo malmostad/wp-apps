@@ -217,8 +217,8 @@ aside {
     .single .post article .featured-image img {
       width: 100%;
       height: auto; } }
-.mf-v4 .dropdown-menu li {
-  font-size: 1.27273em; }
+.mf-v4 .author .dropdown-menu li {
+  font-size: 1.16667em; }
 
 #comments {
   margin-bottom: 1em;
@@ -427,13 +427,18 @@ aside .widget-area {
   aside .latest-posts .text h2 {
     font-size: 1.21429em; } }
 /* Overrides for Vote it up plug */
-.vote-box {
-  *zoom: 1; }
-  .vote-box:before, .vote-box:after {
+.vote-box,
+.post_postvote {
+  *zoom: 1;
+  float: none !important; }
+  .vote-box:before, .vote-box:after,
+  .post_postvote:before,
+  .post_postvote:after {
     display: table;
     content: '';
     line-height: 0; }
-  .vote-box:after {
+  .vote-box:after,
+  .post_postvote:after {
     clear: both; }
 
 .post_postvote {

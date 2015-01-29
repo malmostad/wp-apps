@@ -1,6 +1,8 @@
 /* Overrides for Vote it up plug */
-.vote-box {
+.vote-box,
+.post_postvote {
   @include clearfix();
+  float: none !important;
 }
 
 .post_postvote {

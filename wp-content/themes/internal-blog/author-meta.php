@@ -1,3 +1,4 @@
+<?php global $mconfig; ?>
 <div class="author">
   <div class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>" id="blogger-menu" role="button" title="Information om bloggaren">
