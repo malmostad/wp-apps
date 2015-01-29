@@ -217,6 +217,9 @@ aside {
     .single .post article .featured-image img {
       width: 100%;
       height: auto; } }
+.mf-v4 .dropdown-menu li {
+  font-size: 1.27273em; }
+
 #comments {
   margin-bottom: 1em;
   clear: both;
@@ -423,5 +426,72 @@ aside .widget-area {
 @media (max-width: 26em) {
   aside .latest-posts .text h2 {
     font-size: 1.21429em; } }
+/* Overrides for Vote it up plug */
+.vote-box {
+  *zoom: 1; }
+  .vote-box:before, .vote-box:after {
+    display: table;
+    content: '';
+    line-height: 0; }
+  .vote-box:after {
+    clear: both; }
+
+.post_postvote {
+  font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif; }
+  .post_postvote .post_votebutton,
+  .post_postvote .post_votebutton:hover {
+    color: black;
+    text-align: center; }
+  .post_postvote .post_votecount {
+    border-bottom: #b5b5b5 1px solid;
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 4px 0 5px !important;
+    font-size: 17px; }
+  .post_postvote .post_votecount.show {
+    cursor: pointer;
+    color: #007896;
+    width: 100%; }
+  .post_postvote .post_votecount.show:hover {
+    text-decoration: underline; }
+  .post_postvote .post_votewidget {
+    background-image: none;
+    background-color: #fff0ac;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    width: 55px; }
+  .post_postvote .post_votebutton {
+    width: 100%;
+    padding: .1em 0;
+    background-image: none; }
+    .post_postvote .post_votebutton a {
+      color: #007896 !important;
+      font-size: 11px; }
+
+@media (max-width: 34em) {
+  .box-content {
+    font-size: 1em !important; }
+
+  .service-title a {
+    font-size: 1.15385em !important; }
+
+  #wpadminbar {
+    display: none; } }
+@media (max-width: 28em) {
+  article .alignright,
+  article .alignleft,
+  article .alignnone,
+  article .aligncenter,
+  article .featured-image img {
+    display: block;
+    float: none;
+    margin: .3em 0 1em 0;
+    width: 100%;
+    height: auto; } }
+@media print {
+  body > footer, body > header, aside, menu,
+  #respond, .service-title, .btn, .vote-box, .feed {
+    display: none !important; } }
 
 /*# sourceMappingURL=application.css.map */

@@ -4,17 +4,12 @@
     <h1 class="body-copy"><?php the_title(); ?></h1>
 
     <section class="meta">
-      <div class="author">
-        <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )) ?>">
-          <?php echo get_avatar(get_the_author_meta('user_email'), 139) ; ?>
-          <div class="vcard fn"><?php the_author() ?></div>
-        </a>
-      </div>
+      <?php get_template_part('author-meta') ?>
+
       <time><?php echo get_the_date() . ' ' . get_the_time() ?></time>
 
       <?php get_template_part('single-meta') ?>
-
-      <section class="m-share"></section>
+      <?php get_template_part('social-links') ?>
 
       <script>
         var blogTracking = {
