@@ -9,7 +9,7 @@ jQuery(function($) {
     }
     attempts++;
     // We need to loop since the #content editor has no initiated callback
-    if (tinyMCE.get('content') === undefined) {
+    if (tinyMCE.get('content') === null || typeof tinyMCE.get('content') === "undefined") {
       setTimeout(function() {
         setupEditor();
       }, 10);
@@ -48,10 +48,9 @@ jQuery(function($) {
     setupEditor();
   }
 
-  $('#wpa_loop-links').delegate('.link-url input', 'focus', function() {
+  $('#wpa_loop-links').on('focus', '.link-url input', function() {
     if ($(this).val() === '') {
       $(this).attr('value', 'http://');
     }
   });
-
 });

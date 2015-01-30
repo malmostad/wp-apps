@@ -89,13 +89,13 @@ function load_language() {
 }
 
 // Add featured image thumbnail to RSS feed
-add_action("do_feed_rss2","wp_rss_img_do_feed",5,1);
-function wp_rss_img_do_feed(){
-    add_action('rss2_item', 'wp_rss_img_include');
+add_action("do_feed_rss2","wp_rss_img_feed",5,1);
+function wp_rss_img_feed(){
+    add_action('rss2_item', 'wp_rss_img');
     add_action('rss2_ns', 'add_rss2_ns');
-    add_action('commentrss2_item', 'wp_rss_img_include');
+    add_action('commentrss2_item', 'wp_rss_img');
 }
-function wp_rss_img_include($content) {
+function wp_rss_img($content) {
   global $post;
   $small = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
   $medium = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium');
