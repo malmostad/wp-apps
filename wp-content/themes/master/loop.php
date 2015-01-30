@@ -13,12 +13,7 @@
     <?php while (have_posts()): the_post(); ?>
       <section id="post-<?php the_ID(); ?>" <?php post_class() ?>>
         <div class="entry-meta">
-          <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')) ?>">
-            <div class="avatar">
-              <?php echo get_avatar(get_the_author_meta('user_email'), 139) ?>
-            </div>
-            <p class="author vcard"><?php the_author() ?></p>
-          </a>
+          <?php get_template_part('author-meta') ?>
           <time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>
         </div>
 
