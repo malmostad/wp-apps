@@ -1,9 +1,9 @@
 <?php
 /*
-  Plugin Name: Force Login
-  Plugin URI: https://github.com/malmostad/intranet-wordpress-themes
+  Plugin Name: Force Login for Reading
+  Plugin URI: https://github.com/malmostad/wp-apps
   Description: Require login for all access except for feeds
-  Version: 0.0.1
+  Version: 0.0.2
   Author: Malmö stad
   Author URI: https://github.com/malmostad
 */
