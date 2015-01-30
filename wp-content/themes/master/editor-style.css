@@ -5,7 +5,7 @@ Theme Name: Malmo_Theme
 Used to style the TinyMCE editor.
 */
 html .mceContentBody {
-	max-width: 516px;
+	max-width: 506px;
 }
 pre, code, code var {
 	font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
