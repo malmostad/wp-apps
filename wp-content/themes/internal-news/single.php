@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div role="main">
+<main role="main" class="post">
   <article class="body-copy">
     <?php while (have_posts()): the_post(); ?>
 
@@ -80,11 +80,13 @@
 
   <?php comments_template( '', true ); ?>
 
-  <menu class="history" type="toolbar">
-    <li class="previous"><?php previous_post_link( '%link', '<span class="icon-circle-arrow-left icon-large"></span><span class="title">%title</span>' ); ?></li>
-    <li class="next"><?php next_post_link( '%link', '<span class="title">%title</span><span class=" icon-circle-arrow-right icon-large"></span>' ); ?></li>
-  </menu>
-</div>
+  <nav>
+    <ul class="pagination">
+      <li class="previous"><?php previous_post_link( '%link', 'Föregående' ); ?></li>
+      <li class="next"><?php next_post_link( '%link', 'Nästa' ); ?></li>
+    </ul>
+  </nav>
+</main>
 
 
 <?php

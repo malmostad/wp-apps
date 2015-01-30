@@ -351,6 +351,10 @@ aside ul, aside ol {
   list-style: none;
   margin: 0;
   padding: 0; }
+aside nav.basic ul {
+  margin-bottom: 1em; }
+  aside nav.basic ul:last-child {
+    margin-bottom: 0em; }
 aside .latest-posts li {
   *zoom: 1;
   margin-bottom: .4em; }

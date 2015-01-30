@@ -12,6 +12,12 @@ aside {
     margin: 0;
     padding: 0;
   }
+  nav.basic ul {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0em;
+    }
+  }
 
   .latest-posts {
     li {
