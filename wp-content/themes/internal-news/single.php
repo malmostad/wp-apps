@@ -39,9 +39,7 @@
       <?php endif; ?>
 
       <section class="meta">
-        <div class="author-avatar">
-          <?php get_template_part('author-meta') ?>
-        </div>
+        <?php get_template_part('author-meta') ?>
 
         <dl class="entry-meta">
           <dt class="meta-prep meta-prep-tags">Kategorier:</dt>

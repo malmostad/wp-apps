@@ -642,7 +642,8 @@ aside {
 }
 
 @media (max-width: 50em) {
-  main, aside {
+  main,
+  aside {
     width: 100%;
     margin-right: 2%;
     margin-right: 0;
@@ -713,7 +714,12 @@ aside {
 .single .post .meta .entry-meta,
 .single .post .meta .entry-tags {
   display: block;
-  margin: 0;
+  margin: 0 0 1em 0;
+}
+.single .post .meta .entry-meta::after,
+.single .post .meta .entry-tags::after {
+  display: none;
+  content: none;
 }
 .single .post .meta .entry-meta dt, .single .post .meta .entry-meta dd,
 .single .post .meta .entry-tags dt,
@@ -741,8 +747,8 @@ aside {
 }
 .single .post .meta .entry-meta ul li:first-child::after,
 .single .post .meta .entry-tags ul li:first-child::after {
+  display: none;
   content: none;
-  margin: 0;
 }
 
 /*# sourceMappingURL=application.css.map */

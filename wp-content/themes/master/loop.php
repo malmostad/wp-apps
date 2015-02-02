@@ -12,9 +12,7 @@
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
       <section id="post-<?php the_ID(); ?>" <?php post_class() ?>>
-        <div class="entry-meta">
-          <?php get_template_part('author-meta') ?>
-        </div>
+        <?php get_template_part('loop-meta') ?>
 
         <a href="<?php the_permalink(); ?>" rel="bookmark">
           <section class="body-copy">
