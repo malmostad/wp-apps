@@ -83,11 +83,6 @@ if (is_admin()) {
   add_action( 'admin_menu', 'my_remove_meta_boxes' );
 }
 
-add_action( 'after_setup_theme', 'load_language' );
-function load_language() {
-  load_child_theme_textdomain( 'malmo', get_stylesheet_directory() . '/languages' );
-}
-
 // Add featured image thumbnail to RSS feed
 add_action("do_feed_rss2","wp_rss_img_feed",5,1);
 function wp_rss_img_feed(){

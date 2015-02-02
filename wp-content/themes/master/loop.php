@@ -5,9 +5,7 @@
   $alt = isset($alt) ? $alt : "Prenumerera på RSS-flödet för {$title}";
 ?>
 <main role="main" class="loop">
-  <?php if (!is_home()): ?>
-    <h1 class="page-title"><?php echo $title ?></h1>
-  <?php endif ?>
+  <h1 class="page-title"><?php echo $title ?></h1>
 
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
