@@ -7,15 +7,23 @@ aside {
       text-decoration: none;
     }
   }
+
   ul, ol {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  nav.basic ul {
-    margin-bottom: 1em;
-    &:last-child {
-      margin-bottom: 0em;
+
+  nav.basic {
+    ul {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0em;
+      }
+    }
+    p {
+      font-family: $serif;
+      font-size: 13px;
     }
   }
 
@@ -26,9 +34,9 @@ aside {
     }
     .featured-image {
       @include columns(3, false, 5%);
-      background-color: transparent;
+      background-color: $background-light;
+      margin-top: emize(4);
       img {
-        margin-top: emize(4);
         width: 100%;
         height: auto;
       }

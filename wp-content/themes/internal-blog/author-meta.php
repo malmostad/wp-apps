@@ -11,3 +11,4 @@
     </menu>
   </div>
 </div>
+<time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>

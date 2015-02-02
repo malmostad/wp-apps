@@ -4,3 +4,4 @@
     <div class="vcard fn"><?php the_author() ?></div>
   </a>
 </div>
+<time><?php echo get_the_date() . ' ' .  get_the_time() ?></time>

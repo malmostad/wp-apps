@@ -1,0 +1,18 @@
+.loop {
+  .post {
+    .body-copy {
+      @include columns(10, true, 3%);
+    }
+    .entry-meta {
+      @include columns(2, false, 3%);
+      .article-image {
+        background: $background-light;
+        margin-top: .3em;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

@@ -6,8 +6,6 @@
     <section class="meta">
       <?php get_template_part('author-meta') ?>
 
-      <time><?php echo get_the_date() . ' ' . get_the_time() ?></time>
-
       <?php get_template_part('single-meta') ?>
       <?php get_template_part('social-links') ?>
 

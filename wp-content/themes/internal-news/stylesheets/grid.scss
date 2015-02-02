@@ -1,0 +1,11 @@
+.wrapper {
+  max-width: 58em;
+}
+
+main {
+  @include columns(8, false, 5%);
+}
+
+aside {
+  @include columns(4, true, 5%);
+}
