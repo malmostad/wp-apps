@@ -13,7 +13,7 @@ For more information about the services, contact webbteamet@malmo.se.
 * Wordpress >= 4.1
 * Wordpress compatible database
 * LDAP server for authentication
-* [Assets service](https://github.com/malmostad/intranet-assets).
+* [Assets service](https://github.com/malmostad/global-assets).
 * [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
 * Sass for development and build.
 * Wordpress plugins used:
