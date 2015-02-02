@@ -37,10 +37,12 @@ For more information about the services, contact webbteamet@malmo.se.
 Use Sass to generate CSS for the child theme. This will include both the master and the child theme Sass files (if any).
 
 During development:
+
   $ cd wp-content/themes
   $ sass --watch --style expanded <child-theme>stylesheets/application.scss
 
 Build for deploy:
+
   $ cd wp-content/themes
   $ sass --style compressed  <child-theme>stylesheets/application.scss > <child-theme>stylesheets/application.css
 
