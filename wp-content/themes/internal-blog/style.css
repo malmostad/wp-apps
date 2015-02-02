@@ -9,7 +9,7 @@ Version: 4.0
 
 
 /*
-Use the Sass to generate CSS **within** the child theme
+Use Sass to generate CSS **within** the child theme
 
 During development:
   $ sass --watch --style expanded stylesheets/application.scss

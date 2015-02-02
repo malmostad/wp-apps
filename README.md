@@ -4,27 +4,26 @@ Wordpress applications for the following publishing services at Malmö stad:
 * Intranet Blog
 * External Blog
 * Intranet News
-* HR, help texts to the HR system.
 
-The themes are using Malmö stads’s global assets, see the repo see the repo [intranet-assets](https://github.com/malmostad/intranet-assets).
+The themes are using Malmö stads’s global assets, see the repo see the repo [global-assets](https://github.com/malmostad/global-assets).
 
-For more information about the services, contact kominteamet@malmo.se.
+For more information about the services, contact webbteamet@malmo.se.
 
 ## Dependencies
-* Wordpress >= 3.8
+* Wordpress >= 4.1
 * Wordpress compatible database
-* LDAP server or a SAML IdP for authentication
+* LDAP server for authentication
 * [Assets service](https://github.com/malmostad/intranet-assets).
 * [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
-* Sass for development and build. See `wp-content/themes/komin-master/stylesheets/application.scss` for info.
+* Sass for development and build.
 * Wordpress plugins used:
   * auto-hyperlink-urls
   * content-scheduler
   * valideratext
   * wpdirauth
-  * Force Login (included in source)
+  * Force Login for Reading (included in source)
   * Force SSL In Content (included in source)
-  * SAML 2.0 (included in source)
+  * Portwise Authentication (included in source)
 
 ## Setup
 * Copy and edit the following files from this code base (do __not__ check in config files in the repository):
@@ -34,6 +33,14 @@ For more information about the services, contact kominteamet@malmo.se.
 * Install and activate one of the themes.
 * Install the plugins listed above.
 * Edit `themes/<theme_name>/functions/theme-config.php`
+
+Use Sass to generate CSS **within** the child theme. This will include both the master and the child theme Sass files (if any).
+
+During development:
+  $ sass --watch --style expanded stylesheets/application.scss
+
+Build for deploy:
+  $ sass --style compressed  stylesheets/application.scss > stylesheets/application.css
 
 ## Licence
 Released under AGPL version 3.
