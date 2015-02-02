@@ -200,3 +200,9 @@ function add_theme_caps() {
   $role->add_cap( 'upload_files', true );
 }
 add_action( 'admin_init', 'add_theme_caps');
+
+function include_theme_scripts() {
+  // Include the child themes application.css. See style.css for Sass compiling instructions
+	wp_enqueue_style('child_theme_style', get_stylesheet_directory_uri() . "/stylesheets/application.css");
+}
+add_action( 'wp_enqueue_scripts', 'include_theme_scripts' );

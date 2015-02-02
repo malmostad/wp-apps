@@ -109,8 +109,3 @@ function wp_rss_img($content) {
 function add_rss2_ns() {
   echo 'xmlns:dashboard="http://komin.malmo.se/dashboard"';
 }
-
-function internal_news_scripts() {
-	wp_enqueue_style('internal_news_style', get_stylesheet_directory_uri() . "/stylesheets/application.css");
-}
-add_action( 'wp_enqueue_scripts', 'internal_news_scripts' );
