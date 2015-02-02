@@ -6,9 +6,9 @@
     .entry-meta {
       @include columns(2, false, 3%);
       .article-image {
-        background: $background-light;
         margin-top: .3em;
         img {
+          background: $background-light;
           width: 100%;
           height: auto;
         }

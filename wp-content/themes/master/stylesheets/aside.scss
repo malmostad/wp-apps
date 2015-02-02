@@ -34,11 +34,11 @@ aside {
     }
     .featured-image {
       @include columns(3, false, 5%);
-      background-color: $background-light;
       margin-top: emize(4);
       img {
         width: 100%;
         height: auto;
+        background: $background-light;
       }
     }
     .text {
