@@ -34,13 +34,13 @@ For more information about the services, contact webbteamet@malmo.se.
 * Install the plugins listed above.
 * Edit `themes/<theme_name>/functions/theme-config.php`
 
-Use Sass to generate CSS **within** the child theme. This will include both the master and the child theme Sass files (if any).
+Use Sass to generate CSS for the child theme. This will include both the master and the child theme Sass files (if any).
 
 During development:
-  $ sass --watch --style expanded stylesheets/application.scss
+  $ sass --watch --style expanded <child-theme>stylesheets/application.scss
 
 Build for deploy:
-  $ sass --style compressed  stylesheets/application.scss > stylesheets/application.css
+  $ sass --style compressed  <child-theme>stylesheets/application.scss > <child-theme>stylesheets/application.css
 
 ## Licence
 Released under AGPL version 3.

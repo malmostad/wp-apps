@@ -454,7 +454,7 @@ aside nav.basic ul {
   margin-bottom: 1em;
 }
 aside nav.basic ul:last-child {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 aside nav.basic p {
   font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
@@ -506,7 +506,7 @@ aside .latest-posts .text h2 {
 aside .latest-posts .text time {
   clear: both;
   display: block;
-  margin-top: .2em;
+  margin: .2em 0;
   font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 0.85714em;
 }
