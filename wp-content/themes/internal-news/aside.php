@@ -30,7 +30,6 @@
     </ul>
   </nav>
 
-
   <nav class="basic">
     <h1>Nyheter</h1>
     <ul>

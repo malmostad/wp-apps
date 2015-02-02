@@ -119,6 +119,9 @@ aside {
   font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 0.75em;
 }
+.single .post .box {
+  clear: both;
+}
 .single .post .alignright, .single .post .aligncenter {
   float: right;
   margin: .3em 0 1em 1em;
@@ -638,6 +641,19 @@ aside {
   box-sizing: border-box;
 }
 
+@media (max-width: 50em) {
+  main, aside {
+    width: 100%;
+    margin-right: 2%;
+    margin-right: 0;
+    float: none;
+    float: left;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
 .loop .post .body-copy {
   width: 82.83333%;
   margin-right: 0;
@@ -663,6 +679,70 @@ aside {
 .loop .post .entry-meta .article-image img {
   width: 100%;
   height: auto;
+}
+
+.single .post .meta {
+  width: 100%;
+  margin-right: 2%;
+  margin-right: 0;
+  float: none;
+  float: left;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.single .post .meta .author {
+  float: right;
+  width: 25%;
+  text-align: right;
+  margin-left: 0;
+}
+@media (max-width: 32em) {
+  .single .post .meta .author {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+}
+.single .post .meta .author img {
+  width: 87px;
+  height: auto;
+  margin: 0;
+}
+.single .post .meta .entry-meta,
+.single .post .meta .entry-tags {
+  display: block;
+  margin: 0;
+}
+.single .post .meta .entry-meta dt, .single .post .meta .entry-meta dd,
+.single .post .meta .entry-tags dt,
+.single .post .meta .entry-tags dd {
+  font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.single .post .meta .entry-meta dt,
+.single .post .meta .entry-tags dt {
+  font-size: 0.875em;
+}
+.single .post .meta .entry-meta dd,
+.single .post .meta .entry-tags dd {
+  font-size: 1.16667em;
+}
+.single .post .meta .entry-meta ul,
+.single .post .meta .entry-tags ul {
+  margin: 0;
+  padding: 0;
+}
+.single .post .meta .entry-meta ul li:first-child,
+.single .post .meta .entry-tags ul li:first-child {
+  font-weight: normal;
+}
+.single .post .meta .entry-meta ul li:first-child::after,
+.single .post .meta .entry-tags ul li:first-child::after {
+  content: none;
+  margin: 0;
 }
 
 /*# sourceMappingURL=application.css.map */

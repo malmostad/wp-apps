@@ -22,6 +22,10 @@
     }
   }
 
+  .box {
+    clear: both;
+  }
+
   .alignright, .aligncenter { // centered media is bad
     float: right;
     margin: .3em 0 1em 1em;

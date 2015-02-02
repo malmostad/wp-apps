@@ -9,3 +9,9 @@ main {
 aside {
   @include columns(4, true, 5%);
 }
+
+@media ( max-width: 50em ) {
+  main, aside {
+    @include columns(12);
+  }
+}

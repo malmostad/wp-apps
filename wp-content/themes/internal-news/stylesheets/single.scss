@@ -1,0 +1,48 @@
+.single .post {
+  .meta {
+    @include columns(12);
+    .author {
+      float: right;
+      width: 25%;
+      text-align: right;
+      margin-left: 0;
+      @media (max-width: 32em) {
+        float: none;
+        width: 100%;
+        text-align: left;
+      }
+      img {
+        width: 87px;
+        height: auto;
+        margin: 0;
+      }
+    }
+    .entry-meta,
+    .entry-tags {
+      display: block;
+      margin: 0;
+      dt, dd {
+        font-family: $sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      dt {
+        font-size: emize(14);
+      }
+      dd {
+        font-size: emize(14, 12);
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li:first-child {
+          font-weight: normal;
+          &::after {
+            content: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
