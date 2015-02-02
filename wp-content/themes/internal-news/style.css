@@ -7,6 +7,13 @@ Template: master
 */
 
 /*
-Use the Sass file stylesheets/application.scss for styles and transform it with:
-$ sass --watch stylesheets/application.scss
+Use the Sass to generate CSS **within** the child theme
+
+During development:
+  $ sass --watch --style expanded stylesheets/application.scss
+
+Build for deploy:
+  $ sass --style compressed stylesheets/application.scss > stylesheets/application.css
+
+This will include both the master and the child theme Sass files
 */

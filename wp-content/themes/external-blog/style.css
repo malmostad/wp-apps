@@ -6,3 +6,15 @@ Author: Malmö stad
 Template: master
 Version: 4.0
 */
+
+/*
+Use the Sass to generate CSS **within** the child theme
+
+During development:
+  $ sass --watch --style expanded stylesheets/application.scss
+
+Build for deploy:
+  $ sass --style compressed  stylesheets/application.scss > stylesheets/application.css
+
+This will include both the master and the child theme Sass files
+*/

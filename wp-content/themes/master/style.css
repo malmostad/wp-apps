@@ -7,8 +7,13 @@ Version: 4.0
 */
 
 /*
-Use the Sass to generate CSS
+Use the Sass to generate CSS **within** the child theme
 
-  $ sass --watch stylesheets/application.scss
-  $ sass --watch --style compressed  stylesheets/application.scss
+During development:
+  $ sass --watch --style expanded stylesheets/application.scss
+
+Build for deploy:
+  $ sass --style compressed  stylesheets/application.scss > stylesheets/application.css
+
+This will include both the master theme Sass and child theme Sass
 */
