@@ -38,13 +38,13 @@ Use Sass to generate CSS for the child theme. This will include both the master 
 
 During development:
 
-  $ cd wp-content/themes
-  $ sass --watch --style expanded <child-theme>stylesheets/application.scss
+    $ cd wp-content/themes
+    $ sass --watch --style expanded <child-theme>stylesheets/application.scss
 
 Build for deploy:
 
-  $ cd wp-content/themes
-  $ sass --style compressed  <child-theme>stylesheets/application.scss > <child-theme>stylesheets/application.css
+    $ cd wp-content/themes
+    $ sass --style compressed  <child-theme>stylesheets/application.scss > <child-theme>stylesheets/application.css
 
 ## Licence
 Released under AGPL version 3.
