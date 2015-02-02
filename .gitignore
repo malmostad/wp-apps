@@ -20,8 +20,8 @@ sitemap.xml
 sitemap.xml.gz
 .sass-cache
 
-/wp-content/themes/*/stylesheets/application.css
-/wp-content/themes/*/stylesheets/application.css.map
+# /wp-content/themes/*/stylesheets/application.css
+# /wp-content/themes/*/stylesheets/application.css.map
 
 /index.php
 /wp-activate.php
