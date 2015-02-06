@@ -21,32 +21,32 @@
         font-size: emize(14);
       }
     }
+    a {
+      color: #000;
+    }
     .entry-meta {
       @include columns(3, false, 3%);
       font-family: $sans-serif;
       .author {
         margin-bottom: .2em;
-        color: $link-color;
         font-size: emize(14);
         @media (max-width: 32em) {
           font-size: emize(12);
         }
-      }
-      .avatar {
-        margin-top: .2em;
-        img {
-          width: 100%;
-          height: auto;
-          border: 0;
+        a {
+          color: $link-color;
         }
+      }
+      img {
+        margin-top: .2em;
+        width: 100%;
+        height: auto;
+        border: 0;
       }
       time {
         display: block;
         font-size: emize(12);
       }
-    }
-    a {
-      color: #000;
     }
     a:hover {
       text-decoration: none;

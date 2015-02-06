@@ -370,7 +370,7 @@ aside {
   margin-top: 0;
 }
 .loop .post .body-copy {
-  width: 74.5%;
+  width: 74.25%;
   margin-right: 0;
   float: left;
   -ms-box-sizing: border-box;
@@ -389,8 +389,8 @@ aside {
   color: #000;
 }
 .loop .post .entry-meta {
-  width: 23.5%;
-  margin-right: 2%;
+  width: 22.75%;
+  margin-right: 3%;
   float: left;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -410,13 +410,9 @@ aside {
 .loop .post .entry-meta .author a {
   color: #007896;
 }
-.loop .post .entry-meta .avatar {
+.loop .post .entry-meta img {
   margin-top: .2em;
-  overflow: hidden;
-}
-.loop .post .entry-meta .avatar img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   border: 0;
 }
