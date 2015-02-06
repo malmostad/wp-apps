@@ -71,7 +71,7 @@
       endwhile; ?>
   </article>
 
-  <?php edit_post_link('Redigera', '<span class="btn btn-mini edit">', '</span>'); ?>
+  <?php edit_post_link('Redigera', '<span class="btn btn-default btn-sm edit">', '</span>'); ?>
 
   <?php comments_template( '', true ); ?>
 
