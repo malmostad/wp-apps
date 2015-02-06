@@ -458,7 +458,7 @@ aside nav.basic ul:last-child {
 }
 aside nav.basic p {
   font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
-  font-size: 13px;
+  font-size: 0.8125em;
 }
 aside .latest-posts li {
   *zoom: 1;
@@ -497,7 +497,7 @@ aside .latest-posts .text {
   box-sizing: border-box;
 }
 aside .latest-posts .text h2 {
-  font-size: 1.07143em;
+  font-size: 0.92857em;
   line-height: 1.3;
   font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
   font-weight: normal;

@@ -23,7 +23,7 @@ aside {
     }
     p {
       font-family: $serif;
-      font-size: 13px;
+      font-size: emize(13);
     }
   }
 
@@ -44,7 +44,7 @@ aside {
     .text {
       @include columns(9, true, 5%);
       h2 {
-        font-size: emize(15, 14);
+        font-size: emize(13, 14);
         line-height: 1.3;
         font-family: $serif;
         font-weight: normal;
