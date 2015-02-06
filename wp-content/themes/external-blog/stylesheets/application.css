@@ -119,6 +119,9 @@ aside {
   font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 0.75em;
 }
+.single .post .box {
+  clear: both;
+}
 .single .post .alignright, .single .post .aligncenter {
   float: right;
   margin: .3em 0 1em 1em;
@@ -367,7 +370,7 @@ aside {
   margin-top: 0;
 }
 .loop .post .body-copy {
-  width: 74.25%;
+  width: 74.5%;
   margin-right: 0;
   float: left;
   -ms-box-sizing: border-box;
@@ -382,9 +385,12 @@ aside {
   font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 0.875em;
 }
+.loop .post a {
+  color: #000;
+}
 .loop .post .entry-meta {
-  width: 22.75%;
-  margin-right: 3%;
+  width: 23.5%;
+  margin-right: 2%;
   float: left;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -394,7 +400,6 @@ aside {
 }
 .loop .post .entry-meta .author {
   margin-bottom: .2em;
-  color: #007896;
   font-size: 0.875em;
 }
 @media (max-width: 32em) {
@@ -402,20 +407,22 @@ aside {
     font-size: 0.75em;
   }
 }
+.loop .post .entry-meta .author a {
+  color: #007896;
+}
 .loop .post .entry-meta .avatar {
   margin-top: .2em;
+  overflow: hidden;
 }
 .loop .post .entry-meta .avatar img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  border: none;
+  border: 0;
 }
 .loop .post .entry-meta time {
   display: block;
   font-size: 0.75em;
-}
-.loop .post a {
-  color: #000;
 }
 .loop .post a:hover {
   text-decoration: none;
@@ -451,7 +458,11 @@ aside nav.basic ul {
   margin-bottom: 1em;
 }
 aside nav.basic ul:last-child {
-  margin-bottom: 0em;
+  margin-bottom: 0;
+}
+aside nav.basic p {
+  font-family: Georgia, "Droid Serif", "DejaVu Serif", "Bitstream Vera Serif", serif;
+  font-size: 13px;
 }
 aside .latest-posts li {
   *zoom: 1;
@@ -473,12 +484,12 @@ aside .latest-posts .featured-image {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: transparent;
+  margin-top: 0.25em;
 }
 aside .latest-posts .featured-image img {
-  margin-top: 0.25em;
   width: 100%;
   height: auto;
+  background: #f5f5f5;
 }
 aside .latest-posts .text {
   width: 73.75%;
@@ -499,7 +510,7 @@ aside .latest-posts .text h2 {
 aside .latest-posts .text time {
   clear: both;
   display: block;
-  margin-top: .2em;
+  margin: .2em 0;
   font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 0.85714em;
 }
@@ -609,6 +620,9 @@ aside .widget-area p {
   #respond, .service-title, .btn, .vote-box, .feed {
     display: none !important;
   }
+}
+body.home .page-title {
+  display: none;
 }
 
 /*# sourceMappingURL=application.css.map */
