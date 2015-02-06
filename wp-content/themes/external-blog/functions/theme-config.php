@@ -2,9 +2,6 @@
 $mconfig['env'] = ENV;
 $mconfig['logdir'] = dirname(__FILE__) . '/../../../';
 
-$mconfig['staff_directory'] = '';
-$mconfig['avtar_base_url'] =  '';
-
 if ($mconfig['env'] == 'development') {
   $mconfig['asset_host'] = '//assets.malmo.se/external/v4-staging/';
 }
