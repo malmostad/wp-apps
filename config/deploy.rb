@@ -1,70 +1,82 @@
-set :application, 'wp-apps'
-set :repo_url, 'git@github.com:malmostad/wp-apps.git'
+# The Capistrano 2 tasks will use your **working copy**
+# Execute one of the following to deploy into staging or production:
+#   $ bundle exec cap [one of the :stages] deploy
+# Rollback one step:
+#   $ bundle exec cap [one of the :stages] deploy:rollback
 
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+require 'capistrano/ext/multistage'
+require 'fileutils'
 
-# Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/wp-apps/news'
+server server_address, :web
+set :use_sudo, false
 
+# We use stages to specify both the actual stage and the service to deploy
+set :stages,
+    %w(external-blog-staging internal-blog-staging internal-news-staging
+       external-blog-production internal-blog-production internal-news-production)
 
-desc "Are you sure?"
-task :are_you_sure do
-  on roles(:app) do |server|
-    puts ""
-    puts "Service:      \033[0;32m#{fetch(:service)}\033[0m"
-    puts "Environment:   \033[0;32m#{fetch(:env)}\033[0m"
-    puts "Server:        \033[0;32m#{server.hostname}\033[0m"
-    puts ""
-    puts "Do you want to deploy?"
-    set :continue, ask("[y/n]:", "n")
-    if fetch(:continue).downcase != 'y' && fetch(:continue).downcase != 'yes'
-      puts "Deployment stopped"
-      exit
-    else
-      puts "Deployment starting"
+set :themes_dir, 'wp-content/themes'
+
+# Using your local copy, update the stuff you want to deploy
+set :deploy_via, :copy
+set :copy_exclude, [
+  '**/.sass-cache', '**/.git*', '**/.DS_Store',
+  '**/*.scss', '**/*.css.map',
+  '.gitignore', '.bowerrc', 'package.json'
+]
+
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+
+set(:user) do
+  Capistrano::CLI.ui.ask "Username for #{server_address}: "
+end
+
+before 'deploy', 'deploy:continue', 'build'
+after 'deploy', 'deploy:create_symlink', 'build:cleanup'
+
+namespace :deploy do
+  desc 'Deploy themes to server'
+  task :default do
+    run_locally "cd #{themes_dir} && tar -jcf themes.tar.bz2 master #{wp_app}"
+    top.upload "#{themes_dir}/themes.tar.bz2", "#{releases_path}", via: :scp
+    run "cd #{releases_path} &&
+         tar -jxf themes.tar.bz2 && rm themes.tar.bz2 &&
+         mkdir #{release_name} &&
+         mv master #{release_name}/ &&
+         mv #{wp_app} #{release_name}/"
+  end
+
+  task :continue do
+    if stage.nil? || !stages.include?(stage)
+      puts "\033[1;31mYou must specify the wp_app + stage in your command, e.g.:\033[0m"
+      puts "  \033[0;32m$ bundle exec cap internal-blog-staging deploy\033[0m"
+      puts "  \033[0;32m$ Available stages are:\033[0m"
+      puts "  \033[0;32m$ #{stages.join(" | ")}\033[0m"
+      Kernel.exit(1)
     end
+    puts ''
+    puts "wp_app + stage:    \033[0;32m#{stage}\033[0m"
+    puts ''
+    puts "This will use your \033[0;32mworking copy\033[0m, compile the assets and deploy them to:"
+    puts "  \033[0;32m#{server_address} #{releases_path}/#{release_name}\033[0m"
+    puts ''
+    continue = Capistrano::CLI.ui.ask 'Do you want to continue [y/n]: '
+    Kernel.exit(1) if continue.downcase != 'y' && continue.downcase != 'yes'
   end
 end
 
-before :starting, "deploy:are_you_sure", "deploy:check_revision"
+namespace :build do
+  desc 'Precompile assets locally'
+  task :default do
+    run_locally("cd #{themes_dir}")
+    run_locally("
+      sass --style compressed  #{wp_app}/stylesheets/application.scss
+      > #{wp_app}/stylesheets/application.css")
+  end
 
-
-
-
-# Default value for :scm is :git
-# set :scm, :git
-
-# Default value for :format is :pretty
-# set :format, :pretty
-
-# Default value for :log_level is :debug
-# set :log_level, :debug
-
-# Default value for :pty is false
-# set :pty, true
-
-# Default value for :linked_files is []
-# set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-
-# Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for keep_releases is 5
-# set :keep_releases, 5
-
-namespace :deploy do
-
-  # after :restart, :clear_cache do
-  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
-  #     # Here we can do anything such as:
-  #     # within release_path do
-  #     #   execute :rake, 'cache:clear'
-  #     # end
-  #   end
-  # end
-
+  desc 'CLeanup build files'
+  task :cleanup do
+    run_locally("cp #{themes_dir} && rm themes.tar.bz2")
+  end
 end
