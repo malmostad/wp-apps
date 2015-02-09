@@ -19,7 +19,7 @@ set :themes_dir, 'wp-content/themes'
 # Using your local copy, update the stuff you want to deploy
 set :deploy_via, :copy
 set :copy_exclude, [
-  '**/.sass-cache', '**/.git*', '**/.DS_Store',
+  '**/.sass-cache', '**/.git*', '**/.DS_Store', '**/._.DS_Store',
   '**/*.scss', '**/*.css.map',
   '.gitignore', '.bowerrc', 'package.json'
 ]
@@ -37,10 +37,10 @@ after 'deploy', 'deploy:create_symlink', 'build:cleanup'
 namespace :deploy do
   desc 'Deploy themes to server'
   task :default do
-    run_locally "cd #{themes_dir} && tar -jcf themes.tar.bz2 master #{theme}"
+    run_locally "cd #{themes_dir} && tar -jcf themes.tar.bz2 --exclude=#{copy_exclude.join(' --exclude=')} master #{theme}"
     top.upload "#{themes_dir}/themes.tar.bz2", "#{releases_path}", via: :scp
     run "cd #{releases_path} &&
-         tar -jxf themes.tar.bz2 && rm themes.tar.bz2 &&
+         tar -jxf themes.tar.bz2 &&
          mkdir #{release_name} &&
          mv master #{release_name}/ &&
          mv #{theme} #{release_name}/"
@@ -48,8 +48,8 @@ namespace :deploy do
 
   task :continue do
     puts ''
-    puts "Theme: \033[0;32mmaster and #{theme}\033[0m"
-    puts ''
+    puts 'Theme:'
+    puts "  \033[0;32mmaster and #{theme}\033[0m"
     puts "This will use your \033[0;32mworking copy\033[0m, compile the assets and deploy the theme to:"
     puts "  \033[0;32m#{server_address} #{releases_path}/#{release_name}\033[0m"
     puts ''
@@ -67,6 +67,7 @@ namespace :build do
 
   desc 'CLeanup build files'
   task :cleanup do
-    run_locally("cp #{themes_dir} && rm themes.tar.bz2")
+    run_locally "cd #{themes_dir} && rm themes.tar.bz2"
+    run "cd #{releases_path} && rm themes.tar.bz2"
   end
 end
