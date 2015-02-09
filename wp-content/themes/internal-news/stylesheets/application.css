@@ -380,6 +380,7 @@ aside {
 .loop .post .body-copy p {
   margin: 0 0 .2em;
 }
+.loop .post .body-copy .published,
 .loop .post .body-copy .comments-link {
   font-family: "OpenSans", "Droid Sans", "Verdana", "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
   font-size: 0.875em;
