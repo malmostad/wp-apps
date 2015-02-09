@@ -39,11 +39,12 @@ namespace :deploy do
   task :default do
     run_locally "cd #{themes_dir} && tar -jcf themes.tar.bz2 --exclude=#{copy_exclude.join(' --exclude=')} master #{theme}"
     top.upload "#{themes_dir}/themes.tar.bz2", "#{releases_path}", via: :scp
-    run "cd #{releases_path} &&
-         tar -jxf themes.tar.bz2 &&
-         mkdir #{release_name} &&
-         mv master #{release_name}/ &&
-         mv #{theme} #{release_name}/"
+    run "
+cd #{releases_path} && \
+tar -jxf themes.tar.bz2 && \
+mkdir #{release_name} && \
+mv master #{release_name}/ && \
+mv #{theme} #{release_name}/"
   end
 
   task :continue do
