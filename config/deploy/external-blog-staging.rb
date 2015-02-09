@@ -1,3 +1,4 @@
 set :server_address, 'webapps07.malmo.se'
-set :wp_app, 'external-blog'
-set :deploy_to, "/srv/www/#{wp_app}-themes/staging"
+server server_address, :web
+set :theme, 'external-blog'
+set :deploy_to, "~/linked-wp-apps/#{theme}-theme/production"
