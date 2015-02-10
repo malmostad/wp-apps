@@ -41,7 +41,7 @@ Use Sass to generate CSS for the child theme during development. This will inclu
     $ sass --watch --style expanded <child-theme-directory>stylesheets/application.scss
 
 ## Build & Deployment
-Capistrano 2 is used for build and deployment of the themes. Sass files are compiled during the build process. The Wordpress application and plugins are deployed manually.
+Capistrano 2 is used for build and deployment of the themes. Deployed themes are symlinked on the server. Sass files are compiled during the build process. The Wordpress application and plugins are deployed manually.
 
 The stages defined in the Capistrano build files are found in `config/deployment`. Stages are defined to contain both the application name, i.e. `internal-news`, `internal-blog` or `external-blog` as well as the actual stage name, i.e. `staging` or `production`. The application name and the stage is separated by a dash. To build and deploy the internal news themes for the production environment, run:
 
