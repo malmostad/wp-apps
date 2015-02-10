@@ -15,7 +15,8 @@ For more information about the services, contact webbteamet@malmo.se.
 * LDAP server for authentication
 * [Assets service](https://github.com/malmostad/global-assets).
 * [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
-* Sass for development and build.
+* Sass.
+* Capistrano 2.x for build and deployment.
 * Wordpress plugins used:
   * auto-hyperlink-urls
   * content-scheduler
@@ -34,17 +35,17 @@ For more information about the services, contact webbteamet@malmo.se.
 * Install the plugins listed above.
 * Edit `themes/<theme_name>/functions/theme-config.php`
 
-Use Sass to generate CSS for the child theme. This will include both the master and the child theme Sass files (if any).
-
-During development:
+Use Sass to generate CSS for the child theme during development. This will include both the master and the child themes Sass files.
 
     $ cd wp-content/themes
-    $ sass --watch --style expanded <child-theme>stylesheets/application.scss
+    $ sass --watch --style expanded <child-theme-directory>stylesheets/application.scss
 
-Build for deploy:
+## Build & Deployment
+Capistrano 2 is used for build and deployment of the themes. Sass files are compiled during the build process. The Wordpress application and plugins are deployed manually.
 
-    $ cd wp-content/themes
-    $ sass --style compressed  <child-theme>stylesheets/application.scss > <child-theme>stylesheets/application.css
+The stages defined in the Capistrano build files are found in `config/deployment`. Stages are defined to contain both the application name, i.e. `internal-news`, `internal-blog` or `external-blog` as well as the actual stage name, i.e. `staging` or `production`. The application name and the stage is separated by a dash. To build and deploy the internal news themes for the production environment, run:
+
+    $ bundle exec cap internal-news-production deploy
 
 ## Licence
 Released under AGPL version 3.
