@@ -12,7 +12,7 @@
 
   Instructions:
     Define the following constants in wp-config.php:
-      define('PORTWISE_IP_ADDRESS', '123.123.123.123');
+      define('PORTWISE_IP_ADDRESS', ['123.123.123.123', '123.123.123.124']);
       define('PORTWISE_TOKEN', 'long token');
       define('PORTWISE_REQUIRE_SSL', true);
       define('PORTWISE_SIGNOUT_URL', 'https://sso.example.org/wa/logout');
@@ -57,7 +57,7 @@ class PortwiseAuthentication {
   }
 
   private function trust_request() {
-    return ($_SERVER['REMOTE_ADDR'] == PORTWISE_IP_ADDRESS && // HTTP_CLIENT_IP HTTP_X_FORWARDED_FOR
+    return (array_search($_SERVER['REMOTE_ADDR'], PORTWISE_IP_ADDRESS, true) && // HTTP_CLIENT_IP HTTP_X_FORWARDED_FOR
         $_SERVER['HTTP_X_TOKEN'] == PORTWISE_TOKEN &&
         isset($_SERVER['HTTP_X_UID']) &&
         (PORTWISE_REQUIRE_SSL ? $_SERVER['HTTPS'] == "on" : true));
