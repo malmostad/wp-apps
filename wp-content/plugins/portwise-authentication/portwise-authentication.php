@@ -57,7 +57,7 @@ class PortwiseAuthentication {
   }
 
   private function trust_request() {
-    return (in_array($_SERVER['REMOTE_ADDR'], PORTWISE_IP_ADDRESS, true) && // HTTP_CLIENT_IP HTTP_X_FORWARDED_FOR
+    return (in_array($_SERVER['REMOTE_ADDR'], preg_split("/[\s,]+/", PORTWISE_IP_ADDRESS)) &&
         $_SERVER['HTTP_X_TOKEN'] == PORTWISE_TOKEN &&
         isset($_SERVER['HTTP_X_UID']) &&
         (PORTWISE_REQUIRE_SSL ? $_SERVER['HTTPS'] == "on" : true));

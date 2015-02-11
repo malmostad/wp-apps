@@ -24,7 +24,11 @@ define ('WPLANG', 'sv_SE');
 define('ENV', 'development');
 
 
-define('PORTWISE_IP_ADDRESS', ['123.123.123.123', '123.123.123.124']);
+define('PORTWISE_IP_ADDRESS',
+  '123.123.123.123,
+   123.123.123.124,
+   123.123.123.125');
+
 define('PORTWISE_TOKEN', 'secret');
 define('PORTWISE_REQUIRE_SSL', true);
 define('PORTWISE_SIGNOUT_URL', 'https://pw.example.org/wa/logout');
