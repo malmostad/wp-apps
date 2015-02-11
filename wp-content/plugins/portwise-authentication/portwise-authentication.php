@@ -12,7 +12,7 @@
 
   Instructions:
     Define the following constants in wp-config.php:
-      define('PORTWISE_IP_ADDRESS', '123.123.123.123');
+      define('PORTWISE_IP_ADDRESS', '123.123.123.123, 123.123.123.124');
       define('PORTWISE_TOKEN', 'long token');
       define('PORTWISE_REQUIRE_SSL', true);
       define('PORTWISE_SIGNOUT_URL', 'https://sso.example.org/wa/logout');
