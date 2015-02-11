@@ -23,6 +23,16 @@ define('WP_HOME',    'http://www.local.malmo.se/ws/wp-komin');
 define ('WPLANG', 'sv_SE');
 define('ENV', 'development');
 
+
+define('PORTWISE_IP_ADDRESS',
+  '123.123.123.123,
+   123.123.123.124,
+   123.123.123.125');
+
+define('PORTWISE_TOKEN', 'secret');
+define('PORTWISE_REQUIRE_SSL', true);
+define('PORTWISE_SIGNOUT_URL', 'https://pw.example.org/wa/logout');
+
 define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
 define('WP_DEBUG_DISPLAY', false);
