@@ -16,7 +16,7 @@
           <section class="body-copy">
             <h1><?php the_title(); ?></h1>
             <p class="published">Publicerad <?php the_author() ?> av <?php echo get_the_date() . ' ' . get_the_time() ?></p>
-            <p><?php echo truncate_excerpt(get_the_content(), 40) ?></p>
+            <p><?php echo truncate_excerpt(get_the_content(), 20) ?></p>
             <p class="comments-link"><?php comments_number('Kommentera', 'En kommentar', '% kommentarer') ?></p>
           </section>
         </a>

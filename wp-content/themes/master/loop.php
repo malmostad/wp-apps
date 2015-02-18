@@ -15,7 +15,7 @@
         <a href="<?php the_permalink(); ?>" rel="bookmark">
           <section class="body-copy">
             <h1><?php the_title(); ?></h1>
-            <p><?php echo truncate_excerpt(get_the_content(), 40) ?></p>
+            <p><?php echo truncate_excerpt(get_the_content(), 30) ?></p>
             <p class="comments-link"><?php comments_number('Kommentera', 'En kommentar', '% kommentarer') ?></p>
           </section>
         </a>
