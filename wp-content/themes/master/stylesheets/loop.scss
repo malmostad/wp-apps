@@ -34,7 +34,7 @@
         @media (max-width: 32em) {
           font-size: emize(12);
         }
-        a {
+        a:not(:hover) {
           color: $link-color;
         }
       }
