@@ -13,6 +13,9 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/plugins/wordpress-importer
 wp-content/plugins/kk-star-ratings
+wp-content/plugins/w3-total-cache
+wp-content/w3tc-config
+
 sitemap.xml
 *.log
 wp-content/cache/
