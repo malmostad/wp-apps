@@ -129,6 +129,11 @@ p {
   line-height: 25px;
   margin-top: 0;
 }
+
+body.webkit p strong {
+	font-weight: normal !important;
+}
+
 p.preamble {
   font-weight: bold;
   font-family: 'OpenSans', 'Verdana', 'DejaVu Sans', 'Bitstream Vera Sans', sans-serif;
