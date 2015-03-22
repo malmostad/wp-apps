@@ -11,8 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :vmware_fusion
   config.vm.provider :vmware_workstation
 
-  config.vm.network 'forwarded_port', guest: 80, host: 8080
-  config.vm.network 'forwarded_port', guest: 4443, host: 4443
+  config.vm.network 'forwarded_port', guest: 8000, host: 8000
+  config.vm.network 'forwarded_port', guest: 4430, host: 4430
 
   config.vm.provision :shell, path: 'puppet/bootstrap.sh'
 
