@@ -18,10 +18,9 @@ class { '::mcommons::mysql':
 }
 
 class { '::mcommons::apache':
-  force_ssl => true,
-  port      => 8000, # set forwarded_port in Vagrantfile
-  ssl_port  => 4430, # set forwarded_port in Vagrantfile
-  snakeoil  => true,
-  php       => true,
-  opcache   => 'Off',
+  ssl     => false,
+  php     => true,
+  opcache => 'Off',
 }
+
+class { '::mcommons::wordpress': }
