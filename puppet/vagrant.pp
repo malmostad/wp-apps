@@ -7,6 +7,7 @@ $runner_path  = '/usr/local/sbin:/usr/local/bin:/usr/bin:/bin'
 
 $app_name = 'wordpress'
 $app_home = '/vagrant'
+$doc_root  = "${::runner_home}/wordpress"
 
 class { '::mcommons': }
 
