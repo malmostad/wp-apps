@@ -6,7 +6,8 @@ $runner_home  = '/home/vagrant'
 $runner_path  = '/usr/local/sbin:/usr/local/bin:/usr/bin:/bin'
 
 $app_name       = 'wordpress'
-$app_home       = '/vagrant'
+$app_home       = "${::runner_home}/${::app_name}"
+# $app_home       = '/vagrant'
 
 class { '::mcommons': }
 
@@ -18,9 +19,10 @@ class { '::mcommons::mysql':
 }
 
 class { '::mcommons::apache':
-  ssl     => false,
-  php     => true,
-  opcache => 'Off',
+  ssl       => false,
+  force_ssl => false,
+  php       => true,
+  opcache   => 'Off',
 }
 
 class { '::mcommons::wordpress': }
