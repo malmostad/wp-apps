@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :vmware_fusion
   config.vm.provider :vmware_workstation
 
-  config.vm.network 'forwarded_port', guest: 80, host: 8000
+  config.vm.network 'forwarded_port', guest: 8000, host: 8000
   # config.vm.network 'forwarded_port', guest: 443, host: 4430
 
   # Setup Puppet environment and install malmo-mcommons using bash script
