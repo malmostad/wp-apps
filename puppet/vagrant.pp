@@ -26,4 +26,13 @@ class { '::mcommons::apache':
   opcache   => 'Off',
 }
 
-class { '::mcommons::wordpress': }
+class { '::mcommons::wordpress':
+  table_prefix => '',
+  plugins      => [
+    'https://downloads.wordpress.org/plugin/akismet.3.1.1.zip',
+    'https://downloads.wordpress.org/plugin/auto-hyperlink-urls.4.0.zip',
+    'https://downloads.wordpress.org/plugin/content-scheduler.2.0.5.zip',
+    'https://downloads.wordpress.org/plugin/valideratext.2.0.zip',
+    'https://downloads.wordpress.org/plugin/wpdirauth.1.7.6.zip',
+  ]
+}
