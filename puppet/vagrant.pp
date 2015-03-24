@@ -28,14 +28,14 @@ if $::wp_upgrade {
 else {
   class { '::mcommons': }
 
-  class { '::mcommons::mysql':
+  -> class { '::mcommons::mysql':
     db_password      => '',
     db_root_password => '',
     daily_backup     => false,
     php_enable       => true,
   }
 
-  class { '::mcommons::apache':
+  -> class { '::mcommons::apache':
     port      => 8000,
     ssl       => false,
     force_ssl => false,
@@ -43,7 +43,7 @@ else {
     opcache   => 'Off',
   }
 
-  class { '::mcommons::wordpress':
+  -> class { '::mcommons::wordpress':
     table_prefix => '',
     plugins      => $::wp_plugins,
   }

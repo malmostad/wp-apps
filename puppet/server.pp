@@ -28,13 +28,13 @@ if $::wp_upgrade {
 else {
   class { '::mcommons': }
 
-  class { '::mcommons::mysql':
+  -> class { '::mcommons::mysql':
     php_enable => true,
   }
 
-  class { '::mcommons::apache':
+  -> class { '::mcommons::apache':
     php => true,
   }
 
-  class { '::mcommons::wordpress': }
+  -> class { '::mcommons::wordpress': }
 }
