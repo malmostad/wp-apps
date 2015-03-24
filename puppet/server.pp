@@ -16,10 +16,7 @@ class { '::mcommons::mysql':
 }
 
 class { '::mcommons::apache':
-  ssl       => true,
-  force_ssl => true,
-  php       => true,
-  opcache   => 'On',
+  php => true,
 }
 
 class { '::mcommons::wordpress': }
