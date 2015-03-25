@@ -13,8 +13,24 @@ require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 require 'fileutils'
 
+set :thirdparty_wp_plugins, [
+  'akismet.3.1.1.zip',
+  'auto-hyperlink-urls.4.0.zip',
+  'content-scheduler.2.0.5.zip',
+  'valideratext.2.0.zip',
+  'wpdirauth.1.7.6.zip',
+]
+
+set :custom_wp_plugins, [
+  'force-login',
+  'force-ssl-in-content',
+  'portwise-authentication',
+]
+
 set :use_sudo, false
-set :themes_dir, 'wp-content/themes'
+set :themes_dir, 'themes'
+set :plugins_dir, 'plugins'
+set :deploy_to, '/home/app_runner/wordpress-custom'
 
 # Using your local copy, update the stuff you want to deploy
 set :deploy_via, :copy
@@ -70,5 +86,14 @@ namespace :build do
   task :cleanup do
     run_locally "cd #{themes_dir} && rm themes.tar.bz2"
     run "cd #{releases_path} && rm themes.tar.bz2"
+  end
+end
+
+desc 'Download and extract the list of thirdparty Wordpress plugins'
+namespace :download_plugins do
+  thirdparty_wp_plugins.each do |plugin|
+    run "cd #{releases_path} && wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
+    run "unzip -o #{plugin}"
+    run "rm #{plugin}"
   end
 end
