@@ -4,11 +4,6 @@
 # Rollback one step:
 #   $ bundle exec cap [one of the :stages] deploy:rollback
 
-# We use stages to specify both the actual stage and the service to deploy
-# set :stages, %w(staging production)
-# set :default_stage, 'staging'
-# set :stage_dir, 'config/deploy'
-
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 require 'fileutils'
@@ -18,18 +13,17 @@ set :thirdparty_wp_plugins, [
   'auto-hyperlink-urls.4.0.zip',
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
-  'wpdirauth.1.7.6.zip',
+  'wpdirauth.1.7.6.zip'
 ]
 
 set :custom_wp_plugins, [
   'force-login',
   'force-ssl-in-content',
-  'portwise-authentication',
+  'portwise-authentication'
 ]
 
 set :use_sudo, false
 set :themes_dir, 'themes'
-set :plugins_dir, 'plugins'
 set :deploy_to, '/home/app_runner/wordpress-custom'
 
 # Using your local copy, update the stuff you want to deploy
@@ -43,6 +37,9 @@ set :copy_exclude, [
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
+set :cdr, "cd #{releases_path} &&"
+set :cdrp, "cd #{releases_path}/plugins &&"
+
 set(:user) do
   Capistrano::CLI.ui.ask "Username for #{server_address}: "
 end
@@ -55,12 +52,32 @@ namespace :deploy do
   task :default do
     run_locally "cd #{themes_dir} && tar -jcf themes.tar.bz2 --exclude=#{copy_exclude.join(' --exclude=')} master #{theme}"
     top.upload "#{themes_dir}/themes.tar.bz2", "#{releases_path}", via: :scp
-    run "
-cd #{releases_path} && \
-tar -jxf themes.tar.bz2 && \
-mkdir #{release_name} && \
-mv master #{release_name}/ && \
-mv #{theme} #{release_name}/"
+    custom_wp_plugins.map! { |p| "plugins/#{p}" }
+    run_locally "tar -jcf plugins.tar.bz2 #{custom_wp_plugins.join(' ')}"
+    run "#{cdr} tar -jxf themes.tar.bz2"
+    run "#{cdr} mkdir #{release_name}"
+    run "#{cdr} mv master #{release_name}/"
+    run "#{cdr} mv #{theme} #{release_name}/"
+  end
+
+  desc 'Install Wordpress plugins on server'
+  task :install_wp_plugins do
+    run "mkdir #{releases_path}/plugins"
+    thirdparty_wp_plugins.each do |plugin|
+      run "#{cdrp} wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
+      run "#{cdrp} unzip -o #{plugin}"
+      run "#{cdrp} rm #{plugin}"
+    end
+  end
+
+  desc 'Deploy custom Wordpress plugins to server'
+  task :custom_wp_plugins do
+    custom_wp_plugins.map! { |p| "plugins/#{p}" }
+    run_locally "tar -jcf plugins.tar.bz2 #{custom_wp_plugins.join(' ')}"
+    run "#{cdr} tar -jxf plugins.tar.bz2"
+    run "#{cdr} mkdir #{release_name}"
+    run "#{cdr} mv master #{release_name}/"
+    run "#{cdr} mv #{theme} #{release_name}/"
   end
 
   task :continue do
@@ -89,11 +106,15 @@ namespace :build do
   end
 end
 
-desc 'Download and extract the list of thirdparty Wordpress plugins'
-namespace :download_plugins do
-  thirdparty_wp_plugins.each do |plugin|
-    run "cd #{releases_path} && wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
-    run "unzip -o #{plugin}"
-    run "rm #{plugin}"
+namespace :local do
+  desc 'Download and install Wordpress plugins locally'
+  task :install_plugins do
+    Dir.chdir('plugins') do
+      thirdparty_wp_plugins.each do |plugin|
+        run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
+        run_locally "unzip -o #{plugin}"
+        run_locally "rm #{plugin}"
+      end
+    end
   end
 end
