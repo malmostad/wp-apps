@@ -60,24 +60,24 @@ namespace :deploy do
     run "#{cdr} mv #{theme} #{release_name}/"
   end
 
-  desc 'Install Wordpress plugins on server'
-  task :install_wp_plugins do
-    run "mkdir #{releases_path}/plugins"
-    thirdparty_wp_plugins.each do |plugin|
-      run "#{cdrp} wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
-      run "#{cdrp} unzip -o #{plugin}"
-      run "#{cdrp} rm #{plugin}"
-    end
-  end
-
   desc 'Deploy custom Wordpress plugins to server'
   task :custom_wp_plugins do
+    run "mkdir #{releases_path}/plugins"
     custom_wp_plugins.map! { |p| "plugins/#{p}" }
     run_locally "tar -jcf plugins.tar.bz2 #{custom_wp_plugins.join(' ')}"
     run "#{cdr} tar -jxf plugins.tar.bz2"
     run "#{cdr} mkdir #{release_name}"
     run "#{cdr} mv master #{release_name}/"
     run "#{cdr} mv #{theme} #{release_name}/"
+  end
+
+  desc 'Install Wordpress plugins on server'
+  task :install_wp_plugins do
+    thirdparty_wp_plugins.each do |plugin|
+      run "#{cdrp} wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
+      run "#{cdrp} unzip -o #{plugin}"
+      run "#{cdrp} rm #{plugin}"
+    end
   end
 
   task :continue do
