@@ -8,7 +8,7 @@ require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 require 'fileutils'
 
-set :thirdparty_wp_plugins, [
+set :remote_plugins, [
   'akismet.3.1.1.zip',
   'auto-hyperlink-urls.4.0.zip',
   'content-scheduler.2.0.5.zip',
@@ -16,68 +16,59 @@ set :thirdparty_wp_plugins, [
   'wpdirauth.1.7.6.zip'
 ]
 
-set :custom_wp_plugins, [
+set :custom_plugins, [
   'force-login',
   'force-ssl-in-content',
   'portwise-authentication'
 ]
 
 set :use_sudo, false
-set :themes_dir, 'themes'
 set :deploy_to, '/home/app_runner/wordpress-custom'
+set :themes_dir, "#{releases_path}/#{release_name}/themes"
 set :plugins_dir, "#{releases_path}/#{release_name}/plugins"
 
-# Using your local copy, update the stuff you want to deploy
+# Using your local copy, update the stuff you want to deploy first
 set :deploy_via, :copy
 set :copy_exclude, [
-  '**/.sass-cache', '**/.git*', '**/.DS_Store', '**/._.DS_Store',
+  '**/.sass-cache', '**/.DS_Store', '**/._.DS_Store',
   '**/*.scss', '**/*.css.map',
-  '.gitignore', '.bowerrc', 'package.json'
+  '**/*.coffee'
 ]
+set :tar_excludes, copy_exclude.map { |e| "--exclude #{e}" }.join(' ')
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-
-set :cdr, "cd #{releases_path} &&"
-set :cdrp, "cd #{releases_path}/plugins &&"
 
 set(:user) do
   Capistrano::CLI.ui.ask "Username for #{server_address}: "
 end
 
 before 'deploy', 'deploy:continue', 'build'
-after 'deploy', 'deploy:create_symlink', 'build:cleanup'
+after 'deploy', 'deploy:create_symlink'
 
 namespace :deploy do
-  desc 'Deploy themes to server'
+  desc 'Deploy themes, custom plugins and remote plugins on server'
   task :default do
-    run_locally "cd #{themes_dir} && tar -jcf themes.tar.bz2 --exclude=#{copy_exclude.join(' --exclude=')} master #{theme}"
-    top.upload "#{themes_dir}/themes.tar.bz2", "#{releases_path}", via: :scp
-    custom_wp_plugins.map! { |p| "plugins/#{p}" }
-    run_locally "tar -jcf plugins.tar.bz2 #{custom_wp_plugins.join(' ')}"
-    run "#{cdr} tar -jxf themes.tar.bz2"
-    run "#{cdr} mkdir #{release_name}"
-    run "#{cdr} mv master #{release_name}/"
-    run "#{cdr} mv #{theme} #{release_name}/"
-  end
 
-  desc 'Deploy custom Wordpress plugins to server'
-  task :custom_wp_plugins do
-    run "mkdir #{releases_path}/plugins"
-    custom_wp_plugins.map! { |p| "plugins/#{p}" }
-    run_locally "tar -jcf plugins.tar.bz2 #{custom_wp_plugins.join(' ')}"
-    run "#{cdr} tar -jxf plugins.tar.bz2"
-    run "#{cdr} mkdir #{release_name}"
-    run "#{cdr} mv master #{release_name}/"
-    run "#{cdr} mv #{theme} #{release_name}/"
-  end
+    # Deploy themes to server
+    run_locally "cd themes && tar -jcf themes.tar.bz2 #{tar_excludes} master #{theme}"
+    run "mkdir -p #{themes_dir}"
+    top.upload 'themes/themes.tar.bz2', themes_dir, via: :scp
+    run "cd #{themes_dir} && tar -jxf themes.tar.bz2 && rm themes.tar.bz2"
+    run_locally 'rm themes/themes.tar.bz2'
 
-  desc 'Install plugins from wordpress.org'
-  task :install_wp_plugins do
-    thirdparty_wp_plugins.each do |plugin|
-      run "#{cdrp} wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
-      run "#{cdrp} unzip -o #{plugin}"
-      run "#{cdrp} rm #{plugin}"
+    # Deploy custom Wordpress plugins to server
+    run_locally "cd plugins && tar -jcf plugins.tar.bz2 #{tar_excludes} #{custom_plugins.join(' ')}"
+    run "mkdir -p #{plugins_dir}"
+    top.upload 'plugins/plugins.tar.bz2', plugins_dir, via: :scp
+    run "cd #{plugins_dir} && tar -jxf plugins.tar.bz2 && rm plugins.tar.bz2"
+    run_locally 'rm plugins/plugins.tar.bz2'
+
+    # Install plugins from wordpress.org to server
+    remote_plugins.each do |plugin|
+      run "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugins_dir}/#{plugin}"
+      run "cd #{plugins_dir} && unzip -o #{plugin}"
+      run "rm #{plugins_dir}/#{plugin}"
     end
   end
 
@@ -85,7 +76,11 @@ namespace :deploy do
     puts ''
     puts 'Theme:'
     puts "  \033[0;32mmaster and #{theme}\033[0m"
-    puts "This will use your \033[0;32mworking copy\033[0m, compile the assets and deploy the theme to:"
+    puts 'Remote plugins:'
+    puts "  \033[0;32m#{remote_plugins.join(', ')}\033[0m"
+    puts 'Custom plugins:'
+    puts "  \033[0;32m#{custom_plugins.join(', ')}\033[0m"
+    puts "This will use the themes in your \033[0;32mworking copy\033[0m, compile the assets and deploy the theme to:"
     puts "  \033[0;32m#{server_address} #{releases_path}/#{release_name}\033[0m"
     puts ''
     continue = Capistrano::CLI.ui.ask 'Do you want to continue [y/n]: '
@@ -96,23 +91,16 @@ end
 namespace :build do
   desc 'Precompile assets locally'
   task :default do
-    run_locally("cd #{themes_dir} && \
+    run_locally("cd themes && \
       sass --style compressed #{theme}/stylesheets/application.scss > #{theme}/stylesheets/application.css")
-  end
-
-  desc 'CLeanup build files'
-  task :cleanup do
-    run_locally "cd #{themes_dir} && rm themes.tar.bz2"
-    run "cd #{releases_path} && rm themes.tar.bz2"
   end
 end
 
-# To install plugins locally in Vagrant:
-# $ cap local install_plugins
-desc 'Install plugins from wordpress.org'
-task :install_plugins do
+# $ cap vagrant install_remote_plugins
+desc 'Install plugins from wordpress.org on Vagrant'
+task :install_remote_wp_plugins do
   Dir.chdir(plugins_dir) do
-    thirdparty_wp_plugins.each do |plugin|
+    remote_plugins.each do |plugin|
       run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
       run_locally "unzip -o #{plugin}"
       run_locally "rm #{plugin}"
