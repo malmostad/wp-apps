@@ -25,6 +25,7 @@ set :custom_wp_plugins, [
 set :use_sudo, false
 set :themes_dir, 'themes'
 set :deploy_to, '/home/app_runner/wordpress-custom'
+set :plugins_dir, "#{releases_path}/#{release_name}/plugins"
 
 # Using your local copy, update the stuff you want to deploy
 set :deploy_via, :copy
@@ -71,7 +72,7 @@ namespace :deploy do
     run "#{cdr} mv #{theme} #{release_name}/"
   end
 
-  desc 'Install Wordpress plugins on server'
+  desc 'Install plugins from wordpress.org'
   task :install_wp_plugins do
     thirdparty_wp_plugins.each do |plugin|
       run "#{cdrp} wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
@@ -106,15 +107,15 @@ namespace :build do
   end
 end
 
-namespace :local do
-  desc 'Download and install Wordpress plugins locally'
-  task :install_plugins do
-    Dir.chdir('plugins') do
-      thirdparty_wp_plugins.each do |plugin|
-        run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
-        run_locally "unzip -o #{plugin}"
-        run_locally "rm #{plugin}"
-      end
+# To install plugins locally in Vagrant:
+# $ cap local install_plugins
+desc 'Install plugins from wordpress.org'
+task :install_plugins do
+  Dir.chdir(plugins_dir) do
+    thirdparty_wp_plugins.each do |plugin|
+      run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
+      run_locally "unzip -o #{plugin}"
+      run_locally "rm #{plugin}"
     end
   end
 end
