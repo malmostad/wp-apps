@@ -98,7 +98,7 @@ end
 
 # $ cap vagrant install_remote_plugins
 desc 'Install plugins from wordpress.org on Vagrant'
-task :install_remote_wp_plugins do
+task :install_remote_plugins do
   Dir.chdir(plugins_dir) do
     remote_plugins.each do |plugin|
       run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
