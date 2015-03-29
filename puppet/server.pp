@@ -24,8 +24,11 @@ else {
   }
 
   -> class { '::mcommons::apache':
-    php => true,
+    php      => true,
+    snakeoil => true,
   }
 
-  -> class { '::mcommons::wordpress': }
+  -> class { '::mcommons::wordpress':
+    table_prefix => '', # Change to 'wp_' if you're not about to import an existing db
+  }
 }

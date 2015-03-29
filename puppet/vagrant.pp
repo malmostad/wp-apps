@@ -5,9 +5,9 @@ $runner_group = 'vagrant'
 $runner_home  = '/home/vagrant'
 $runner_path  = '/usr/local/sbin:/usr/local/bin:/usr/bin:/bin'
 
-$app_name  = 'wordpress'
-$app_home  = '/vagrant'
-$doc_root  = "${::runner_home}/wordpress"
+$app_name = 'wordpress'
+$app_home = '/vagrant'
+$doc_root = "${::runner_home}/wordpress"
 
 # To just upgrade Wordpress
 # $ sudo FACTER_WP_UPGRADE=true puppet apply puppet/vagrant.pp
@@ -36,5 +36,9 @@ else {
 
   -> class { '::mcommons::wordpress':
     table_prefix => '',
+  }
+
+  -> class { '::mcommons::wordpress::vagrant':
+    capistrano_tasks => ['install_remote_plugins'],
   }
 }
