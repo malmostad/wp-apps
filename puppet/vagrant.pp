@@ -39,6 +39,6 @@ else {
   }
 
   -> class { '::mcommons::wordpress::vagrant':
-    capistrano_tasks => ['install_remote_plugins'],
+    capistrano_tasks => ['local:update_plugins'],
   }
 }

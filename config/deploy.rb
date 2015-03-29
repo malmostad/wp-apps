@@ -22,6 +22,9 @@ set :custom_plugins, [
   'portwise-authentication'
 ]
 
+set :wordpress_url, 'https://sv.wordpress.org/latest-sv_SE.tar.gz'
+
+set :user, 'app_runner'
 set :use_sudo, false
 set :deploy_to, '/home/app_runner/wordpress-custom'
 set :themes_dir, "#{releases_path}/#{release_name}/themes"
@@ -38,10 +41,6 @@ set :tar_excludes, copy_exclude.map { |e| "--exclude #{e}" }.join(' ')
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-
-set(:user) do
-  Capistrano::CLI.ui.ask "Username for #{server_address}: "
-end
 
 before 'deploy', 'deploy:continue', 'build'
 after 'deploy', 'deploy:create_symlink'
@@ -82,9 +81,16 @@ namespace :deploy do
     puts "  \033[0;32m#{custom_plugins.join(', ')}\033[0m"
     puts "This will use the themes in your \033[0;32mworking copy\033[0m, compile the assets and deploy the theme to:"
     puts "  \033[0;32m#{server_address} #{releases_path}/#{release_name}\033[0m"
+    puts "Deploying user \033[0;32m#{user}\033[0m"
     puts ''
     continue = Capistrano::CLI.ui.ask 'Do you want to continue [y/n]: '
     Kernel.exit(1) if continue.downcase != 'y' && continue.downcase != 'yes'
+  end
+
+  desc 'Override Capistranos setup task'
+  task :setup do
+    run "rm -rf #{deploy_to}/current" # Created by puppet
+    run "mkdir -p #{deploy_to}/releases"
   end
 end
 
@@ -96,14 +102,32 @@ namespace :build do
   end
 end
 
-# $ cap vagrant install_remote_plugins
-desc 'Install plugins from wordpress.org on Vagrant'
-task :install_remote_plugins do
-  Dir.chdir(plugins_dir) do
-    remote_plugins.each do |plugin|
-      run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
-      run_locally "unzip -o #{plugin}"
-      run_locally "rm #{plugin}"
+
+desc 'Update Wordpress on server to latest version'
+task :update_wordpress do
+  run "wget #{wordpress_url} -O wordpress.tar.gz"
+  run '/bin/tar zxvf wordpress.tar.gz --exclude wp-content/themes --exclude wp-content/plugins'
+  run 'rm wordpress.tar.gz'
+end
+
+namespace :local do
+  desc 'Update Wordpress on Vagrant to latest version'
+  task :update_wordpress do
+    Dir.chdir(home_dir) do
+      run_locally "wget #{wordpress_url} -O wordpress.tar.gz"
+      run_locally '/bin/tar zxvf wordpress.tar.gz --exclude wp-content/themes --exclude wp-content/plugins'
+      run_locally 'rm wordpress.tar.gz'
+    end
+  end
+
+  desc 'Install plugins on Vagrant from wordpress.org'
+  task :update_plugins do
+    Dir.chdir(plugins_dir) do
+      remote_plugins.each do |plugin|
+        run_locally "wget https://downloads.wordpress.org/plugin/#{plugin} -O #{plugin}"
+        run_locally "unzip -o #{plugin}"
+        run_locally "rm #{plugin}"
+      end
     end
   end
 end
