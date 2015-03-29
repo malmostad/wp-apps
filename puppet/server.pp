@@ -10,7 +10,7 @@ $app_home = "${::runner_home}/wordpress-custom/current"
 $doc_root = "${::runner_home}/wordpress"
 
 # To just upgrade Wordpress
-# $ sudo FACTER_WP_UPGRADE=true puppet apply puppet/vagrant.pp
+# $ sudo FACTER_WP_UPGRADE=true puppet apply [vagrant|server].pp
 if $::wp_upgrade {
   class { '::mcommons::wordpress::install': }
 }
