@@ -9,26 +9,17 @@ $app_name = 'wordpress'
 $app_home = "${::runner_home}/wordpress-custom/current"
 $doc_root = "${::runner_home}/wordpress"
 
-# To just upgrade Wordpress:
-# sudo FACTER_WP_UPGRADE=true puppet apply [vagrant|server].pp
-if $::wp_upgrade {
-  class { '::mcommons::wordpress::install': }
+class { '::mcommons': }
+
+-> class { '::mcommons::mysql':
+  php_enable => true,
 }
 
-# Full installation and configuration
-else {
-  class { '::mcommons': }
+-> class { '::mcommons::apache':
+  php      => true,
+  snakeoil => true,
+}
 
-  -> class { '::mcommons::mysql':
-    php_enable => true,
-  }
-
-  -> class { '::mcommons::apache':
-    php      => true,
-    snakeoil => true,
-  }
-
-  -> class { '::mcommons::wordpress':
-    table_prefix => '', # Change to 'wp_' if you're not about to import an existing db
-  }
+-> class { '::mcommons::wordpress':
+  table_prefix => '', # Change to 'wp_' if creating a new db
 }
