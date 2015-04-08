@@ -5,9 +5,6 @@ Wordpress themes and plugins for the following publishing services at Malmö sta
 * Intranet Blog
 * Intranet News
 
-The themes are using Malmö stads’s [Global Assets]([global-assets](https://github.com/malmostad/global_assets)
-
-
 ## Dependencies
 * Wordpress >= 4.1
 * Wordpress compatible database
