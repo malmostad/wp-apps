@@ -1,51 +1,61 @@
 # Wordpress Themes and Plugins
 
-Wordpress applications for the following publishing services at Malmö stad:
-* Intranet Blog
+Wordpress themes and plugins for the following publishing services at Malmö stad:
 * External Blog
+* Intranet Blog
 * Intranet News
 
-The themes are using Malmö stads’s global assets, see the repo see the repo [global-assets](https://github.com/malmostad/global-assets).
+The themes are using Malmö stads’s [Global Assets]([global-assets](https://github.com/malmostad/global_assets)
 
-For more information about the services, contact webbteamet@malmo.se.
 
 ## Dependencies
 * Wordpress >= 4.1
 * Wordpress compatible database
 * LDAP server for authentication
-* [Assets service](https://github.com/malmostad/global-assets).
+* Nexus Hybrid Access Gateway for SSO authentication
+* [Global Assets](https://github.com/malmostad/global-assets).
 * [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
-* Sass.
-* Capistrano 2.x for build and deployment.
-* Wordpress plugins used:
-  * auto-hyperlink-urls
-  * content-scheduler
-  * valideratext
-  * wpdirauth
-  * Force Login for Reading (included in source)
-  * Force SSL In Content (included in source)
-  * Portwise Authentication (included in source)
 
-## Setup
-* Copy and edit the following files from this code base (do __not__ check in config files in the repository):
-  * `wp-config-example.php` to `wp-config.php`
-  * `.htaccess-example` to `.htaccess`
-* Perform a regular Wordpress installation.
-* Install and activate one of the themes.
-* Install the plugins listed above.
-* Edit `themes/<theme_name>/functions/theme-config.php`
 
-Use Sass to generate CSS for the child theme during development. This will include both the master and the child themes Sass files.
+## Editing Sass files
 
-    $ cd wp-content/themes
-    $ sass --watch --style expanded <child-theme-directory>stylesheets/application.scss
+Each child themes `stylesheets` directory contains theme specific Sass files and are using Sass files from the `master` theme. Sass will listen for changes to files when you edit them with this command:
+
+    $ cd themes
+    $ sass --watch --style expanded <child-theme-directory-name>/stylesheets/application.scss
 
 ## Build & Deployment
-Capistrano 2 is used for build and deployment of the themes. Deployed themes are symlinked on the server. Sass files are compiled during the build process. The Wordpress application and plugins are deployed manually.
 
-The stages defined in the Capistrano build files are found in `config/deployment`. Stages are defined to contain both the application name, i.e. `internal-news`, `internal-blog` or `external-blog` as well as the actual stage name, i.e. `staging` or `production`. The application name and the stage is separated by a dash. To build and deploy the internal news themes to the production server, run the following command in the projects root:
+Capistrano 2 is for build and deployment. It uses your *local copy* of this repo, it *does not* check out from the repo.
 
-    $ bundle exec cap internal-news-production deploy
+The `app_runner` user must be used for all deployment tasks (see Server Provisioning above).
+
+Each theme, `internal_news`, `internal_blog` and `external_blog`, is a child theme of the `master` theme. Two stages for each are defined in `config/deployment`: `staging` (test server) and `production`.
+
+The build and deployment process:
+
+* Compiles asset files from the master and child themes
+* Deploys both the master and child theme to the server
+* Installs custom plugins to the server as defined as `:custom_plugins` in `config/deploy.rb`
+* Installs third-party plugins to the server as defined as `:remote_plugins` in `config/deploy.rb`
+
+The deployment command defines the stage as the theme name and it's stage separated by underscore. Example: to build and deploy the internal news themes to the production server, run the following command in the projects root:
+
+    $ bundle exec cap internal_news_production deploy
+
+Rollback to the previous version:
+
+    $ bundle exec cap internal_news_production deploy
+
+Both themes and plugins are rolled back.
+
+## Update Wordpress core
+
+To update Wordpress core to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
+
+    $ bundle exec cap internal_news_production update_wordpress
+
+###
 
 ## Licence
 Released under AGPL version 3.
