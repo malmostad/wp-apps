@@ -27,7 +27,7 @@ Capistrano 2 is for build and deployment. It uses your *local copy* of this repo
 
 The `app_runner` user must be used for all deployment tasks (see Server Provisioning above).
 
-Each theme, `internal_news`, `internal_blog` and `external_blog`, is a child theme of the `master` theme. Two stages for each are defined in `config/deployment`: `staging` (test server) and `production`.
+Each theme, `internal-news`, `internal-blog` and `external-blog`, is a child theme of the `master` theme. Two stages for each are defined in `config/deployment`: `staging` (test server) and `production`.
 
 The build and deployment process:
 
@@ -36,21 +36,21 @@ The build and deployment process:
 * Installs custom plugins to the server as defined as `:custom_plugins` in `config/deploy.rb`
 * Installs third-party plugins to the server as defined as `:remote_plugins` in `config/deploy.rb`
 
-The deployment command defines the stage as the theme name and it's stage separated by underscore. Example: to build and deploy the internal news themes to the production server, run the following command in the projects root:
+The deployment command defines the stage as the theme name and it's stage separated by a dash. Example: to build and deploy the internal news themes to the production server, run the following command in the projects root:
 
-    $ bundle exec cap internal_news_production deploy
+    $ bundle exec cap internal-news-production deploy
 
 Rollback to the previous version:
 
-    $ bundle exec cap internal_news_production deploy
+    $ bundle exec cap internal-news-production deploy
 
 Both themes and plugins are rolled back.
 
 ## Update Wordpress core
 
-To update Wordpress core to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
+To update Wordpress core on the server to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
 
-    $ bundle exec cap internal_news_production update_wordpress
+    $ bundle exec cap <child-theme-name>-<stage-name> update_wordpress
 
 ###
 
