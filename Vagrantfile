@@ -5,9 +5,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Append the name at the end of vagrant commands, e.g.
   #  vagrant up internal_news
   #  vagrant ssh internal_news
-  config.vm.define :internal_news, autostart: false
-  config.vm.define :internal_blog, autostart: false
-  config.vm.define :external_blog, autostart: false
+  config.vm.define 'internal-news', autostart: false
+  config.vm.define 'internal-blog', autostart: false
+  config.vm.define 'external-blog', autostart: false
 
   config.vm.box = 'ubuntu/trusty64'
   config.vm.hostname = 'www.local.malmo.se'

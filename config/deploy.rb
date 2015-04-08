@@ -1,9 +1,3 @@
-# The Capistrano 2 tasks will use your **working copy**
-# Execute one of the following to deploy into staging or production:
-#   $ bundle exec cap [one of the :stages] deploy
-# Rollback one step:
-#   $ bundle exec cap [one of the :stages] deploy:rollback
-
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 require 'fileutils'
