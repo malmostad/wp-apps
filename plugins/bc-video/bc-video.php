@@ -23,9 +23,7 @@ function addBrightcoveVideo($attrs) {
 <div class='bc-video-box'>
   <script language='JavaScript' type='text/javascript' src='http://admin.brightcove.com/js/BrightcoveExperiences.js'></script>
   <object id='myExperience4162254067001' class='BrightcoveExperience'>
-    <param name='bgcolor' value='#808080'/>
-    <param name='width' value='480'/>
-    <param name='height' value='270'/>
+    <param name='bgcolor' value='#f0f0f0'/>
     <param name='playerID' value='2810881920001'/>
     <param name='playerKey' value='AQ~~,AAAArZCmTQE~,w5iz83926flwNgeVE8x1_ZgoF5t7oTGp'/>
     <param name='isVid' value='true'/>
