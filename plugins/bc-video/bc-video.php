@@ -2,8 +2,7 @@
 /*
   Plugin Name: BC Video
   Plugin URI: https://github.com/malmostad/wp-apps
-  Description: Simple shortcode support to add videos from the
-               Brightcove Cloud in Wordpress posts.
+  Description: Simple shortcode support to add videos from the Brightcove Cloud in Wordpress posts.
   Version: 0.0.1
   Author: Malmö stad
   Author URI: https://github.com/malmostad
@@ -21,7 +20,7 @@ add_shortcode('bc','addBrightcoveVideo');
 function addBrightcoveVideo($attrs) {
 	return "
 <div class='bc-video-box'>
-  <script language='JavaScript' type='text/javascript' src='http://admin.brightcove.com/js/BrightcoveExperiences.js'></script>
+  <script language='JavaScript' type='text/javascript' src='https://sadmin.brightcove.com/js/BrightcoveExperiences.js'></script>
   <object id='myExperience4162254067001' class='BrightcoveExperience'>
     <param name='bgcolor' value='#f0f0f0'/>
     <param name='playerID' value='2810881920001'/>
@@ -34,10 +33,12 @@ function addBrightcoveVideo($attrs) {
     <param name='includeAPI' value='true'/>
     <param name='templateLoadHandler' value='onTemplateLoad'/>
     <param name='templateReadyHandler' value='onTemplateReady'/>
+    <param name='secureConnections' value='true'/>
+    <param name='secureHTMLConnections' value='true'/>
     <param name='@videoPlayer' value='{$attrs["id"]}'/>
   </object>
   <script type='text/javascript'>brightcove.createExperiences();</script>
-  <script type='text/javascript' src='http://admin.brightcove.com/js/api/SmartPlayerAPI.js'></script>
+  <script type='text/javascript' src='https://sadmin.brightcove.com/js/api/SmartPlayerAPI.js'></script>
 </div>
 ";
 }
