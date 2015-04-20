@@ -13,7 +13,8 @@ set :remote_plugins, [
 set :custom_plugins, [
   'force-login',
   'force-ssl-in-content',
-  'portwise-authentication'
+  'portwise-authentication',
+  'bc-video'
 ]
 
 set :wordpress_url, 'https://sv.wordpress.org/latest-sv_SE.tar.gz'
