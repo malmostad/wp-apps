@@ -2,7 +2,7 @@
 /*
   Plugin Name: BC Video
   Plugin URI: https://github.com/malmostad/wp-apps
-  Description: Simple shortcode support to add videos from the Brightcove Cloud in Wordpress posts.
+  Description: Simple shortcode support to add videos from the Brightcove Cloud in Wordpress posts. Usage: [bc id="123123123"]
   Version: 0.0.1
   Author: Malmö stad
   Author URI: https://github.com/malmostad
