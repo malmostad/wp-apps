@@ -55,6 +55,7 @@ sitemap.xml.gz
 /plugins/most-commented
 /plugins/content-scheduler
 /plugins/auto-hyperlink-urls
+/plugins/brightcove-video-cloud
 /plugins/saml-20-single-sign-on/etc/certs/
 /plugins/saml-20-single-sign-on/etc/config/saml20-idp-remote.ini
 /plugins/akismet
