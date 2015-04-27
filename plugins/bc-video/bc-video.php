@@ -20,8 +20,7 @@ add_shortcode('bc','addBrightcoveVideo');
 function addBrightcoveVideo($attrs) {
 	return "
 <div class='bc-video-box'>
-	<video
-		id='bc-video'
+	<video id='bc-video'
 	  data-account='745456160001'
 	  data-player='ac887454-ec8b-4ffc-a530-4af5c1c8e8c7'
 		data-video-id='{$attrs["id"]}'
@@ -35,12 +34,12 @@ function addBrightcoveVideo($attrs) {
 		videojs('bc-video').ready(function () {
 		  //Kolla komin:
 		  this.on('loadedmetadata', function (evt) {
-		    if (true || !eval(this.mediainfo.custom_fields.targetgroup === 'Komin')) {
+		    if (!eval(this.mediainfo.custom_fields.targetgroup === 'Komin')) {
 		      var options = {
 		        'title': this.mediainfo.name,
 		        'description': this.mediainfo.description,
 		        'url': 'http://video.malmo.se?bctid=' + this.mediainfo.id,
-		        'displayAfterVideo': true,
+		        'displayAfterVideo': false,
 		        'deeplinking': false,
 		        'offset': '00:00:00',
 		        'services': {
