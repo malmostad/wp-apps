@@ -16,7 +16,7 @@ function feedContentFilter($content) {
   $preamble = get_post_meta(get_the_id(), '_metabox_preamble', true);
 
   if ( !empty( $preamble["preamble"] ) ) {
-     $before_content .= $preamble["preamble"] . " ";
+    $before_content .= htmlspecialchars_decode(htmlspecialchars($preamble["preamble"], ENT_DISALLOWED, 'UTF-8')) . " ";
   }
 
   // Featured image
