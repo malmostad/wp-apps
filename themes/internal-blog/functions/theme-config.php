@@ -16,4 +16,4 @@ else {
 }
 
 $mconfig['cache_id'] = 'internal_blog_' . $mconfig['env'];
-$mconfig['eri_cats'] = false;
+$mconfig['eri_cats'] = true;

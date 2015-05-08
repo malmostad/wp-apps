@@ -13,5 +13,3 @@ else {
   $mconfig['loglevel'] = 1;
   $mconfig['cache_engine'] = 'apc';
 }
-
-$mconfig['eri_cats'] = false;
