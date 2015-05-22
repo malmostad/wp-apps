@@ -7,13 +7,12 @@ Wordpress themes and plugins for the following publishing services at Malmö sta
 
 ## Dependencies
 
-* Wordpress >= 4.1
+* Wordpress >= 4.2
 * Wordpress compatible database
 * LDAP server for authentication
 * Nexus Hybrid Access Gateway for SSO authentication
 * [Global Assets](https://github.com/malmostad/global-assets).
 * [Avatar service](https://github.com/malmostad/intranet-dashboard/wiki/Avatar-Service-API-v1).
-* Ruby for build and deployment with Capistrano
 
 We use [Puppet](https://puppetlabs.com/) in standalone mode to setup server and development environments, see [puppet-mcommons](https://github.com/malmostad/puppet-mcommons/) for in-depth details.
 
@@ -98,11 +97,11 @@ The `deploy` Capistrano task does the following:
 
 The deployment command defines the stage as the theme name and it's stage separated by a dash. Example: to build and deploy the internal news themes to the production server, run the following command in the projects root:
 
-    $ bundle exec cap internal-news-production deploy
+    $ cap internal-news-production deploy
 
 Rollback to the previous version:
 
-    $ bundle exec cap internal-news-production deploy
+    $ cap internal-news-production deploy
 
 Both themes and plugins are rolled back.
 
@@ -110,7 +109,7 @@ Both themes and plugins are rolled back.
 
 To update Wordpress core on the server to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
 
-    $ bundle exec cap <child-theme-name>-<stage-name> update_wordpress
+    $ cap <child-theme-name>-<stage-name> update_wordpress
 
 
 ## Update Wordpress core or plugins in Vagrant
