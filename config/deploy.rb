@@ -7,7 +7,8 @@ set :remote_plugins, [
   'auto-hyperlink-urls.4.0.zip',
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
-  'wpdirauth.1.7.6.zip'
+  'wpdirauth.1.7.6.zip',
+  'vote-it-up.1.2.2.zip' # Used for interal blog. 1.2.3/4 are broken.
 ]
 
 set :custom_plugins, [

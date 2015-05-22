@@ -1,5 +1,5 @@
-set :server_address, 'webapps04.malmo.se'
+set :server_address, 'www.local.malmo.se'
 server server_address, :web
-set :theme, 'internal-news'
+set :theme, 'internal-blog'
 set :plugins_dir, '/vagrant/plugins'
 set :home_dir, '/home/vagrant'
