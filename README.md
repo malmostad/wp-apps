@@ -87,7 +87,7 @@ The Ruby based framework [Capistrano 2](https://github.com/capistrano/capistrano
 
 The `app_runner` user must be used for all deployment tasks (see Server Provisioning above).
 
-Each theme, `internal-news`, `internal-blog` and `external-blog`, is a child theme of the `master` theme. Two stages for each are defined in `config/deployment`: `staging` (test server) and `production`.
+Each theme, `internal-news`, `internal-blog` and `external-blog`, is a child theme of the `master` theme.
 
 The `deploy` Capistrano task does the following:
 

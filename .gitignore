@@ -15,6 +15,8 @@ wp-content/wp-cache-config.php
 /plugins/wordpress-importer
 /plugins/kk-star-ratings
 /plugins/w3-total-cache
+/plugins/Basic-Auth
+/plugins/WP-API
 
 *.log
 sitemap.xml
