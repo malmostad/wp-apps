@@ -32,7 +32,6 @@ function addBrightcoveVideo($attrs) {
 		<script src='//players.brightcove.net/videojs-social/dist/videojs-social.min.js'></script>
 		<script>
 		videojs('bc-video').ready(function () {
-		  //Kolla komin:
 		  this.on('loadedmetadata', function (evt) {
 		    if (!eval(this.mediainfo.custom_fields.targetgroup === 'Komin')) {
 		      var options = {
