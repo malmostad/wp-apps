@@ -17,3 +17,5 @@ else {
 
 $mconfig['cache_id'] = 'internal_blog_' . $mconfig['env'];
 $mconfig['eri_cats'] = true;
+
+$voteitup_path = plugins_url() . '/vote-it-up';

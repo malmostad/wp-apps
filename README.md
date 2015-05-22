@@ -106,11 +106,22 @@ Rollback to the previous version:
 
 Both themes and plugins are rolled back.
 
-## Update Wordpress core
+## Update Wordpress core on the server
 
 To update Wordpress core on the server to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
 
     $ bundle exec cap <child-theme-name>-<stage-name> update_wordpress
+
+
+## Update Wordpress core or plugins in Vagrant
+
+To update Wordpress core in your Vagrant to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
+
+    $ cap vagrant local:update_wordpress
+
+To update Wordpress plugins in your Vagrant to the versions specified in `config/deploy.rb` with `:remote_plugins`:
+
+    $ cap vagrant local:update_plugins
 
 
 ## Editing Sass files
