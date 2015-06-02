@@ -7,13 +7,6 @@
       <time><?php echo get_the_date() . ' ' . get_the_time() ?></time>
       <p class="preamble"><?php $mb_preamble->the_value('preamble'); ?></p>
 
-      <?php if ( has_post_thumbnail() ) { ?>
-        <div class="featured-image">
-          <?php the_post_thumbnail('medium', array('class' => 'article-image')) ?>
-          <div class="caption"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></div>
-        </div>
-      <?php } ?>
-
       <?php the_content(); ?>
 
       <?php if ( !!$mb_facts->the_meta() ) { ?>
