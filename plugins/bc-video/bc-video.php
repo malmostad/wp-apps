@@ -10,7 +10,7 @@
   Instructions:
     In a Wordpress post, insert the shortcode with the `id`
     for the video you want to display. You get the id when
-    you manage the video in Brightcove:
+    you manage the video in Brightcove. Example:
 
     [bc id="123123123"]
 */
@@ -25,36 +25,9 @@ function addBrightcoveVideo($attrs) {
 	  data-player='ac887454-ec8b-4ffc-a530-4af5c1c8e8c7'
 		data-video-id='{$attrs["id"]}'
 	  data-embed='default'
-	  class='video-js bc-video' controls></video>
-
-		<script src='//players.brightcove.net/745456160001/ac887454-ec8b-4ffc-a530-4af5c1c8e8c7_default/index.min.js'></script>
-		<link href='//players.brightcove.net/videojs-social/dist/videojs-social.css' rel='stylesheet'>
-		<script src='//players.brightcove.net/videojs-social/dist/videojs-social.min.js'></script>
-		<script>
-		videojs('bc-video').ready(function () {
-		  this.on('loadedmetadata', function (evt) {
-		    if (!eval(this.mediainfo.custom_fields.targetgroup === 'Komin')) {
-		      var options = {
-		        'title': this.mediainfo.name,
-		        'description': this.mediainfo.description,
-		        'url': 'http://video.malmo.se?bctid=' + this.mediainfo.id,
-		        'displayAfterVideo': false,
-		        'deeplinking': false,
-		        'offset': '00:00:00',
-		        'services': {
-		          'facebook': true,
-		          'google': true,
-		          'twitter': true,
-		          'tumblr': true,
-		          'pinterest': true,
-		          'linkedin': true
-		        }
-		      };
-		      this.social(options);
-		    }
-		  });
-		});
-		</script>
+	  class='video-js bc-video' controls>
+	</video>
+	<script src='//players.brightcove.net/745456160001/ac887454-ec8b-4ffc-a530-4af5c1c8e8c7_default/index.min.js'></script>
 </div>
 ";
 }
