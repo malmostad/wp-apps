@@ -1,3 +1,5 @@
+.vagrant
+.rnd
 .htaccess
 .DS_Store
 licens-sv_SE.txt
@@ -6,26 +8,23 @@ readme.html
 wp-config.php
 wp-config-sample.php
 wp-content/uploads/
-wp-content/blogs.dir/
 wp-content/upgrade/
 wp-content/backup-db/
 wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
-wp-content/plugins/wordpress-importer
-wp-content/plugins/kk-star-ratings
-wp-content/plugins/w3-total-cache
-wp-content/w3tc-config
+/plugins/wordpress-importer
+/plugins/kk-star-ratings
+/plugins/w3-total-cache
+/plugins/Basic-Auth
+/plugins/WP-API
 
-sitemap.xml
 *.log
-wp-content/cache/
-wp-content/backups/
 sitemap.xml
 sitemap.xml.gz
 .sass-cache
 
-# /wp-content/themes/*/stylesheets/application.css
-# /wp-content/themes/*/stylesheets/application.css.map
+/themes/*/stylesheets/application.css
+/themes/*/stylesheets/application.css.map
 
 /index.php
 /wp-activate.php
@@ -52,13 +51,15 @@ sitemap.xml.gz
 /wp-signup.php
 /wp-trackback.php
 /xmlrpc.php
-/wp-content/plugins/valideratext
-/wp-content/plugins/vote-it-up
-/wp-content/plugins/wpdirauth
-/wp-content/plugins/most-commented
-/wp-content/plugins/content-scheduler
-/wp-content/plugins/auto-hyperlink-urls
-/wp-content/plugins/saml-20-single-sign-on/etc/certs/
-/wp-content/plugins/saml-20-single-sign-on/etc/config/saml20-idp-remote.ini
-/wp-content/themes/twentyfourteen
-/wp-content/themes/twentyfifteen
+/plugins/valideratext
+/plugins/vote-it-up
+/plugins/wpdirauth
+/plugins/most-commented
+/plugins/content-scheduler
+/plugins/auto-hyperlink-urls
+/plugins/brightcove-video-cloud
+/plugins/saml-20-single-sign-on/etc/certs/
+/plugins/saml-20-single-sign-on/etc/config/saml20-idp-remote.ini
+/plugins/akismet
+/themes/twentyfourteen
+/themes/twentyfifteen

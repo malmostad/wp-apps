@@ -16,7 +16,7 @@ function feedContentFilter($content) {
   $preamble = get_post_meta(get_the_id(), '_metabox_preamble', true);
 
   if ( !empty( $preamble["preamble"] ) ) {
-     $before_content .= $preamble["preamble"] . " ";
+    $before_content .= htmlspecialchars_decode(htmlspecialchars($preamble["preamble"], ENT_DISALLOWED, 'UTF-8')) . " ";
   }
 
   // Featured image
@@ -102,3 +102,18 @@ function wp_rss_img_include($content) {
 function add_rss2_ns() {
   echo 'xmlns:dashboard="http://komin.malmo.se/dashboard"';
 }
+
+// Add metadata from WP_Alchemy to WP REST API
+function metaboxes_for_json($data, $post, $context) {
+  $preamble = get_post_meta(get_the_id(), '_metabox_preamble', true);
+  $facts    = get_post_meta(get_the_id(), '_metabox_facts', true);
+  $links    = get_post_meta(get_the_id(), '_metabox_links', true);
+
+	$data['metaboxes'] = array(
+    'preamble' => $preamble["preamble"],
+		'facts'    => $facts["facts"],
+    'links'    => $links["links"],
+	);
+	return $data;
+}
+add_filter( 'json_prepare_post', 'metaboxes_for_json',10, 3 );
