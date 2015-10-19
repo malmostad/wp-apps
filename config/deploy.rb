@@ -3,7 +3,7 @@ require 'capistrano/ext/multistage'
 require 'fileutils'
 
 set :remote_plugins, [
-  'akismet.3.1.2.zip',
+  'akismet.3.1.5.zip',
   'auto-hyperlink-urls.4.0.zip',
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
