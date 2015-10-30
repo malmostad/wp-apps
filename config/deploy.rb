@@ -7,15 +7,18 @@ set :remote_plugins, [
   'auto-hyperlink-urls.4.0.zip',
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
-  'wpdirauth.1.7.6.zip',
-  # 'vote-it-up.1.2.2.zip' # Used for interal blog. 1.2.3/4 are broken.
+  'wpdirauth.1.7.6.zip'
 ]
 
 set :custom_plugins, [
   'force-login',
   'force-ssl-in-content',
   'portwise-authentication',
-  'bc-video'
+  'bc-video',
+  # Vote It Up is used for interal blog
+  # This is a fork of 1.2.2 with skins/orange_ticker added
+  # 1.2.3 and 1.2.4 are broken
+  'vote-it-up'
 ]
 
 set :wordpress_url, 'https://sv.wordpress.org/latest-sv_SE.tar.gz'

@@ -1,0 +1,2 @@
+[09-Feb-2009 12:18:41] PHP Fatal error:  Call to undefined function  add_option() in /home/launc6/public_html/phatorwack/wp-content/plugins/vote-it-up/voteitup.php on line 46
+[09-Feb-2009 13:49:32] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/launc6/public_html/phatorwack/wp-content/plugins/vote-it-up/resetcount.php on line 4
