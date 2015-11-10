@@ -8,7 +8,7 @@ set :remote_plugins, [
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
   'wpdirauth.1.7.6.zip',
-  'wp-status-notifier.1.3.1.zip'
+  'wp-status-notifier.zip'
 ]
 
 set :custom_plugins, [
