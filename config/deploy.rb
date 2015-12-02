@@ -7,7 +7,7 @@ set :remote_plugins, [
   'auto-hyperlink-urls.4.0.zip',
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
-  'wpdirauth.1.7.6.zip',
+  'wpdirauth.1.7.9.zip',
   'wp-status-notifier.zip'
 ]
 
