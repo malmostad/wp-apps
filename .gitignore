@@ -17,6 +17,7 @@ wp-content/wp-cache-config.php
 /plugins/w3-total-cache
 /plugins/Basic-Auth
 /plugins/WP-API
+/plugins/wp-status-notifier/
 
 *.log
 sitemap.xml

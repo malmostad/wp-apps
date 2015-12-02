@@ -101,7 +101,7 @@ The deployment command defines the stage as the theme name and it's stage separa
 
 Rollback to the previous version:
 
-    $ cap internal-news-production deploy
+    $ cap internal-news-production deploy:rollback
 
 Both themes and plugins are rolled back.
 
