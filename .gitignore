@@ -18,6 +18,7 @@ wp-content/wp-cache-config.php
 /plugins/Basic-Auth
 /plugins/WP-API
 /plugins/wp-status-notifier/
+/plugins/vote-it-up/error_log
 
 *.log
 sitemap.xml
