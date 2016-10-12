@@ -81,7 +81,7 @@ function get_malmo_avatar( $avatar, $id_or_email, $size, $url, $alt, $css = "" )
     return "...";
 
   $user = get_userdata($user_id);
-  $username = $user->user_login;
+  $username = strtolower($user->user_login);
 
   // Map $size to the closest avatar width, round up
   $style = "";
