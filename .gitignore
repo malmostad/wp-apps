@@ -19,6 +19,8 @@ wp-content/wp-cache-config.php
 /plugins/WP-API
 /plugins/wp-status-notifier/
 /plugins/vote-it-up/error_log
+/plugins/manage-notification-emails/
+/themes/twentysixteen
 
 *.log
 sitemap.xml

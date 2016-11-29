@@ -8,7 +8,10 @@ set :remote_plugins, [
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
   'wpdirauth.1.7.9.zip',
-  'wp-status-notifier.zip'
+  'manage-notification-emails.1.2.0.zip'
+  # 'wp-status-notifier.zip' # Not available anymore
+                             # Used on external blog.
+                             # manage-notification-emails may solve the need.
 ]
 
 set :custom_plugins, [
