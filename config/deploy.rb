@@ -3,11 +3,11 @@ require 'capistrano/ext/multistage'
 require 'fileutils'
 
 set :remote_plugins, [
-  'akismet.3.1.5.zip',
-  'auto-hyperlink-urls.4.0.zip',
+  'akismet.3.2.zip',
+  'auto-hyperlink-urls.5.0.zip',
   'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
-  'wpdirauth.1.7.9.zip',
+  'wpdirauth.1.7.16.zip',
   'manage-notification-emails.1.2.0.zip'
   # 'wp-status-notifier.zip' # Not available anymore
                              # Used on external blog.
