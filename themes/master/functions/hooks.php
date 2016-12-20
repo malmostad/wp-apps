@@ -114,7 +114,7 @@ add_action('get_header', 'remove_adminbar_style');
 // Allow redirect to dashboard. Used for logout redirect
 add_filter('allowed_redirect_hosts','allow_domain_redirect');
 function allow_domain_redirect($allowed) {
-  $allowed[] = 'webapps06.malmo.se';
+  $allowed[] = 'minsida.malmo.se';
   return $allowed;
 }
 
