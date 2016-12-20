@@ -22,7 +22,7 @@ set :custom_plugins, [
   # Vote It Up is used for interal blog
   # This is a fork of 1.2.2 with skins/orange_ticker added
   # 1.2.3 and 1.2.4 are broken
-  'vote-it-up'
+  # 'vote-it-up'
 ]
 
 set :wordpress_url, 'https://sv.wordpress.org/latest-sv_SE.tar.gz'

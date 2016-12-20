@@ -2,8 +2,8 @@
 $mconfig['env'] = ENV;
 $mconfig['logdir'] = dirname(__FILE__) . '/../../../';
 
-$mconfig['staff_directory'] = 'http://webapps06.malmo.se/dashboard/users/';
-$mconfig['avtar_base_url'] =  '//webapps06.malmo.se/avatars/';
+$mconfig['staff_directory'] = 'http://minsida/users/';
+$mconfig['avtar_base_url'] =  '//profilbilder.malmo.se/';
 
 if ($mconfig['env'] == 'development') {
   $mconfig['asset_host'] = '//assets.malmo.se/internal/v4-staging/';
