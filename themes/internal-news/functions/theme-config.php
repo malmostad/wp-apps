@@ -2,7 +2,7 @@
 $mconfig['env'] = ENV;
 $mconfig['logdir'] = dirname(__FILE__) . '/../../../';
 
-$mconfig['staff_directory'] = 'http://minsida/users/';
+$mconfig['staff_directory'] = 'http://minsida.malmo.se/users/';
 $mconfig['avtar_base_url'] =  '//profilbilder.malmo.se/';
 
 if ($mconfig['env'] == 'development') {
