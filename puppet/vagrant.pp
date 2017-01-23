@@ -20,10 +20,12 @@ class { '::mcommons': }
 
 -> class { '::mcommons::apache':
   port      => 8000,
-  ssl       => false,
-  force_ssl => false,
+  ssl_port  => 4430,
+  ssl       => true,
+  force_ssl => true,
   php       => true,
-  opcache   => 'Off',
+  opcache   => 'On',
+  snakeoil  => true,
 }
 
 -> class { '::mcommons::wordpress':
