@@ -105,7 +105,7 @@ Rollback to the previous version:
 
 Both themes and plugins are rolled back.
 
-## Update Wordpress core on the server
+## Upgrade Wordpress core on the server
 
 To update Wordpress core on the server to the version specified in `config/deploy.rb` with `:wordpress_url` (defaults to latest):
 
