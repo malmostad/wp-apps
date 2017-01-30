@@ -1,3 +1,3 @@
-set :server_address, 'srvubuwebhost21.malmo.se'
+set :server_address, 'kominnyheter.malmo.se'
 server server_address, :web
 set :theme, 'internal-news'

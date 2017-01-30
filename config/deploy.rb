@@ -6,8 +6,8 @@ set :remote_plugins, [
   'akismet.3.2.zip',
   'auto-hyperlink-urls.5.0.zip',
   'valideratext.2.0.zip',
-  'wpdirauth.1.7.16.zip',
-  'manage-notification-emails.1.2.0.zip'
+  'wpdirauth.1.7.17.zip',
+  'manage-notification-emails.1.3.0.zip'
 ]
 
 set :custom_plugins, [
