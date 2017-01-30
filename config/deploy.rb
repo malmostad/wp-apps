@@ -5,24 +5,16 @@ require 'fileutils'
 set :remote_plugins, [
   'akismet.3.2.zip',
   'auto-hyperlink-urls.5.0.zip',
-  'content-scheduler.2.0.5.zip',
   'valideratext.2.0.zip',
   'wpdirauth.1.7.16.zip',
   'manage-notification-emails.1.2.0.zip'
-  # 'wp-status-notifier.zip' # Not available anymore
-                             # Used on external blog.
-                             # manage-notification-emails may solve the need.
 ]
 
 set :custom_plugins, [
   'force-login',
   'force-ssl-in-content',
   'portwise-authentication',
-  'bc-video',
-  # Vote It Up is used for interal blog
-  # This is a fork of 1.2.2 with skins/orange_ticker added
-  # 1.2.3 and 1.2.4 are broken
-  # 'vote-it-up'
+  'bc-video'
 ]
 
 set :wordpress_url, 'https://sv.wordpress.org/latest-sv_SE.tar.gz'
