@@ -24,8 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network 'forwarded_port', guest: 4430, host: 4430
 
   # Setup Puppet environment and install malmo-mcommons using bash script
-  # config.vm.provision :shell, path: 'https://raw.githubusercontent.com/malmostad/puppet-mcommons/master/bootstrap.sh'
-  config.vm.provision :shell, path: 'https://raw.githubusercontent.com/malmostad/puppet-mcommons/ubuntu-1604/bootstrap.sh'
+  config.vm.provision :shell, path: 'https://raw.githubusercontent.com/malmostad/puppet-mcommons/master/bootstrap.sh'
 
   # Run vagrant.pp Puppet install and configuration
   config.vm.provision :puppet do |puppet|
