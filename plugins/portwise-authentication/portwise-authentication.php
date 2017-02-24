@@ -38,7 +38,7 @@ class PortwiseAuthentication {
         $user = get_user_by('login', $this->username());
         $this->update_user($user);
       } else {
-        error_log("User dosn't exit");
+        error_log("User dosn't exit, create her");
         $user = $this->add_user();
       }
 
